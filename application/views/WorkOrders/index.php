@@ -14,8 +14,13 @@
                                             <div class="media">
                                                 <div class="media-body">
                                                     <h2 class="media-heading">
+<<<<<<< HEAD
+                                                        <span title="Work Order Priority" class="priority"><?php echo str_repeat("!", $workorder->priority); ?></span>
+                                                        <?php echo substr($workorder->title, 0, 85);?>...
+=======
                                                         <span title="Work Order Priority" class="priority"><?php //echo str_repeat("!", $workorder->priority); ?></span>
                                                         <?php //echo $workorder->title; ?>
+>>>>>>> origin/master
                                                     </h2>
                                                     <div class="task-meta-data">
                                                         <span class="task-number">#<?php //echo $workorder->id; ?></span>
@@ -48,5 +53,8 @@
 
     <h1 class="text-center"><i class="glyphicon glyphicon-repeat"></i> Start here</h1>
     <h2 class="text-center">Begin by selecting a Work Order</h2>
+    <a href="<?php echo site_url('/WorkOrders/add'); ?>" class="btn paper-button paper-floating-action-button">
+        <i class="glyphicon glyphicon-plus"></i>
+    </a>
 </div>
 <?php $this->load->view('blocks/footer'); ?>

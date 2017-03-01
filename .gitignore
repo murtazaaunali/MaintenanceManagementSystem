@@ -25,4 +25,9 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.stTheme.cache
 *.sublime-workspace
 *.sublime-project
+<<<<<<< HEAD
 application/config/config.php
+=======
+
+application/views/WorkOrders/index.php
+>>>>>>> origin/master

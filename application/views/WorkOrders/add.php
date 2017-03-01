@@ -5,6 +5,7 @@
         <div class="panel-body">
             <h4>Add New Work Order</h4>
             <div class="row">
+                <?php  ?>
                 <div class="col-md-12">
                     <div class="form-group">
                         <h4 class="control-label">Work Order Info</h4>
@@ -48,6 +49,18 @@
                     </div>
                     <div class="form-group">
                         <?php echo form_dropdown('workorder_repeating_schedule', array('Select Repeating Schedule', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'form-control')) ?>
+                    </div>
+                    <div class="form-group">
+                        <?php echo form_label('Requires Signature', 'workorder_requires_signature', array('class' => 'control-label')); ?>
+                    </div>
+                    <div class="form-group">
+                        <label class="switch">
+                            <input type="checkbox" name="workorder_requires_signature" checked>
+                            <div class="slider round"></div>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <?php echo form_submit("Save", "Save", array('class' => 'btn btn-primary pull-right')); ?>
                     </div>
                 </div>
             </div>
