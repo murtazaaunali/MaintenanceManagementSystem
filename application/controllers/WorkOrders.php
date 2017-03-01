@@ -17,12 +17,12 @@ class WorkOrders extends CI_Controller {
 
     function __construct() {
         parent::__construct();
-        $this->load->model("Workorders_m");
+        //$this->load->model("Workorders_m");
     }
 
     public function index() {
         $this->data['page_title'] = 'Work Orders';
-        $this->data['workorders'] = $this->Workorders_m->get_all();
+        //$this->data['workorders'] = $this->Workorders_m->get_all();
         $this->load->view("WorkOrders/Index", $this->data);
     }
 
