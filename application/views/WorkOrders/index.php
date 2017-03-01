@@ -8,18 +8,23 @@
                     <ul class="timeline list-unstyled">
                         <li class="timeline-item first-item">
                             <ul class="list-unstyled tasks-list">
-                                <?php foreach ($workorders as $workorder): ?>
+                                <?php //foreach ($workorders as $workorder): ?>
                                     <li class="task-item show-pointer active">
                                         <div class="task-item-container task-open">
                                             <div class="media">
                                                 <div class="media-body">
                                                     <h2 class="media-heading">
+<<<<<<< HEAD
                                                         <span title="Work Order Priority" class="priority"><?php echo str_repeat("!", $workorder->priority); ?></span>
                                                         <?php echo substr($workorder->title, 0, 85);?>...
+=======
+                                                        <span title="Work Order Priority" class="priority"><?php //echo str_repeat("!", $workorder->priority); ?></span>
+                                                        <?php //echo $workorder->title; ?>
+>>>>>>> origin/master
                                                     </h2>
                                                     <div class="task-meta-data">
-                                                        <span class="task-number">#<?php echo $workorder->id; ?></span>
-                                                        <span class="time-literal"><?php echo $workorder->date_created; ?></span>
+                                                        <span class="task-number">#<?php //echo $workorder->id; ?></span>
+                                                        <span class="time-literal"><?php //echo $workorder->date_created; ?></span>
                                                         <span class="updates line-icon">No. of Task</span>
                                                         <span class="ml-10">Location / Client</span>
                                                         <span class="ml-10 grey-text"> </span>
@@ -35,7 +40,7 @@
                                             </div>
                                         </div>
                                     </li>
-                                <?php endforeach; ?>
+                                <?php //endforeach; ?>
                             </ul>
                         </li>
                     </ul>
