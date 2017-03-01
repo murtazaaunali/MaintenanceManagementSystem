@@ -19,6 +19,7 @@ class WorkOrders extends CI_Controller {
         parent::__construct();
         $this->load->model('Workorders_m');
         $this->load->model('Locations_m');
+        $this->load->model('Categories_m');
     }
 
     public function index() {
@@ -30,6 +31,7 @@ class WorkOrders extends CI_Controller {
     public function add() {
         $this->data['page_title'] = 'Work Orders > Add New Work Order';
         $this->data['workorder_locations'] = $this->Locations_m->get_dropdown();
+        $this->data['workorder_categories'] = $this->Categories_m->get_dropdown();
         ;
         $this->load->view('WorkOrders/Add', $this->data);
         if ($this->input->post()) {

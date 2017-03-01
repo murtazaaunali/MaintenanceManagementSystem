@@ -30,7 +30,7 @@
                         <?php echo form_dropdown('workorder_location', $workorder_locations, FALSE, array('class' => 'form-control')) ?>
                     </div>
                     <div class="form-group">
-                        <?php echo form_dropdown('workorder_category', array('Select Category', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'form-control')) ?>
+                        <?php echo form_dropdown('workorder_category', $workorder_categories, FALSE, array('class' => 'form-control')) ?>
                     </div>
                     <div class="form-group">
                         <?php echo form_label('Assign Staff', 'workorder_priority', array('class' => 'control-label')); ?>
