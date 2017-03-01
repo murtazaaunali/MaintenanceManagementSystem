@@ -7,16 +7,26 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <?php echo form_label('Name', '', array('class' => 'control-label')); ?>
-                        <?php echo form_input('Name', '', array('class' => 'form-control', 'placeholder' => 'name of location*')) ?>
+                         <?php echo form_label('Name', '', array('class' => 'control-label')); ?>
+                    <div class="form-group">
+                        <?php echo form_input('Location_name', '', array('class' => 'form-control', 'placeholder' => 'Name of the Location*')) ?>
+                    </div>
+                        <div class="form-group">
+                         <?php echo form_label('Address', '', array('class' => 'control-label')); ?>
+                    <div class="form-group">
+                        <?php echo form_input('Location_address', '', array('class' => 'form-control', 'placeholder' => 'Address of the Location*')) ?>
                     </div>
                     <div class="form-group">
-                        <?php echo form_label('Address', '', array('class' => 'control-label')); ?>
-                        <?php echo form_input('workorder_title', '', array('class' => 'form-control', 'placeholder' => 'Address of the location*')); ?>
-                    </div>
-                    
+                        <div class="form-block">
+                            <input type="checkbox" ng-model="showGoogleMap" class="iswitch iswitch-secondary ng-valid ng-dirty ng-valid-parse ng-not-modified ng-touched" ng-change="toggleMap(event)" id="if-map">
+                            <label id="if-map" class="top-fix ng-scope" translate="">Include Map Coordinates for Location</label>
+                        </div>
+                    </div>        
+                        
+                </div>
             </div>
         </div>
+    </div>
     </div>
 </div>
 <?php $this->load->view('blocks/footer'); ?>
