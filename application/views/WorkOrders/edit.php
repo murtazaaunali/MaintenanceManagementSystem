@@ -50,7 +50,6 @@
             <h4>Add New Work Order</h4>
             <div class="row">
                 <div class="col-md-12">
-                    <?php print_r($workorder); ?>
                     <div class="form-group">
                         <h4 class="control-label">Work Order Info</h4>
                         <?php echo form_input('workorder_title', set_value('workorder_title', $workorder->title), array('class' => 'form-control', 'placeholder' => 'Work order title*')) ?>
@@ -96,7 +95,7 @@
                     </div>
                     <div class="form-group">
                         <label class="switch">
-                            <input type="checkbox" name="workorder_requires_signature" checked>
+                            <input type="checkbox" name="workorder_requires_signature" <?php echo set_value('workorder_requires_signature', $workorder->requires_sign) == 1 ? 'checked' : '' ?>>
                             <div class="slider round"></div>
                         </label>
                     </div>
