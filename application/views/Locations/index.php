@@ -1,35 +1,35 @@
 <?php $this->load->view('blocks/header'); ?>
 <?php $this->load->view('blocks/navigation'); ?>
-<div class="col-md-4">
-    <div class="panel panel-default panel-primary">
-        <div class="panel-body">
-            Panel content 1
-        </div>
-    </div>
-    <div class="panel panel-default panel-primary">
-        <div class="panel-body">
-            Panel content 2
-        </div>
-    </div>
-    <div class="panel panel-default panel-primary">
-        <div class="panel-body">
-            Panel content 3
-        </div>
-    </div>
-    <div class="panel panel-default panel-primary">
-        <div class="panel-body">
-            Panel content 4
-        </div>
-    </div>
-    <div class="panel panel-default panel-primary">
-        <div class="panel-body">
-            Panel content 5
-        </div>
-    </div>
-</div>
-<div class="col-md-5">
+<div class="container-fluid">
+    <div class="col-md-9">
+        <div class="panel panel-primary">
+            <div class="panel-body">
+                <div class="container-fluid">
+                    <div class="col-md-12">
+                        <div class="panel panel-default panel-primary">
+                            <div class="panel-body">
+                                <div class="row page-sub-option alternate">
+                                    <div class="options-left">
+                                        <a ui-sref="app.location" class="active-link" href="#/app/location">
+                                            <i class="glyphicon glyphicon-list"></i>
+                                        </a>
+                                        <a ui-sref="app.location.map" href="#/app/location/map">
+                                             <i class="glyphicon glyphicon-plus"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default panel-primary">
+                            <div class="panel-body">
+                                Panel content 2
+                            </div>
+                        </div>
 
-    <h1 class="text-center"><i class="glyphicon glyphicon-repeat"></i> Start here</h1>
-    <h2 class="text-center">Begin by selecting a Work Order</h2>
-</div>
-<?php $this->load->view('blocks/footer'); ?>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="<?php echo site_url('/Locations/add'); ?>" class="btn paper-button paper-floating-action-button">
+                            <i class="glyphicon glyphicon-plus"></i>
+                        </a>
+                    </div>
+                    <?php $this->load->view('blocks/footer'); ?>
