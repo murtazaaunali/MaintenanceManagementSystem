@@ -28,19 +28,19 @@
     </div>
     <div class="row clearfix">
         <div class="col-md-12 column">
-            <a href="<?php echo site_url('WorkOrders/add'); ?>" class="btn btn-primary">+</a>
+            <a href="<?php echo site_url('Requests/add'); ?>" class="btn btn-primary">+</a>
         </div>
     </div>
 </div>
 <div class="col-md-5">
     <div class="panel panel-primary">
         <div class="panel-body">
-            <h4>Add New Work Order</h4>
+            <h4>Assign Work Order Request</h4>
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <h4 class="control-label">Work Order Info</h4>
-                        <?php echo form_input('workorder_title', '', array('class' => 'form-control', 'placeholder' => 'Work order title*')) ?>
+                        <h4 class="control-label">Work Request Info</h4>
+                        <?php echo form_input('request_tittle', '', array('class' => 'form-control', 'placeholder' => 'Request title*')) ?>
                     </div>
                     <div class="form-group">
                         <?php echo form_textarea('workorder_title', '', array('class' => 'form-control', 'placeholder' => 'Detailed description', 'rows' => '3')); ?>

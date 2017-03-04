@@ -31,5 +31,8 @@
 
     <h1 class="text-center"><i class="glyphicon glyphicon-repeat"></i> Start here</h1>
     <h2 class="text-center">Begin by selecting a Work Order</h2>
+    <a href="<?php echo site_url('/Employees/add'); ?>" class="btn paper-button paper-floating-action-button">
+        <i class="glyphicon glyphicon-plus"></i>
+    </a>
 </div>
 <?php $this->load->view('blocks/footer'); ?>

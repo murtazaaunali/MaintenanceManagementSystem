@@ -3,15 +3,15 @@
 <div class="col-md-9">
     <div class="panel panel-primary">
         <div class="panel-body">
-            <h4>Add New Work Order</h4>
+            <h4>Submit a request</h4>
             <div class="row">
                 <div class="col-md-12">
+                    <?php echo form_label('Request Info', '', array('class' => 'control-label')); ?>
                     <div class="form-group">
-                        <h4 class="control-label">Work Order Info</h4>
-                        <?php echo form_input('workorder_title', '', array('class' => 'form-control', 'placeholder' => 'Work order title*')) ?>
+                        <?php echo form_input('Request_info', '', array('class' => 'form-control', 'placeholder' => 'Request Tittle*')) ?>
                     </div>
                     <div class="form-group">
-                        <?php echo form_textarea('workorder_title', '', array('class' => 'form-control', 'placeholder' => 'Detailed description', 'rows' => '3')); ?>
+                        <?php echo form_textarea('reques_description', '', array('class' => 'form-control', 'placeholder' => 'Detailed description', 'rows' => '3')); ?>
                     </div>
                     <?php echo form_label('Set Priority', 'workorder_priority', array('class' => 'control-label')); ?>
                     <div class="form-group">
@@ -29,26 +29,9 @@
                         </label>
                     </div>
                     <div class="form-group">
-                        <?php echo form_dropdown('workorder_location', array('Select Location', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'form-control')) ?>
+                        <?php echo form_submit("Save", "Save", array('class' => 'btn btn-primary pull-right')); ?>
                     </div>
-                    <div class="form-group">
-                        <?php echo form_label('Assign Staff', 'workorder_priority', array('class' => 'control-label')); ?>
-                        <?php echo form_dropdown('workorder_worker', array('Select Main Worker', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'form-control')) ?>
-                    </div>
-                    <div class="form-group">
-                        <?php echo form_dropdown('workorder_team', array('Select Team', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'form-control')) ?>
-                    </div>
-                    <div class="form-group">
-                        <?php echo form_label('Assign Due Date', 'workorder_priority', array('class' => 'control-label')); ?>
-                        <?php echo form_input(array('type' => 'date', 'name' => 'workorder_duedate', 'class' => 'form-control')) ?>
-                    </div>
-                    <div class="form-group">
-                        <?php echo form_label('End Due Date', 'workorder_priority', array('class' => 'control-label')); ?>
-                        <?php echo form_input(array('type' => 'date', 'name' => 'workorder_end_duedate', 'class' => 'form-control')) ?>
-                    </div>
-                    <div class="form-group">
-                        <?php echo form_dropdown('workorder_repeating_schedule', array('Select Repeating Schedule', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'form-control')) ?>
-                    </div>
+
                 </div>
             </div>
         </div>

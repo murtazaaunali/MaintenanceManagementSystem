@@ -6,7 +6,7 @@
         <div class="panel-body">
        <div class="container-fluid">
 <div class="col-md-12">
-<h4>Add New Location</h4>
+<h4>Edit Location</h4>
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
