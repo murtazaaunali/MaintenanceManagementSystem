@@ -60,8 +60,14 @@ class WorkOrders extends CI_Controller {
     }
 
     public function edit($id = NULL) {
-        $this->data['page_title'] = 'Work Orders > Edit > Order Title';
-        $this->load->view('WorkOrders/Edit');
+        if ($id) {
+            $this->data['page_title'] = 'Work Orders > Edit > Order Title';
+            $this->data['workorders'] = $this->Workorders_m->get_all();
+            $this->data['workorder'] = $this->Workorders_m->get($id);
+            $this->load->view('WorkOrders/Edit', $this->data);
+        } else {
+            redirect(site_url('Workorders/index'));
+        }
     }
 
     public function change_status() {
