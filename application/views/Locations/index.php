@@ -18,7 +18,7 @@
                                             </div>
                                             <div class="media-right">
                                                 <div class="task-status-box">
-                                                    <a href="<?php echo site_url('locations/update'); ?>">
+                                                    <a href="<?php echo site_url('locations/edit'); ?>">
                                                         <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
                                                     </a>
                                                 </div>
@@ -36,7 +36,7 @@
                                             </div>
                                             <div class="media-right">
                                                 <div class="task-status-box">
-                                                    <a href="<?php echo site_url('locations/update'); ?>">
+                                                    <a href="<?php echo site_url('locations/edit'); ?>">
                                                     <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
                                                     </a>
                                                 </div>
@@ -54,7 +54,7 @@
                                             </div>
                                             <div class="media-right">
                                                 <div class="task-status-box">
-                                                    <a href="<?php echo site_url('locations/update'); ?>">
+                                                    <a href="<?php echo site_url('locations/edit'); ?>">
                                                     <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
                                                     </a>
                           
@@ -73,7 +73,7 @@
                                             </div>
                                             <div class="media-right">
                                                 <div class="task-status-box">
-                                                    <a href="<?php echo site_url('locations/update'); ?>">
+                                                    <a href="<?php echo site_url('locations/edit'); ?>">
                                                     <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
                                                     </a>
                                                 </div>
