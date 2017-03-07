@@ -1,85 +1,152 @@
 <?php $this->load->view('blocks/header'); ?>
 <?php $this->load->view('blocks/navigation'); ?>
 <div class="col-md-4">
-    <div class="panel panel-default panel-primary">
-        <div class="panel-body">
-            Panel content 1
+<div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <ul class="timeline list-unstyled">
+                        <li class="timeline-item first-item">
+                            <ul class="list-unstyled tasks-list">
+                                <li class="task-item show-pointer active">
+                                    <div class="task-item-container task-open">
+                                        <div class="media">
+                                            <div class="media-body">
+                                                <h2 class="media-heading">
+                                                    Testing testing...
+                                                </h2>
+                                            </div>
+                                            <div class="media-right">
+                                                <div class="task-status-box">
+                                                    <a href="<?php echo site_url('Employees/edit'); ?>">
+                                                        <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="task-item show-pointer active">
+                                    <div class="task-item-container task-open">
+                                        <div class="media">
+                                            <div class="media-body">
+                                                <h2 class="media-heading">
+                                                    Testing testing...
+                                                </h2>
+                                            </div>
+                                            <div class="media-right">
+                                                <div class="task-status-box">
+                                                    <a href="<?php echo site_url('Employees/edit'); ?>">
+                                                    <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="task-item show-pointer active">
+                                    <div class="task-item-container task-open">
+                                        <div class="media">
+                                            <div class="media-body">
+                                                <h2 class="media-heading">
+                                                    Testing testing...
+                                                </h2>
+                                            </div>
+                                            <div class="media-right">
+                                                <div class="task-status-box">
+                                                    <a href="<?php echo site_url('Employees/edit'); ?>">
+                                                    <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
+                                                    </a>
+                          
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="task-item show-pointer active">
+                                    <div class="task-item-container task-open">
+                                        <div class="media">
+                                            <div class="media-body">
+                                                <h2 class="media-heading">
+                                                    Testing testing...
+                                                </h2>
+                                            </div>
+                                            <div class="media-right">
+                                                <div class="task-status-box">
+                                                    <a href="<?php echo site_url('Employees/edit'); ?>">
+                                                    <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="panel panel-default panel-primary">
-        <div class="panel-body">
-            Panel content 2
-        </div>
-    </div>
-    <div class="panel panel-default panel-primary">
-        <div class="panel-body">
-            Panel content 3
-        </div>
-    </div>
-    <div class="panel panel-default panel-primary">
-        <div class="panel-body">
-            Panel content 4
-        </div>
-    </div>
-    <div class="panel panel-default panel-primary">
-        <div class="panel-body">
-            Panel content 5
-        </div>
-    </div>
-    <div class="row clearfix">
-        <div class="col-md-12 column">
-            <a href="<?php echo site_url('WorkOrders/add'); ?>" class="btn btn-primary">+</a>
-        </div>
-    </div>
+    
 </div>
 <div class="col-md-5">
     <div class="panel panel-primary">
         <div class="panel-body">
-            <h4>Add New Work Order</h4>
+            <h3>Edit Profiles</h3>
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <h4 class="control-label">Work Order Info</h4>
-                        <?php echo form_input('workorder_title', '', array('class' => 'form-control', 'placeholder' => 'Work order title*')) ?>
+                        <?php echo form_label('Email', '', array('class' => 'control-label')); ?>
+                        <div class="form-group">
+                            <?php echo form_input('email', '', array('class' => 'form-control', 'placeholder' => 'abc@example.com(will also be the username)*')) ?>
+                        </div>
+                        <div class="form-group">
+                            <?php echo form_label('Password', '', array('class' => 'control-label')); ?>
+                            <div class="form-group">
+                                <?php echo form_password('password', '', array('class' => 'form-control', 'placeholder' => 'Password*')) ?>
+                            </div>
+                            <div class="form-group">
+                                <?php echo form_label('User Account Type', 'workorder_priority', array('class' => 'control-label')); ?>
+                                <?php echo form_dropdown('employee_type', array('Select type', 'Admin', 'Manager', 'Employee'), FALSE, array('class' => 'form-control')) ?>
+                            </div>   
+                            <div class="form-group">
+                                <?php echo form_label('First Name', '', array('class' => 'control-label')); ?>
+                                <div class="form-group">
+                                    <?php echo form_input('First_Name', '', array('class' => 'form-control', 'placeholder' => 'First Name*')) ?>
+                                </div>
+                                <div class="form-group">
+                                    <?php echo form_label('Last Name', '', array('class' => 'control-label')); ?>
+                                    <div class="form-group">
+                                        <?php echo form_Input('Last_name', '', array('class' => 'form-control', 'placeholder' => 'Last Name*')) ?>
+                                    </div>
+                                    <div class="form-group">
+                                    <?php echo form_label('Job Tittle', '', array('class' => 'control-label')); ?>
+                                    <div class="form-group">
+                                        <?php echo form_Input('Job_tittle', '', array('class' => 'form-control', 'placeholder' => 'e.g Sales Manager*')) ?>
+                                    </div>
+                                    <div class="form-group">
+                                    <?php echo form_label('Phone Number', '', array('class' => 'control-label')); ?>
+                                    <div class="form-group">
+                                        <?php echo form_input('Phone_number', '', array('class' => 'form-control', 'placeholder' => 'e.g +971 4 xxxxxxx*')) ?>
+                                    </div>
+                                          <div class="form-group">
+                                    <?php echo form_label('Company Name', '', array('class' => 'control-label')); ?>
+                                    <div class="form-group">
+                                        <?php echo form_input('Company_name', '', array('class' => 'form-control', 'placeholder' => 'Company Name*')) ?>
+                                    </div>
+                                        
+                                    <div class="form-group">
+                                        <?php echo form_submit("Save", "Save", array('class' => 'btn btn-primary pull-right')); ?>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <?php echo form_close(); ?>
                     </div>
-                    <div class="form-group">
-                        <?php echo form_textarea('workorder_title', '', array('class' => 'form-control', 'placeholder' => 'Detailed description', 'rows' => '3')); ?>
-                    </div>
-                    <?php echo form_label('Set Priority', 'workorder_priority', array('class' => 'control-label')); ?>
-                    <div class="form-group">
-                        <label class="radio-inline">
-                            <?php echo form_radio('workorder_priority', '0', FALSE); ?> None
-                        </label>
-                        <label class="radio-inline">
-                            <?php echo form_radio('workorder_priority', '1', FALSE); ?> Low
-                        </label>
-                        <label class="radio-inline">
-                            <?php echo form_radio('workorder_priority', '2', FALSE); ?> Medium
-                        </label>
-                        <label class="radio-inline">
-                            <?php echo form_radio('workorder_priority', '3', FALSE); ?> High
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <?php echo form_dropdown('workorder_location', array('Select Location', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'form-control')) ?>
-                    </div>
-                    <div class="form-group">
-                        <?php echo form_label('Assign Staff', 'workorder_priority', array('class' => 'control-label')); ?>
-                        <?php echo form_dropdown('workorder_worker', array('Select Main Worker', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'form-control')) ?>
-                    </div>
-                    <div class="form-group">
-                        <?php echo form_dropdown('workorder_team', array('Select Team', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'form-control')) ?>
-                    </div>
-                    <div class="form-group">
-                        <?php echo form_label('Assign Due Date', 'workorder_priority', array('class' => 'control-label')); ?>
-                        <?php echo form_input(array('type' => 'date', 'name' => 'workorder_duedate', 'class' => 'form-control')) ?>
-                    </div>
-                    <div class="form-group">
-                        <?php echo form_label('End Due Date', 'workorder_priority', array('class' => 'control-label')); ?>
-                        <?php echo form_input(array('type' => 'date', 'name' => 'workorder_end_duedate', 'class' => 'form-control')) ?>
-                    </div>
-                    <div class="form-group">
-                        <?php echo form_dropdown('workorder_repeating_schedule', array('Select Repeating Schedule', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'form-control')) ?>
+                </div>
+                        </div>
                     </div>
                 </div>
             </div>

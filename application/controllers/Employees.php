@@ -29,7 +29,7 @@ class Employees extends CI_Controller {
         $this->load->view("Employees/Add", $this->data);
     }
 
-    public function update($id = NULL) {
+    public function edit($id = NULL) {
         $this->data['page_title'] = 'Work Orders > Edit > Order Title';
         $this->load->view("Employees/Edit");
     }
