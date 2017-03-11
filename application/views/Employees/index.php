@@ -1,6 +1,6 @@
 <?php $this->load->view('blocks/header'); ?>
-<?php $this->load->view('blocks/navigation'); ?>
-<div class="col-md-5">
+<?php $this->load->view('blocks/navigation'); ?><?php $this->load->view('blocks/top-navigation'); ?>
+<div class="col-md-6">
  <div class="panel-group">
         <div class="panel panel-default">
             <div class="panel-collapse collapse in">
@@ -89,7 +89,7 @@
         </div>
     </div>
 </div>
-<div class="col-md-5">
+<div class="col-md-6">
 
     <h1 class="text-center"><i class="glyphicon glyphicon-repeat"></i> Start here</h1>
     <h2 class="text-center">Begin by selecting a Work Order</h2>

@@ -1,6 +1,6 @@
 <?php $this->load->view('blocks/header'); ?>
-<?php $this->load->view('blocks/navigation'); ?>
-<div class="col-md-9">
+<?php $this->load->view('blocks/navigation'); ?><?php $this->load->view('blocks/top-navigation'); ?>
+<div class="col-md-12">
     <div class="panel panel-primary">
         <div class="panel-body">
             <h3>Add New People</h3>

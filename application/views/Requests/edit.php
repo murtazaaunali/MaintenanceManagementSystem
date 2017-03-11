@@ -1,6 +1,6 @@
 <?php $this->load->view('blocks/header'); ?>
-<?php $this->load->view('blocks/navigation'); ?>
-<div class="col-md-4">
+<?php $this->load->view('blocks/navigation'); ?><?php $this->load->view('blocks/top-navigation'); ?>
+<div class="col-md-6">
 <div class="panel-group">
         <div class="panel panel-default">
             <div class="panel-collapse collapse in">
@@ -90,7 +90,7 @@
     </div>
     
 </div>
-<div class="col-md-5">
+<div class="col-md-6">
     <div class="panel panel-primary">
         <div class="panel-body">
             <h4>Assign Work Order Request</h4>

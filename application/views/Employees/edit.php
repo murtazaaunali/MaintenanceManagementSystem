@@ -1,7 +1,7 @@
 <?php $this->load->view('blocks/header'); ?>
-<?php $this->load->view('blocks/navigation'); ?>
-<div class="col-md-4">
-<div class="panel-group">
+<?php $this->load->view('blocks/navigation'); ?><?php $this->load->view('blocks/top-navigation'); ?>
+<div class="col-md-6">
+    <div class="panel-group">
         <div class="panel panel-default">
             <div class="panel-collapse collapse in">
                 <div class="panel-body">
@@ -37,7 +37,7 @@
                                             <div class="media-right">
                                                 <div class="task-status-box">
                                                     <a href="<?php echo site_url('Employees/edit'); ?>">
-                                                    <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
+                                                        <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
                                                     </a>
                                                 </div>
                                             </div>
@@ -55,9 +55,9 @@
                                             <div class="media-right">
                                                 <div class="task-status-box">
                                                     <a href="<?php echo site_url('Employees/edit'); ?>">
-                                                    <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
+                                                        <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
                                                     </a>
-                          
+
                                                 </div>
                                             </div>
                                         </div>
@@ -74,7 +74,7 @@
                                             <div class="media-right">
                                                 <div class="task-status-box">
                                                     <a href="<?php echo site_url('Employees/edit'); ?>">
-                                                    <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
+                                                        <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
                                                     </a>
                                                 </div>
                                             </div>
@@ -88,9 +88,9 @@
             </div>
         </div>
     </div>
-    
+
 </div>
-<div class="col-md-5">
+<div class="col-md-6">
     <div class="panel panel-primary">
         <div class="panel-body">
             <h3>Edit Profiles</h3>
@@ -121,31 +121,31 @@
                                         <?php echo form_Input('Last_name', '', array('class' => 'form-control', 'placeholder' => 'Last Name*')) ?>
                                     </div>
                                     <div class="form-group">
-                                    <?php echo form_label('Job Tittle', '', array('class' => 'control-label')); ?>
-                                    <div class="form-group">
-                                        <?php echo form_Input('Job_tittle', '', array('class' => 'form-control', 'placeholder' => 'e.g Sales Manager*')) ?>
-                                    </div>
-                                    <div class="form-group">
-                                    <?php echo form_label('Phone Number', '', array('class' => 'control-label')); ?>
-                                    <div class="form-group">
-                                        <?php echo form_input('Phone_number', '', array('class' => 'form-control', 'placeholder' => 'e.g +971 4 xxxxxxx*')) ?>
-                                    </div>
-                                          <div class="form-group">
-                                    <?php echo form_label('Company Name', '', array('class' => 'control-label')); ?>
-                                    <div class="form-group">
-                                        <?php echo form_input('Company_name', '', array('class' => 'form-control', 'placeholder' => 'Company Name*')) ?>
-                                    </div>
-                                        
-                                    <div class="form-group">
-                                        <?php echo form_submit("Save", "Save", array('class' => 'btn btn-primary pull-right')); ?>
-                                    </div>
+                                        <?php echo form_label('Job Tittle', '', array('class' => 'control-label')); ?>
+                                        <div class="form-group">
+                                            <?php echo form_Input('Job_tittle', '', array('class' => 'form-control', 'placeholder' => 'e.g Sales Manager*')) ?>
+                                        </div>
+                                        <div class="form-group">
+                                            <?php echo form_label('Phone Number', '', array('class' => 'control-label')); ?>
+                                            <div class="form-group">
+                                                <?php echo form_input('Phone_number', '', array('class' => 'form-control', 'placeholder' => 'e.g +971 4 xxxxxxx*')) ?>
+                                            </div>
+                                            <div class="form-group">
+                                                <?php echo form_label('Company Name', '', array('class' => 'control-label')); ?>
+                                                <div class="form-group">
+                                                    <?php echo form_input('Company_name', '', array('class' => 'form-control', 'placeholder' => 'Company Name*')) ?>
+                                                </div>
 
+                                                <div class="form-group">
+                                                    <?php echo form_submit("Save", "Save", array('class' => 'btn btn-primary pull-right')); ?>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php echo form_close(); ?>
                                 </div>
                             </div>
-                        </div>
-                        <?php echo form_close(); ?>
-                    </div>
-                </div>
                         </div>
                     </div>
                 </div>

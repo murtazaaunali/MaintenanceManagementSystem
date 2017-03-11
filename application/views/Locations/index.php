@@ -1,6 +1,6 @@
 <?php $this->load->view('blocks/header'); ?>
-<?php $this->load->view('blocks/navigation'); ?>
-<div class="col-md-10">
+<?php $this->load->view('blocks/navigation'); ?><?php $this->load->view('blocks/top-navigation'); ?>
+<div class="col-md-12">
     <div class="panel-group">
         <div class="panel panel-default">
             <div class="panel-collapse collapse in">
