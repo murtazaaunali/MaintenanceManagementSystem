@@ -12,13 +12,13 @@
 body {
     background-color: #ECECEC;
     font-family: HelveticaNeue;
-    color: #f24d2d;
+    color: #0e713b;
 }
 a {
-    color: #f24d2d;
+    color: #0e713b;
 }
 h1, h2, h3, h4, h5, h6, h7 {
-    color: #f24d2d;
+    color: #0e713b;
 }
 body {
     font-size: 12px;
@@ -105,7 +105,7 @@ body {
 }
 .priority {
     color: #fff;
-    background: #ff3b30;
+    background: #0e713b;
     font-weight: 600;
     padding: 1px 7px;
     position: relative;
@@ -146,7 +146,7 @@ body {
     font-weight: 400;
 }
 .timeline .timeline-item .task-item .task-item-container.task-open .media .media-right {
-    color: #ff3b30;
+    color: #0e713b;
 }
 .timeline .timeline-item .task-item .media .media-right {
     width: 63px;
@@ -170,7 +170,7 @@ body {
     align-items: center;
 }
 .status-circle.task-open {
-    color: #ff3b30;
+    color: #0e713b;
     background: currentColor;
 }
 .status-circle {
@@ -199,7 +199,7 @@ body {
     border: none;
     line-height: 1;
     color: #fff;
-    background-color: #ff3b30;
+    background-color: #0e713b;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -295,7 +295,7 @@ input:checked + .slider:before {
 }
 
 .task-item .active {
-    background: #ff3b30;
+    background: #0e713b;
     background-color: rgb(255, 59, 48);
     box-shadow: 0 2px 15px 1px rgba(0,0,0,.2);
 }
@@ -483,10 +483,10 @@ section{
 }
 .navbar-inverse .navbar-nav>.active>a {
     background: transparent;
-    color: #ff3b30;
+    color: #0e713b;
 }
 .navbar-inverse .navbar-nav>.active>a:hover {
-    color: #ff3b30;
+    color: #0e713b;
     background: transparent;
 }
 nav.sidebar .navbar-nav > li {
@@ -498,5 +498,9 @@ nav.sidebar .navbar-nav > li {
     font-size: 22px;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-    color: #ff3b30;
+    color: #0e713b;
+}
+.paper-button.paper-floating-action-button i {
+    padding-top: 13px;
+    padding-left: 2px;
 }
