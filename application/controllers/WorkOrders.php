@@ -56,7 +56,9 @@ class WorkOrders extends CI_Controller {
 
     public function view($id = null) {
         $this->data['page_title'] = 'Work Orders > Work Order Title';
-        $this->load->view('WorkOrders/View');
+        $this->data['workorders'] = $this->Workorders_m->get_all();
+        $this->data['workorder'] = $this->Workorders_m->get($id);
+        $this->load->view('WorkOrders/View', $this->data);
     }
 
     public function edit($id = NULL) {
