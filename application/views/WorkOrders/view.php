@@ -87,9 +87,7 @@
                                                 <td>Location Address 1</td>
                                             </tr>
                                         </table>
-
                                         <h3>Tasks</h3>
-
                                         <table class="table table-responsive table-bordered">
                                             <tr>
                                                 <td>Task Name 1</td>
