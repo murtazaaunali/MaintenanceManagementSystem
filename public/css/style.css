@@ -504,3 +504,12 @@ nav.sidebar .navbar-nav > li {
     padding-top: 13px;
     padding-left: 2px;
 }
+
+.btn-circle.btn-lg {
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+}
