@@ -48,122 +48,116 @@
 <div class="col-md-6">
     <div class="panel panel-primary">
         <div class="panel-body">
-            <h3>Add Create your first asset and organize by location in the "Assets & Locations" tab.</h3>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <div class="col-md-3">
-                            <button type="button" class="btn btn-danger btn-circle btn-lg"><i class="glyphicon glyphicon-lock"></i></button>
-                        </div>
-                        <div class="col-md-3">
-                            <button type="button" class="btn btn-warning btn-circle btn-lg"><i class="glyphicon glyphicon-stop"></i></button>
-                        </div>
-                        <div class="col-md-3">
-                            <button type="button" class="btn btn-info btn-circle btn-lg"><i class="glyphicon glyphicon-repeat"></i></button>
-                        </div>
-                        <div class="col-md-3">
-                            <button type="button" class="btn btn-success btn-circle btn-lg"><i class="glyphicon glyphicon-ok"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <h3>Location Details</h3>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="col-md-6">
-                            <div class="form-group"></div>
-                            <?php echo form_label('Location Name', 'workorder_priority', array('class' => 'control-label')); ?>
-                            <?php echo form_input('location_name', set_value('location_name', $workorder->title), array('class' => 'form-control', 'placeholder' => 'Location Name*')) ?>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group"></div>
-                            <?php echo form_label('Location Address', 'workorder_priority', array('class' => 'control-label')); ?>
-                            <?php echo form_input('location_address', set_value('location_address', $workorder->title), array('class' => 'form-control', 'placeholder' => 'Location Address*')) ?>
-                        </div>
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <div class="tabbable" id="tabs-145895">
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#panel-168166" data-toggle="tab">Details</a>
+                            </li>
+                            <li>
+                                <a href="#panel-403986" data-toggle="tab">Updates</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="panel-168166">
+                                <h3>Add Create your first asset and organize by location in the "Assets & Locations" tab.</h3>
+                                <div class="row clearfix">
+                                    <div class="col-md-12">
+                                        <div class="row clearfix">
+                                            <div class="col-md-3">
+                                                <a href="#" class="btn btn-danger btn-circle btn-lg"><i class="glyphicon glyphicon-lock"></i></a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a href="#" class="btn btn-warning btn-circle btn-lg"><i class="glyphicon glyphicon-stop"></i></a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a href="#" class="btn btn-info btn-circle btn-lg"><i class="glyphicon glyphicon-repeat"></i></a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a href="#" class="btn btn-success btn-circle btn-lg"><i class="glyphicon glyphicon-ok"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 column">
+                                        <h3>Location Details</h3>
+                                        <table class="table table-responsive table-bordered">
+                                            <tr>
+                                                <td>Location Address</td>
+                                                <td>Location Address 1</td>
+                                            </tr>
+                                        </table>
 
-                    </div>
-                </div>
-                <h3>Work Order Details</h3>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <?php echo form_label('Work Order #', 'workorder_priority', array('class' => 'control-label')); ?>
-                                <?php echo form_input('Workorder_number', set_value('location_name', $workorder->id), array('class' => 'form-control', 'placeholder' => '001*')) ?>
-                            </div>
-                            <div class="form-group">
-                                <?php echo form_label('Date Created', 'workorder_priority', array('class' => 'control-label')); ?>
-                                <?php echo form_input(array('type' => 'date', 'name' => 'workorder_datecreated', 'value' => set_value('workorder_datecreated', $workorder->date_created), 'class' => 'form-control')) ?>
-                            </div>
-                            <div class="form-group">
-                                <?php echo form_label('Assign To', 'workorder_priority', array('class' => 'control-label')); ?>
-                                <?php echo form_dropdown('workorder_worker', set_value('workorder_worker', $workorder->category_id), TRUE, array('class' => 'form-control')) ?>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <?php echo form_label('Due Date', 'workorder_priority', array('class' => 'control-label')); ?>
-                                <?php echo form_input(array('type' => 'date', 'name' => 'workorder_duedate', 'value' => set_value('workorder_duedate', $workorder->end_date), 'class' => 'form-control')) ?>
-                            </div>
-                            <div class="form-group">
-                                <?php echo form_label('Assign by', 'workorder_priority', array('class' => 'control-label')); ?>
-                                <?php echo form_dropdown('workorder_worker', set_value('workorder_worker', $workorder->category_id), TRUE, array('class' => 'form-control')) ?>
-                            </div>
-                            <div class="form-group">
-                                <?php echo form_label('Last Date', 'workorder_priority', array('class' => 'control-label')); ?>
-                                <?php echo form_input(array('type' => 'date', 'name' => 'workorder_duedate', 'value' => set_value('workorder_Datemodified', $workorder->date_modified), 'class' => 'form-control')) ?>
-                            </div>
-                        </div>
-                    </div>
-                    <h4>Part Details</h4>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    
+                                        <h3>Tasks</h3>
+
+                                        <table class="table table-responsive table-bordered">
+                                            <tr>
+                                                <td>Task Name 1</td>
+                                                <td>Comments Button info button</td>
+                                                <td>Done checkbox</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Task Name 2</td>
+                                                <td>Comments Button info button</td>
+                                                <td>Done Checkbox</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Task Name 3</td>
+                                                <td>Comments Button info button</td>
+                                                <td>Done Checkbox</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <?php echo form_label('Assign Staff', 'workorder_priority', array('class' => 'control-label')); ?>
+                                        <?php echo form_dropdown('workorder_worker', set_value('workorder_worker', $workorder->category_id), TRUE, array('class' => 'form-control')) ?>
+                                    </div>
+                                    <div class="form-group">
+                                        <?php echo form_dropdown('workorder_team', array('Select Team', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'form-control')) ?>
+                                    </div>
+                                    <div class="form-group">
+                                        <?php echo form_label('Assign Due Date', 'workorder_priority', array('class' => 'control-label')); ?>
+                                        <?php echo form_input(array('type' => 'date', 'name' => 'workorder_duedate', 'value' => set_value('workorder_duedate', $workorder->start_date), 'class' => 'form-control')) ?>
+                                    </div>
+                                    <div class="form-group">
+                                        <?php echo form_label('End Due Date', 'workorder_priority', array('class' => 'control-label')); ?>
+                                        <?php echo form_input(array('type' => 'date', 'name' => 'workorder_end_duedate', 'value' => set_value('workorder_end_duedate', $workorder->end_date), 'class' => 'form-control')) ?>
+                                    </div>
+                                    <div class="form-group">
+                                        <?php echo form_dropdown('workorder_repeating_schedule', array('Select Repeating Schedule', '1' => 'Daily', '2' => 'Week days', '3' => 'Every Week', '4' => 'Every Two Weeks', '5' => 'Every Month', '6' => 'Every Year'), set_value('workorder_repeating_schedule', $workorder->repeating_schedule), array('class' => 'form-control')) ?>
+                                    </div>
+                                    <div class="form-group">
+                                        <?php echo form_label('Requires Signature', 'workorder_requires_signature', array('class' => 'control-label')); ?>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="switch">
+                                            <input type="checkbox" name="workorder_requires_signature" <?php echo set_value('workorder_requires_signature', $workorder->requires_sign) == 1 ? 'checked' : '' ?>>
+                                            <div class="slider round"></div>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <?php echo form_submit("Save", "Save", array('class' => 'btn btn-primary pull-right')); ?>
+                                    </div>
+                                    <?php echo form_close(); ?>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                                    <?php echo form_dropdown('workorder_location', array('Select Main Worker', '1' => 'Location1', '2' => 'Location2', '3' => 'Loacation3'), set_value('workorder_location', $workorder->location_id), array('class' => 'form-control')) ?>
-                                </div>
-                                <div class="form-group">
-                                    <?php echo form_label('Assign Staff', 'workorder_priority', array('class' => 'control-label')); ?>
-                                    <?php echo form_dropdown('workorder_worker', set_value('workorder_worker', $workorder->category_id), TRUE, array('class' => 'form-control')) ?>
-                                </div>
-                                <div class="form-group">
-                                    <?php echo form_dropdown('workorder_team', array('Select Team', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'form-control')) ?>
-                                </div>
-                                <div class="form-group">
-                                    <?php echo form_label('Assign Due Date', 'workorder_priority', array('class' => 'control-label')); ?>
-                                    <?php echo form_input(array('type' => 'date', 'name' => 'workorder_duedate', 'value' => set_value('workorder_duedate', $workorder->start_date), 'class' => 'form-control')) ?>
-                                </div>
-                                <div class="form-group">
-                                    <?php echo form_label('End Due Date', 'workorder_priority', array('class' => 'control-label')); ?>
-                                    <?php echo form_input(array('type' => 'date', 'name' => 'workorder_end_duedate', 'value' => set_value('workorder_end_duedate', $workorder->end_date), 'class' => 'form-control')) ?>
-                                </div>
-                                <div class="form-group">
-                                    <?php echo form_dropdown('workorder_repeating_schedule', array('Select Repeating Schedule', '1' => 'Daily', '2' => 'Week days', '3' => 'Every Week', '4' => 'Every Two Weeks', '5' => 'Every Month', '6' => 'Every Year'), set_value('workorder_repeating_schedule', $workorder->repeating_schedule), array('class' => 'form-control')) ?>
-                                </div>
-                                <div class="form-group">
-                                    <?php echo form_label('Requires Signature', 'workorder_requires_signature', array('class' => 'control-label')); ?>
-                                </div>
-                                <div class="form-group">
-                                    <label class="switch">
-                                        <input type="checkbox" name="workorder_requires_signature" <?php echo set_value('workorder_requires_signature', $workorder->requires_sign) == 1 ? 'checked' : '' ?>>
-                                        <div class="slider round"></div>
-                                    </label>
-                                </div>
-                                <div class="form-group">
-                                    <?php echo form_submit("Save", "Save", array('class' => 'btn btn-primary pull-right')); ?>
-                                </div>
-                                <?php echo form_close(); ?>
+                            <div class="tab-pane" id="panel-403986">
+                                <p>
+                                    Howdy, I'm in Section 2.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <a href="<?php echo site_url('/WorkOrders/add'); ?>" class="btn paper-button paper-floating-action-button">
-                <i class="glyphicon glyphicon-plus"></i>
-            </a>
+
         </div>
-        <?php $this->load->view('blocks/footer'); ?>
+    </div>
+</div>
+</div>
+<a href="<?php echo site_url('/WorkOrders/add'); ?>" class="btn paper-button paper-floating-action-button">
+    <i class="glyphicon glyphicon-plus"></i>
+</a>
+</div>
+<?php $this->load->view('blocks/footer'); ?>
