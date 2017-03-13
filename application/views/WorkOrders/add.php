@@ -58,7 +58,7 @@
                     </div>
                     <div class="form-group">
                         <label class="switch">
-                            <input type="checkbox" name="workorder_requires_signature" checked>
+                            <input type="checkbox" name="workorder_requires_signature" value="1" checked>
                             <div class="slider round"></div>
                         </label>
                     </div>
