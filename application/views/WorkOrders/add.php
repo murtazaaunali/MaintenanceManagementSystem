@@ -51,6 +51,9 @@
                         <?php echo form_dropdown('workorder_repeating_schedule', array('Select Repeating Schedule', 'daily' => 'Daily', 'weekdays' => 'Week days', 'every-week' => 'Every Week', 'every-two-weeks' => 'Every Two Weeks', 'every-month' => 'Every Month', 'every-year' => 'Every Year'), FALSE, array('class' => 'form-control')) ?>
                     </div>
                     <div class="form-group">
+                        <?php echo form_label('Tasks', 'workorder_tasks', array('class' => 'control-label')); ?>
+                    </div>
+                    <div class="form-group">
                         <?php echo form_label('Requires Signature', 'workorder_requires_signature', array('class' => 'control-label')); ?>
                     </div>
                     <div class="form-group">

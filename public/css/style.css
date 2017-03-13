@@ -1,12 +1,12 @@
 
 @font-face {
     font-family: HelveticaNeue;
-    src: url("../fonts/HelveticaNeueBd.ttf") format("truetype");
+    src: url("../fonts/Lato-Black.ttf") format("truetype");
 }
 
 @font-face {
     font-family: HelveticaNeueBold;
-    src: url("../fonts/HelveticaNeueBold.ttf") format("truetype");
+    src: url("../fonts/Lato-Bold.ttf") format("truetype");
 }
 
 body {
@@ -479,7 +479,7 @@ section{
     text-decoration: none;
     padding: 7px 20px;
     font-family: HelveticaNeue;
-    font-weight: bold;
+/*    font-weight: bold;*/
 }
 .navbar-inverse .navbar-nav>.active>a {
     background: transparent;
