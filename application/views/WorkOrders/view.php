@@ -50,44 +50,11 @@
         <div class="panel-body">
             <h3>Test Tasks</h3>
             <div class="row clearfix">
-                <div class="col-md-12 column">
-                    <div class="tabbable" id="tabs-145895">
-                        <ul class="nav nav-tabs">
-                            <li class="active">
-                                <a href="#panel-168166" data-toggle="tab">Details</a>
-                            </li>
-                            <li>
-                                <a href="#panel-403986" data-toggle="tab">Updates</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="panel-168166">
-                                <h3>Add Create your first asset and organize by location in the "Assets & Locations" tab.</h3>
-                                <div class="row clearfix">
-                                    <div class="col-md-12">
-                                        <div class="row clearfix">
-                                            <div class="col-md-3">
-                                                <a href="#" class="btn btn-danger btn-circle btn-lg"><i class="glyphicon glyphicon-lock"></i></a>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <a href="#" class="btn btn-warning btn-circle btn-lg"><i class="glyphicon glyphicon-stop"></i></a>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <a href="#" class="btn btn-info btn-circle btn-lg"><i class="glyphicon glyphicon-repeat"></i></a>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <a href="#" class="btn btn-success btn-circle btn-lg"><i class="glyphicon glyphicon-ok"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 column">
-                                        <h3>Location Details</h3>
-                                        <table class="table table-responsive table-bordered">
-                                            <tr>
-                                                <td>Location Address</td>
-                                                <td>Location Address 1</td>
-                                            </tr>
-                                        </table>
+                <div class="col-md-12">
+                    <div class="row clearfix">
+                        <div class="col-md-3">
+                            <a href="#" class="btn btn-danger btn-circle btn-lg"><i class="glyphicon glyphicon-lock"></i></a>
+                        </div>
 
                         <div class="col-md-3">
                             <a href="#" class="btn btn-info btn-circle btn-lg"><i class="glyphicon glyphicon-repeat"></i></a>
@@ -169,6 +136,10 @@
                                                                 <td>Task Name 3</td>
                                                             </tr>
                                                             <tr>
+                                                                <td> <input class="btn btn-danger" type="button" value="Incomplete" onclick="">
+                                                                    <input class="btn btn-warning" type="button" value="On Hold" onclick="">
+                                                                    <input class="btn btn-primary" type="button" value="In Progress" onclick="">
+                                                                    <input class="btn btn-success" type="button" value="Completed" onclick=""></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>User Assigned:</td>
@@ -201,6 +172,7 @@
                                                         <td>Time:</td>
                                                     </tr>
                                                     <tr>
+                                                        <td>  <input class="btn btn-success" type="button" value="Start timer" onclick=""></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Cost:</td>
