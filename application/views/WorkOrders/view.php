@@ -50,25 +50,7 @@
         <div class="panel-body">
             <h3>Test Tasks</h3>
             <div class="row clearfix">
-                <div class="col-md-12">
-                    <div class="row clearfix">
-                        <div class="col-md-3">
-                            <a href="#" class="btn btn-danger btn-circle btn-lg"><i class="fa fa-lock"></i></a>
-                            <a href="#" class="btn btn-danger btn-circle btn-lg"><i class="fa fa-unlock-alt"></i></a>
-                        </div>
 
-                        <div class="col-md-3">
-                            <a href="#" class="btn btn-info btn-circle btn-lg"><i class="fa fa-repeat"></i></a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="#" class="btn btn-warning btn-circle btn-lg"><i class="fa fa-stop"></i></a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="#" class="btn btn-success btn-circle btn-lg"><i class="fa fa-ok"></i></a>
-                            <a href="#" class="btn btn-success btn-circle btn-lg"><i class="fa fa-lock"></i></a>
-                        </div>
-                    </div>
-                </div>
                 <div class="row clearfix">
                     <div class="col-md-12 column">
                         <div class="tabbable" id="tabs-145895">
@@ -83,6 +65,23 @@
                             <div class="tab-content">
                                 <div class="tab-pane active" id="panel-168166">
                                     <div class="row clearfix">
+                                        <div class="col-md-12">
+                                            <div class="row clearfix">
+                                                <div class="col-md-3">
+                                                    <a href="#" class="btn btn-danger btn-circle btn-lg"><i class="fa fa-unlock-alt"></i></a>
+                                                </div>
+
+                                                <div class="col-md-3">
+                                                    <a href="#" class="btn btn-info btn-circle btn-lg"><i class="fa fa-repeat"></i></a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <a href="#" class="btn btn-warning btn-circle btn-lg"><i class="fa fa-stop"></i></a>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <a href="#" class="btn btn-success btn-circle btn-lg"><i class="fa fa-lock"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="col-md-12 column">
                                             <h3>Location Details</h3>
                                             <table class="table table-responsive table-bordered">
