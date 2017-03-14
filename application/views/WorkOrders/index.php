@@ -10,31 +10,57 @@
                         <li class="timeline-item first-item">
                             <ul class="list-unstyled tasks-list">
                                 <?php foreach ($workorders as $workorder): ?>
-                                    <li class="task-item show-pointer active">
-                                        <div class="task-item-container task-open">
-                                            <div class="media">
-                                                <div class="media-body">
-                                                    <h2 class="media-heading">
-                                                        <span title="Work Order Priority" class="priority"><?php echo str_repeat("!", $workorder->priority); ?></span>
-                                                        <?php echo substr($workorder->title, 0, 85); ?>...
-                                                    </h2>
-                                                    <div class="task-meta-data">
-                                                        <span class="task-number">#<?php echo $workorder->id; ?></span>
-                                                        <span class="time-literal"><?php echo $workorder->date_created; ?></span>
-                                                        <span class="updates line-icon">No. of Task</span>
-                                                        <span class="ml-10">Location / Client</span>
-                                                        <span class="ml-10 grey-text"> </span>
-                                                        <span class="ml-10 assigned-initial">Username Initials Assigned</span>
+                                    <li class="task-item show-pointer">
+                                        <a href="<?php echo site_url('WorkOrders/view/' . $workorder->id); ?>">
+                                            <div class="task-item-container task-open">
+                                                <div class="media">
+                                                    <div class="media-body">
+                                                        <h2 class="media-heading">
+                                                            <span title="Work Order Priority" class="priority"><?php echo str_repeat("!", $workorder->priority); ?></span>
+                                                            <?php echo substr($workorder->title, 0, 85); ?>...
+                                                        </h2>
+                                                        <div class="task-meta-data">
+                                                            <span class="task-number">#<?php echo $workorder->id; ?></span>
+                                                            <span class="time-literal"><?php echo $workorder->date_created; ?></span>
+                                                            <span class="updates line-icon">No. of Task</span>
+                                                            <span class="ml-10">Location / Client</span>
+                                                            <span class="ml-10 grey-text"> </span>
+                                                            <span class="ml-10 assigned-initial">Username Initials Assigned</span>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="media-right">
-                                                    <div class="task-status-box">
-                                                        <span class="status-circle task-open"><i class="glyphicon glyphicon-lock"></i></span>
-                                                        <span class="status-name">Open</span>
+                                                    <div class="media-right">
+                                                        <div class="task-status-box">
+                                                            <?php
+                                                            switch ($workorder->status) {
+                                                                case "0":
+                                                                    echo '<span class="status-circle task-complete"><i class="glyphicon glyphicon-ok"></i></span>
+                                                        <span class="status-name">Closed</span>';
+                                                                    break;
+
+                                                                case "1":
+                                                                    echo '<span class="status-circle task-open"><i class="glyphicon glyphicon-lock"></i></span>
+                                                        <span class="status-name">Open</span>';
+                                                                    break;
+
+                                                                case "2":
+                                                                    echo '<span class="status-circle task-progress"><i class="glyphicon glyphicon-repeat"></i></span>
+                                                        <span clas="status-name">In progress</span>';
+                                                                    break;
+
+                                                                case "3":
+                                                                    echo '<span class="status-circle task-hold"><i class="glyphicon glyphicon-stop"></i></span>
+                                                        <span class="status-name">On hold</span>';
+                                                                    break;
+
+                                                                default :
+                                                                    echo "";
+                                                            }
+                                                            ?>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </a>
                                     </li>
                                 <?php endforeach; ?>
                             </ul>
