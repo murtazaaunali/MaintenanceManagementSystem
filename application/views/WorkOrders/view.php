@@ -29,7 +29,7 @@
                                                 </div>
                                                 <div class="media-right">
                                                     <div class="task-status-box">
-                                                        <span class="status-circle task-open"><i class="glyphicon glyphicon-lock"></i></span>
+                                                        <span class="status-circle task-open"><i class="fa fa-lock"></i></span>
                                                         <span class="status-name">Open</span>
                                                     </div>
                                                 </div>
@@ -50,21 +50,20 @@
         <div class="panel-body">
             <h3>Test Tasks</h3>
             <div class="row clearfix">
-<<<<<<< HEAD
                 <div class="col-md-12">
                     <div class="row clearfix">
                         <div class="col-md-3">
-                            <a href="#" class="btn btn-danger btn-circle btn-lg"><i class="glyphicon glyphicon-lock"></i></a>
+                            <a href="#" class="btn btn-danger btn-circle btn-lg"><i class="fa fa-lock"></i></a>
                         </div>
 
                         <div class="col-md-3">
-                            <a href="#" class="btn btn-info btn-circle btn-lg"><i class="glyphicon glyphicon-repeat"></i></a>
+                            <a href="#" class="btn btn-info btn-circle btn-lg"><i class="fa fa-repeat"></i></a>
                         </div>
                         <div class="col-md-3">
-                            <a href="#" class="btn btn-warning btn-circle btn-lg"><i class="glyphicon glyphicon-stop"></i></a>
+                            <a href="#" class="btn btn-warning btn-circle btn-lg"><i class="fa fa-stop"></i></a>
                         </div>
                         <div class="col-md-3">
-                            <a href="#" class="btn btn-success btn-circle btn-lg"><i class="glyphicon glyphicon-ok"></i></a>
+                            <a href="#" class="btn btn-success btn-circle btn-lg"><i class="fa fa-ok"></i></a>
                         </div>
                     </div>
                 </div>
@@ -219,7 +218,7 @@
     </div>
 </div>
 <a href="<?php echo site_url('/WorkOrders/add'); ?>" class="btn paper-button paper-floating-action-button">
-    <i class="glyphicon glyphicon-plus"></i>
+    <i class="fa fa-plus"></i>
 </a>
 </div>
 <?php $this->load->view('blocks/footer'); ?>
