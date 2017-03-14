@@ -53,7 +53,11 @@
                 <div class="col-md-12">
                     <div class="row clearfix">
                         <div class="col-md-3">
+<<<<<<< HEAD
                             <a href="#" class="btn btn-danger btn-circle btn-lg"><i class="fa fa-lock"></i></a>
+=======
+                            <a href="#" class="btn btn-danger btn-circle btn-lg"><i class="fa fa-unlock-alt"></i></a>
+>>>>>>> origin/master
                         </div>
 
                         <div class="col-md-3">
@@ -63,7 +67,11 @@
                             <a href="#" class="btn btn-warning btn-circle btn-lg"><i class="fa fa-stop"></i></a>
                         </div>
                         <div class="col-md-3">
+<<<<<<< HEAD
                             <a href="#" class="btn btn-success btn-circle btn-lg"><i class="fa fa-ok"></i></a>
+=======
+                            <a href="#" class="btn btn-success btn-circle btn-lg"><i class="fa fa-lock"></i></a>
+>>>>>>> origin/master
                         </div>
                     </div>
                 </div>
