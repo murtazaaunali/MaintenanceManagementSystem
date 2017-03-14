@@ -35,22 +35,22 @@ class WorkOrders extends CI_Controller {
         ;
         $this->load->view('WorkOrders/Add', $this->data);
         if ($this->input->post()) {
-            /* $this->Workorders_m->insert(array(
-              'title' => $this->input->post('workorder_title'),
-              'description' => $this->input->post('workorder_description'),
-              'priority' => $this->input->post('workorder_priority'),
-              'location_id' => $this->input->post('workorder_location'),
-              'category_id' => $this->input->post('workorder_category'),
-              'worker_id' => $this->input->post('workorder_worker'),
-              'team_id' => $this->input->post('workorder_team'),
-              'start_date' => $this->input->post('workorder_duedate'),
-              'end_date' => $this->input->post('workorder_end_duedate'),
-              'requires_sign' => $this->input->post('workorder_requires_signature'),
-              'repeating_schedule' => $this->input->post('workorder_repeating_schedule'),
-              'status' => '1',
-              'modified_by' => '1'
-              )); */
-            print_r($this->input->post());
+            $this->Workorders_m->insert(array(
+                'title' => $this->input->post('workorder_title'),
+                'description' => $this->input->post('workorder_description'),
+                'priority' => $this->input->post('workorder_priority'),
+                'location_id' => $this->input->post('workorder_location'),
+                'category_id' => $this->input->post('workorder_category'),
+                'worker_id' => $this->input->post('workorder_worker'),
+                'team_id' => $this->input->post('workorder_team'),
+                'start_date' => $this->input->post('workorder_duedate'),
+                'end_date' => $this->input->post('workorder_end_duedate'),
+                'requires_sign' => $this->input->post('workorder_requires_signature'),
+                'repeating_schedule' => $this->input->post('workorder_repeating_schedule'),
+                'status' => '1',
+                'modified_by' => '1'
+            ));
+            redirect(site_url('Workorders/index'));
         }
     }
 

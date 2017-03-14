@@ -41,11 +41,11 @@
                     </div>
                     <div class="form-group">
                         <?php echo form_label('Assign Due Date', 'workorder_priority', array('class' => 'control-label')); ?>
-                        <?php echo form_input(array('type' => 'date', 'name' => 'workorder_duedate', 'class' => 'form-control')) ?>
+                        <?php echo form_input(array('type' => 'datetime', 'name' => 'workorder_duedate', 'class' => 'form-control')) ?>
                     </div>
                     <div class="form-group">
                         <?php echo form_label('End Due Date', 'workorder_priority', array('class' => 'control-label')); ?>
-                        <?php echo form_input(array('type' => 'date', 'name' => 'workorder_end_duedate', 'class' => 'form-control')) ?>
+                        <?php echo form_input(array('type' => 'datetime', 'name' => 'workorder_end_duedate', 'class' => 'form-control')) ?>
                     </div>
                     <div class="form-group">
                         <?php echo form_dropdown('workorder_repeating_schedule', array('Select Repeating Schedule', 'daily' => 'Daily', 'weekdays' => 'Week days', 'every-week' => 'Every Week', 'every-two-weeks' => 'Every Two Weeks', 'every-month' => 'Every Month', 'every-year' => 'Every Year'), FALSE, array('class' => 'form-control')) ?>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="form-group">
                         <label class="switch">
-                            <input type="checkbox" name="workorder_requires_signature" checked>
+                            <input type="checkbox" name="workorder_requires_signature" value="1" checked>
                             <div class="slider round"></div>
                         </label>
                     </div>

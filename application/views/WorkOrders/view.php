@@ -50,6 +50,7 @@
         <div class="panel-body">
             <h3>Test Tasks</h3>
             <div class="row clearfix">
+<<<<<<< HEAD
                 <div class="col-md-12">
                     <div class="row clearfix">
                         <div class="col-md-3">
@@ -91,6 +92,7 @@
                                             </table>
 
                                             <h3>Tasks</h3>
+
 
                                             <table class="table table-responsive table-bordered">
                                                 <tr>

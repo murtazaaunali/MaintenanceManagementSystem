@@ -11,7 +11,9 @@
         <meta name="author" content="LayoutIt!">
 
         <link href="<?php echo site_url(); ?>/public/css/bootstrap.min.css" rel="stylesheet">
+        <link href="<?php echo site_url(); ?>/public/css/font-awesome.min.css" rel="stylesheet">
         <link href="<?php echo site_url(); ?>/public/css/style.css" rel="stylesheet">
+        
 
     </head>
     <body>

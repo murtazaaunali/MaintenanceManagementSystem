@@ -148,6 +148,12 @@ body {
 .timeline .timeline-item .task-item .task-item-container.task-open .media .media-right {
     color: #0e713b;
 }
+.timeline .timeline-item .task-item .task-item-container.task-progress .media .media-right {
+    color: #607A8B;
+}
+.timeline .timeline-item .task-item .task-item-container.task-hold .media .media-right {
+    color: #ffc107;
+}
 .timeline .timeline-item .task-item .media .media-right {
     width: 63px;
     position: absolute;
@@ -173,6 +179,18 @@ body {
     color: #0e713b;
     background: currentColor;
 }
+.status-circle.task-hold {
+    color: #ffc107;
+    background: currentColor;
+}
+.status-circle.task-progress {
+    color: #607A8B;
+    background: currentColor;
+}
+.status-circle.task-complete {
+    color: #00C04F;
+    background: currentColor;
+}
 .status-circle {
     width: 38px;
     height: 38px;
@@ -184,6 +202,7 @@ body {
 .status-circle i {
     color: #FFFFFF;
 }
+
 .task-status-box .status-name {
     display: block;
     margin-top: 3px;
