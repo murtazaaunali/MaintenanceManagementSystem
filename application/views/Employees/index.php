@@ -19,7 +19,7 @@
                                             <div class="media-right">
                                                 <div class="task-status-box">
                                                     <a href="<?php echo site_url('Employees/edit'); ?>">
-                                                        <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
+                                                        <span class="status-circle task-open"><i class="fa fa-pencil"></i></span>
                                                     </a>
                                                 </div>
                                             </div>
@@ -37,7 +37,7 @@
                                             <div class="media-right">
                                                 <div class="task-status-box">
                                                     <a href="<?php echo site_url('Employees/edit'); ?>">
-                                                    <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
+                                                    <span class="status-circle task-open"><i class="fa fa-pencil"></i></span>
                                                     </a>
                                                 </div>
                                             </div>
@@ -55,7 +55,7 @@
                                             <div class="media-right">
                                                 <div class="task-status-box">
                                                     <a href="<?php echo site_url('Employees/edit'); ?>">
-                                                    <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
+                                                    <span class="status-circle task-open"><i class="fa fa-pencil"></i></span>
                                                     </a>
                           
                                                 </div>
@@ -74,7 +74,7 @@
                                             <div class="media-right">
                                                 <div class="task-status-box">
                                                     <a href="<?php echo site_url('Employees/edit'); ?>">
-                                                    <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
+                                                    <span class="status-circle task-open"><i class="fa fa-pencil"></i></span>
                                                     </a>
                                                 </div>
                                             </div>
@@ -91,10 +91,10 @@
 </div>
 <div class="col-md-6">
 
-    <h1 class="text-center"><i class="glyphicon glyphicon-repeat"></i> Start here</h1>
+    <h1 class="text-center"><i class="fa fa-repeat"></i> Start here</h1>
     <h2 class="text-center">Begin by selecting a Work Order</h2>
     <a href="<?php echo site_url('/Employees/add'); ?>" class="btn paper-button paper-floating-action-button">
-        <i class="glyphicon glyphicon-plus"></i>
+        <i class="fa fa-plus"></i>
     </a>
 </div>
 <?php $this->load->view('blocks/footer'); ?>

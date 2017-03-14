@@ -28,7 +28,7 @@
                                                 </div>
                                                 <div class="media-right">
                                                     <div class="task-status-box">
-                                                        <span class="status-circle task-open"><i class="glyphicon glyphicon-lock"></i></span>
+                                                        <span class="status-circle task-open"><i class="fa fa-lock"></i></span>
                                                         <span class="status-name">Open</span>
                                                     </div>
                                                 </div>

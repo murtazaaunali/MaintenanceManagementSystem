@@ -19,7 +19,7 @@
                                             <div class="media-right">
                                                 <div class="task-status-box">
                                                     <a href="<?php echo site_url('Requests/edit'); ?>">
-                                                        <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
+                                                        <span class="status-circle task-open"><i class="fa fa-pencil"></i></span>
                                                     </a>
                                                 </div>
                                             </div>
@@ -37,7 +37,7 @@
                                             <div class="media-right">
                                                 <div class="task-status-box">
                                                     <a href="<?php echo site_url('Requests/edit'); ?>">
-                                                    <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
+                                                    <span class="status-circle task-open"><i class="fa fa-pencil"></i></span>
                                                     </a>
                                                 </div>
                                             </div>
@@ -55,7 +55,7 @@
                                             <div class="media-right">
                                                 <div class="task-status-box">
                                                     <a href="<?php echo site_url('Requests/edit'); ?>">
-                                                    <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
+                                                    <span class="status-circle task-open"><i class="fa fa-pencil"></i></span>
                                                     </a>
                           
                                                 </div>
@@ -74,7 +74,7 @@
                                             <div class="media-right">
                                                 <div class="task-status-box">
                                                     <a href="<?php echo site_url('Requests/edit'); ?>">
-                                                    <span class="status-circle task-open"><i class="glyphicon glyphicon-pencil"></i></span>
+                                                    <span class="status-circle task-open"><i class="fa fa-pencil"></i></span>
                                                     </a>
                                                 </div>
                                             </div>

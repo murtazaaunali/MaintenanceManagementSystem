@@ -28,7 +28,7 @@
     </div>
 </div>
 <div class="col-md-6">
-    <h1 class="text-center"><i class="glyphicon glyphicon-repeat"></i> Start here</h1>
+    <h1 class="text-center"><i class="fa fa-repeat"></i> Start here</h1>
     <h2 class="text-center">Begin by selecting a Work Order</h2>
     <div class="row clearfix">
         <div class="col-md-12 column">

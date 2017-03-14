@@ -33,22 +33,22 @@
                                                             <?php
                                                             switch ($workorder->status) {
                                                                 case "0":
-                                                                    echo '<span class="status-circle task-complete"><i class="glyphicon glyphicon-ok"></i></span>
+                                                                    echo '<span class="status-circle task-complete"><i class="fa fa-ok"></i></span>
                                                         <span class="status-name">Closed</span>';
                                                                     break;
 
                                                                 case "1":
-                                                                    echo '<span class="status-circle task-open"><i class="glyphicon glyphicon-lock"></i></span>
+                                                                    echo '<span class="status-circle task-open"><i class="fa fa-lock"></i></span>
                                                         <span class="status-name">Open</span>';
                                                                     break;
 
                                                                 case "2":
-                                                                    echo '<span class="status-circle task-progress"><i class="glyphicon glyphicon-repeat"></i></span>
+                                                                    echo '<span class="status-circle task-progress"><i class="fa fa-repeat"></i></span>
                                                         <span clas="status-name">In progress</span>';
                                                                     break;
 
                                                                 case "3":
-                                                                    echo '<span class="status-circle task-hold"><i class="glyphicon glyphicon-stop"></i></span>
+                                                                    echo '<span class="status-circle task-hold"><i class="fa fa-stop"></i></span>
                                                         <span class="status-name">On hold</span>';
                                                                     break;
 
@@ -72,10 +72,10 @@
     </div>
 </div>
 <div class="col-md-6">
-    <h1 class="text-center"><i class="glyphicon glyphicon-repeat"></i> Start here</h1>
+    <h1 class="text-center"><i class="fa fa-repeat"></i> Start here</h1>
     <h2 class="text-center">Begin by selecting a Work Order</h2>
     <a href="<?php echo site_url('/WorkOrders/add'); ?>" class="btn paper-button paper-floating-action-button">
-        <i class="glyphicon glyphicon-plus"></i>
+        <i class="fa fa-plus"></i>
     </a>
 </div>
 <?php $this->load->view('blocks/footer'); ?>
