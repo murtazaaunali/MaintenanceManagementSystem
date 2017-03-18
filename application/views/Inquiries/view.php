@@ -9,13 +9,13 @@
                     <ul class="timeline list-unstyled">
                         <li class="timeline-item first-item">
                             <ul class="list-unstyled tasks-list">
-                                <?php foreach ($Inquiries as $inquiry): ?>
+                                <?php foreach ($inquiries as $inquiry): ?>
                                     <li class="task-item show-pointer active">
                                         <div class="task-item-container task-open">
                                             <div class="media">
                                                 <div class="media-body">
                                                     <h2 class="media-heading">
-                                                        <span title="Work Order Priority" class="priority"><?php echo str_repeat("!", $inquiry->priority); ?></span>
+                                 
                                                         <?php echo substr($inquiry->title, 0, 85); ?>...
                                                     </h2>
                                                     <div class="task-meta-data">
