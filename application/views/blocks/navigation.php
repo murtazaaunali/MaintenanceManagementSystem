@@ -13,22 +13,25 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li <?php if($this->uri->segment(1) == 'WorkOrders') {?> class="active" <?php } ?>>
+                <li <?php if ($this->uri->segment(1) == 'Iquiries') { ?> class="active" <?php } ?>>
+                    <a href="<?php echo site_url('Inquiries'); ?>">Inquiries</a>
+                </li>
+                <li <?php if ($this->uri->segment(1) == 'WorkOrders') { ?> class="active" <?php } ?>>
                     <a href="<?php echo site_url('WorkOrders'); ?>">Work Orders</a>
                 </li>
-                <li <?php if($this->uri->segment(1) == 'Dashboard') {?> class="active" <?php } ?>>
+                <li <?php if ($this->uri->segment(1) == 'Dashboard') { ?> class="active" <?php } ?>>
                     <a href="<?php echo site_url('Dashboard'); ?>">Dashboard</a>
                 </li>
-                <li <?php if($this->uri->segment(1) == 'Requests') {?> class="active" <?php } ?>>
+                <li <?php if ($this->uri->segment(1) == 'Requests') { ?> class="active" <?php } ?>>
                     <a href="<?php echo site_url('Requests'); ?>">Requests</a>
                 </li>
-                <li <?php if($this->uri->segment(1) == 'Locations') {?> class="active" <?php } ?>>
+                <li <?php if ($this->uri->segment(1) == 'Locations') { ?> class="active" <?php } ?>>
                     <a href="<?php echo site_url('Locations'); ?>">Locations</a>
                 </li>
-                <li <?php if($this->uri->segment(1) == 'Employees') {?> class="active" <?php } ?>>
+                <li <?php if ($this->uri->segment(1) == 'Employees') { ?> class="active" <?php } ?>>
                     <a href="<?php echo site_url('Employees'); ?>">Employees</a>
                 </li>
-                <li <?php if($this->uri->segment(1) == 'Teams') {?> class="active" <?php } ?>>
+                <li <?php if ($this->uri->segment(1) == 'Teams') { ?> class="active" <?php } ?>>
                     <a href="<?php echo site_url('Teams'); ?>">Teams</a>
                 </li>
             </ul>

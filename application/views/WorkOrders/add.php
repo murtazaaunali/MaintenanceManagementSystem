@@ -52,6 +52,13 @@
                     </div>
                     <div class="form-group">
                         <?php echo form_label('Tasks', 'workorder_tasks', array('class' => 'control-label')); ?>
+                        <table class="table">
+                            <tr>
+                                <td><?php echo form_dropdown('workorder_task_type',$workorder_task_types , FALSE, array('class' => 'form-control')); ?></td>
+                                <td><?php echo form_input('workorder_task', '', array('class' => 'form-control', 'placeholder' => 'Task')); ?></td>
+                                <td><?php echo form_checkbox('newsletter', 'accept', TRUE); ?></td>
+                            </tr>
+                        </table>
                     </div>
                     <div class="form-group">
                         <?php echo form_label('Requires Signature', 'workorder_requires_signature', array('class' => 'control-label')); ?>

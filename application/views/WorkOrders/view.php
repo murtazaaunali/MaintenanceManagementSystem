@@ -67,17 +67,17 @@
                                     <div class="row clearfix">
                                         <div class="col-md-12">
                                             <div class="row clearfix">
-                                                <div class="col-md-3">
+                                                <div class="col-xs-3">
                                                     <a href="#" class="btn btn-danger btn-circle btn-lg"><i class="fa fa-unlock-alt"></i></a>
                                                 </div>
 
-                                                <div class="col-md-3">
+                                                <div class="col-xs-3">
                                                     <a href="#" class="btn btn-info btn-circle btn-lg"><i class="fa fa-repeat"></i></a>
                                                 </div>
-                                                <div class="col-md-3">
+                                                <div class="col-xs-3">
                                                     <a href="#" class="btn btn-warning btn-circle btn-lg"><i class="fa fa-stop"></i></a>
                                                 </div>
-                                                <div class="col-md-3">
+                                                <div class="col-xs-3">
                                                     <a href="#" class="btn btn-success btn-circle btn-lg"><i class="fa fa-lock"></i></a>
                                                 </div>
                                             </div>

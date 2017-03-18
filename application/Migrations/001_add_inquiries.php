@@ -62,8 +62,7 @@ class Migration_Add_inquiries extends CI_Migration {
                          'null'=> TRUE,
                     ),
                     'fullname' => array(
-                        'type' => 'varchar',
-                        'constraint'=> 255,
+                        'type' => 'text',
                         'null' => FALSE,
                     ),
                     'address' => array(

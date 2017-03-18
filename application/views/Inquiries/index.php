@@ -9,7 +9,6 @@
                     <ul class="timeline list-unstyled">
                         <li class="timeline-item first-item">
                             <ul class="list-unstyled tasks-list">
-                                <?php print_r($inquiries); ?>
                                 <?php foreach ($inquiries as $inquiry): ?>
                                     <li class="task-item show-pointer">
                                         <a href="<?php echo site_url('Inquiries/view/' . $inquiry->id); ?>">
@@ -17,16 +16,15 @@
                                                 <div class="media">
                                                     <div class="media-body">
                                                         <h2 class="media-heading">
-
-                                                            <?php echo substr($inquiry->title, 0, 85); ?>...
+                                                            An inquiry from 
+                                                            <?php echo $inquiry->fullname; ?>
                                                         </h2>
                                                          <div class="task-meta-data">
-                                                            <span class="task-number">#<?php echo $workorder->id; ?></span>
-                                                            <span class="time-literal"><?php echo $workorder->date_created; ?></span>
-                                                            <span class="updates line-icon">No. of Task</span>
-                                                            <span class="ml-10">Location / Client</span>
-                                                            <span class="ml-10 grey-text"> </span>
-                                                            <span class="ml-10 assigned-initial">Username Initials Assigned</span>
+                                                            <span class="task-number">#<?php echo $inquiry->id; ?></span>
+                                                            <span class="time-literal"><?php echo $inquiry->date_created; ?></span>
+                                                            <span class="updates line-icon"><?php echo $inquiry->type; ?></span>
+                                                            <span class="ml-10"><?php echo $inquiry->address; ?></span>
+                                                            <span class="ml-10 grey-text"><?php echo substr($inquiry->comments, 0, 55); ?>... </span>
                                                         </div>
                                                     </div>
                                                     <div class="media-right">

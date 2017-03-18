@@ -30,8 +30,8 @@ class Inquiries extends CI_Controller {
 
     public function view($id=null) {
         $this->data['page_title'] = 'Inquiries > Inquiries Title';
-        $this->data['Inquiries'] = $this->Inquiries_m->get_all();
-        $this->data['Inquiries'] = $this->Inquiries_m->get($id);
+        $this->data['inquiries'] = $this->Inquiries_m->get_all();
+        $this->data['inquiry'] = $this->Inquiries_m->get($id);
         $this->load->view('Inquiries/View', $this->data);
     }
 
