@@ -1,6 +1,6 @@
 <?php
 
-class Migration_Add_user extends CI_Migration {
+class Migration_Add_customers extends CI_Migration {
 
     public function up() {
         $this->dbforge->add_field(

@@ -1,6 +1,12 @@
 <?php
 
-class Migration_Add_categories extends CI_Migration {
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+class Migration_Add_tasks extends CI_Migration {
 
     public function up() {
         $this->dbforge->add_field(
@@ -11,14 +17,10 @@ class Migration_Add_categories extends CI_Migration {
                         'unsigned' => true,
                         'auto_increment' => true
                     ),
-                    'name' => array(
+                    'type' => array(
                         'type' => 'VARCHAR',
                         'constraint' => 255,
                         'null' => FALSE,
-                    ),
-                    'description' => array(
-                        'type' => 'text',
-                        'null' => TRUE,
                     ),
                     'date_created' => array(
                         'type' => 'datetime',
@@ -37,13 +39,13 @@ class Migration_Add_categories extends CI_Migration {
         );
 
         $this->dbforge->add_key('id', TRUE);
-        $this->dbforge->create_table('categories');
+        $this->dbforge->create_table('tasks');
     }
 
     public function down() {
-        $this->dbforge->drop_table('categories');
+        $this->dbforge->drop_table('tasks');
     }
 
 }
-?>
 
+?>
