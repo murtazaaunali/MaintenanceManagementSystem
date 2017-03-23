@@ -17,6 +17,8 @@ class WorkOrders extends CI_Controller {
 
     function __construct() {
         parent::__construct();
+        $this->output->set_title('Primo CMMS | Work Orders');
+        $this->output->set_template('default');
         $this->load->model('Workorders_m');
         $this->load->model('Locations_m');
         $this->load->model('Categories_m');

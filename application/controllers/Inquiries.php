@@ -17,6 +17,8 @@ class Inquiries extends CI_Controller {
 
     function __construct() {
         parent::__construct();
+        $this->output->set_title('Primo CMMS | Inquiries');
+        $this->output->set_template('default');
         $this->load->model('Inquiries_m');
         $this->load->model('Locations_m');
         $this->load->model('Categories_m');
@@ -28,13 +30,12 @@ class Inquiries extends CI_Controller {
         $this->load->view('Inquiries/Index', $this->data);
     }
 
-    public function view($id=null) {
+    public function view($id = null) {
         $this->data['page_title'] = 'Inquiries > Inquiries Title';
         $this->data['inquiries'] = $this->Inquiries_m->get_all();
-        $this->data['inquiry'] = $this->Inquiries_m->get($id);
+        $this->data['Inquiry'] = $this->Inquiries_m->get($id);
         $this->load->view('Inquiries/View', $this->data);
     }
-
 
     public function change_status() {
         

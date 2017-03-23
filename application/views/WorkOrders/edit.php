@@ -1,6 +1,4 @@
-<?php $this->load->view('blocks/header'); ?>
-<?php $this->load->view('blocks/navigation'); ?><?php $this->load->view('blocks/top-navigation'); ?>
-<div class="col-md-6">
+<div class="span6">
     <div class="panel-group">
         <div class="panel panel-default">
             <div class="panel-collapse collapse in">
@@ -44,12 +42,12 @@
         </div>
     </div>
 </div>
-<div class="col-md-6">
+<div class="span6">
     <div class="panel panel-primary">
         <div class="panel-body">
             <h4>Add New Work Order</h4>
-            <div class="row">
-                <div class="col-md-12">
+            <div class="row-fluid">
+                <div class="span12">
                     <div class="form-group">
                         <h4 class="control-label">Work Order Info</h4>
                         <?php echo form_input('workorder_title', set_value('workorder_title', $workorder->title), array('class' => 'form-control', 'placeholder' => 'Work order title*')) ?>
@@ -70,7 +68,7 @@
                         </label>
                     </div>
                     <div class="form-group">
-                        <?php echo form_dropdown('workorder_location', array('Select Main Worker', '1'=>'Location1', '2'=>'Location2', '3'=>'Loacation3'),set_value('workorder_location', $workorder->location_id), array('class' => 'form-control')) ?>
+                        <?php echo form_dropdown('workorder_location', array('Select Main Worker', '1' => 'Location1', '2' => 'Location2', '3' => 'Loacation3'), set_value('workorder_location', $workorder->location_id), array('class' => 'form-control')) ?>
                     </div>
                     <div class="form-group">
                         <?php echo form_label('Assign Staff', 'workorder_priority', array('class' => 'control-label')); ?>
@@ -108,4 +106,3 @@
         </div>
     </div>
 </div>
-<?php $this->load->view('blocks/footer'); ?>

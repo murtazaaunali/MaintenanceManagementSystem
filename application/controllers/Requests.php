@@ -17,6 +17,8 @@ class Requests extends CI_Controller {
 
     function __construct() {
         parent::__construct();
+        $this->output->set_title('Primo CMMS | Requests');
+        $this->output->set_template('default');
     }
 
     public function index() {

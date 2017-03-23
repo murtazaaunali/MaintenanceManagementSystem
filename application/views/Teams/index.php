@@ -1,6 +1,6 @@
-<?php $this->load->view('blocks/header'); ?>
-<?php $this->load->view('blocks/navigation'); ?><?php $this->load->view('blocks/top-navigation'); ?>
-<div class="col-md-12">
+
+
+<div class="span12">
     <div class="panel-group">
         <div class="panel panel-default">
             <div class="panel-collapse collapse in">
@@ -92,4 +92,3 @@
         <i class="fa fa-plus"></i>
     </a>
 </div>
-<?php $this->load->view('blocks/footer'); ?>

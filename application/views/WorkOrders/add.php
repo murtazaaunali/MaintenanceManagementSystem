@@ -1,12 +1,12 @@
-<?php $this->load->view('blocks/header'); ?>
-<?php $this->load->view('blocks/navigation'); ?><?php $this->load->view('blocks/top-navigation'); ?>
-<div class="col-md-12">
+
+
+<div class="span12">
     <div class="panel panel-primary">
         <div class="panel-body">
             <h4>Add New Work Order</h4>
-            <div class="row">
+            <div class="row-fluid">
                 <?php echo form_open(); ?>
-                <div class="col-md-12">
+                <div class="span12">
                     <div class="form-group">
                         <h4 class="control-label">Work Order Info</h4>
                         <?php echo form_input('workorder_title', '', array('class' => 'form-control', 'placeholder' => 'Work order title*')) ?>
@@ -78,4 +78,3 @@
         </div>
     </div>
 </div>
-<?php $this->load->view('blocks/footer'); ?>

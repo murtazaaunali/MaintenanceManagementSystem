@@ -1,210 +1,235 @@
-<?php $this->load->view('blocks/header'); ?>
-<?php $this->load->view('blocks/navigation'); ?>
-<?php $this->load->view('blocks/top-navigation'); ?>
-<div class="col-md-6">
-    <div class="panel-group">
-        <div class="panel panel-default">
-            <div class="panel-collapse collapse in">
-                <div class="panel-body">
-                    <ul class="timeline list-unstyled">
-                        <li class="timeline-item first-item">
-                            <ul class="list-unstyled tasks-list">
-                                <?php foreach ($workorders as $workorder): ?>
-                                    <li class="task-item show-pointer active">
-                                        <div class="task-item-container task-open">
-                                            <div class="media">
-                                                <div class="media-body">
-                                                    <h2 class="media-heading">
-                                                        <span title="Work Order Priority" class="priority"><?php echo str_repeat("!", $workorder->priority); ?></span>
-                                                        <?php echo substr($workorder->title, 0, 85); ?>...
-                                                    </h2>
-                                                    <div class="task-meta-data">
-                                                        <span class="task-number">#<?php echo $workorder->id; ?></span>
-                                                        <span class="time-literal"><?php echo $workorder->date_created; ?></span>
-                                                        <span class="updates line-icon">No. of Task</span>
-                                                        <span class="ml-10">Location / Client</span>
-                                                        <span class="ml-10 grey-text"> </span>
-                                                        <span class="ml-10 assigned-initial">Username Initials Assigned</span>
-                                                    </div>
-                                                </div>
-                                                <div class="media-right">
-                                                    <div class="task-status-box">
-                                                        <span class="status-circle task-open"><i class="fa fa-lock"></i></span>
-                                                        <span class="status-name">Open</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                <?php endforeach; ?>
-                            </ul>
+<div class="row-fluid">
+    <div class="span6">
+        <div class="widget-box">
+            <div class="widget-title"> <span class="icon"> <i class="icon-file"></i> </span>
+                <h5>Work Orders</h5>
+            </div>
+            <div class="widget-content nopadding">
+                <ul class="recent-posts">
+                    <?php foreach ($workorders as $workorder): ?>
+                        <li>
+                            <?php
+                            switch ($workorder->status) {
+                                case "0":
+                                    echo '<span class="label label-important">Closed</span>';
+                                    break;
+
+                                case "1":
+                                    echo '<span class="label label-success">Open</span>';
+                                    break;
+
+                                case "2":
+                                    echo '<span class="label label-info">In progress</span>';
+                                    break;
+
+                                case "3":
+                                    echo '<span class="label label-warning">On hold</span>';
+                                    break;
+
+                                default :
+                                    echo "";
+                            }
+                            ?>                                
+                            <div class="article-post">
+                                <div class="fr"><a href="<?php echo site_url('WorkOrders/view/' . $workorder->id); ?>" class="btn btn-default btn-mini">View</a> <a href="<?php echo site_url('WorkOrders/edit/' . $workorder->id); ?>" class="btn btn-primary btn-mini">Edit</a></div>
+                                <span class="user-info"> #<?php echo $workorder->id; ?> By: john Deo / <?php echo $workorder->date_created; ?> </span>
+                                <p><a href="<?php echo site_url('WorkOrders/view/' . $workorder->id); ?>"><?php echo substr($workorder->title, 0, 85); ?>...</a> </p>
+                            </div>
                         </li>
-                    </ul>
-                </div>
+                    <?php endforeach; ?>
+                </ul>
             </div>
         </div>
     </div>
-</div>
-<div class="col-md-6">
-    <div class="panel panel-primary">
-        <div class="panel-body">
-            <h3>Test Tasks</h3>
-            <div class="row clearfix">
+    <div class="span6">
+        <div class="widget-content nopadding">
+            <div class="row-fluid">
+                <div class="span12">
+                    <ul class="quick-actions">
+                        <a class="btn btn-large bg_lo" href="#"><i class="icon-unlock"></i>Open</a>
+                        <a class="btn btn-large bg_ly" href="#"><i class="icon-stop"></i>Hold</a>
+                        <a class="btn btn-large bg_ls" href="#"><i class="icon-repeat"></i>In progress</a>
+                        <a class="btn btn-large bg_lg" href="#"><i class="icon-lock"></i>Completed</a>
+                    </ul>
+                </div>
+            </div>
+            <div class="widget-box">
+                <div class="widget-title">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#tab1">Details</a></li>
+                        <li><a data-toggle="tab" href="#tab2">Updates</a></li>
+                    </ul>
+                </div>
+                <div class="widget-content tab-content">
+                    <div id="tab1" class="tab-pane active">
+                        <p>And is full of waffle to It has multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end. </p>
+                    </div>
+                    <div id="tab2" class="tab-pane">
+                        <p> waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-body">
+                <h3>Test Tasks</h3>
+                <div class="row-fluid clearfix">
 
-                <div class="row clearfix">
-                    <div class="col-md-12 column">
-                        <div class="tabbable" id="tabs-145895">
-                            <ul class="nav nav-tabs">
-                                <li class="active">
-                                    <a href="#panel-168166" data-toggle="tab">Details</a>
-                                </li>
-                                <li>
-                                    <a href="#panel-403986" data-toggle="tab">Updates</a>
-                                </li>
-                            </ul>
-                            <div class="tab-content">
-                                <div class="tab-pane active" id="panel-168166">
-                                    <div class="row clearfix">
-                                        <div class="col-md-12">
-                                            <div class="row clearfix">
-                                                <div class="col-xs-3">
-                                                    <a href="#" class="btn btn-danger btn-circle btn-lg"><i class="fa fa-unlock-alt"></i></a>
-                                                </div>
+                    <div class="row-fluid clearfix">
+                        <div class="span12 column">
+                            <div class="tabbable" id="tabs-145895">
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="#panel-168166" data-toggle="tab">Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="#panel-403986" data-toggle="tab">Updates</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="panel-168166">
+                                        <div class="row-fluid clearfix">
+                                            <div class="span12">
+                                                <div class="row-fluid clearfix">
+                                                    <div class="col-xs-3">
+                                                        <a href="#" class="btn btn-danger btn-circle btn-lg"><i class="fa fa-unlock-alt"></i></a>
+                                                    </div>
 
-                                                <div class="col-xs-3">
-                                                    <a href="#" class="btn btn-info btn-circle btn-lg"><i class="fa fa-repeat"></i></a>
-                                                </div>
-                                                <div class="col-xs-3">
-                                                    <a href="#" class="btn btn-warning btn-circle btn-lg"><i class="fa fa-stop"></i></a>
-                                                </div>
-                                                <div class="col-xs-3">
-                                                    <a href="#" class="btn btn-success btn-circle btn-lg"><i class="fa fa-lock"></i></a>
+                                                    <div class="col-xs-3">
+                                                        <a href="#" class="btn btn-info btn-circle btn-lg"><i class="fa fa-repeat"></i></a>
+                                                    </div>
+                                                    <div class="col-xs-3">
+                                                        <a href="#" class="btn btn-warning btn-circle btn-lg"><i class="fa fa-stop"></i></a>
+                                                    </div>
+                                                    <div class="col-xs-3">
+                                                        <a href="#" class="btn btn-success btn-circle btn-lg"><i class="fa fa-lock"></i></a>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-12 column">
-                                            <h3>Location Details</h3>
-                                            <table class="table table-responsive table-bordered">
-                                                <tr>
-                                                    <td>Location Name</td>
-                                                    <td>Location Address </td>
-                                                </tr>
-                                            </table>
+                                            <div class="span12 column">
+                                                <h3>Location Details</h3>
+                                                <table class="table table-responsive table-bordered">
+                                                    <tr>
+                                                        <td>Location Name</td>
+                                                        <td>Location Address </td>
+                                                    </tr>
+                                                </table>
 
-                                            <h3>Tasks</h3>
+                                                <h3>Tasks</h3>
 
 
-                                            <table class="table table-responsive table-bordered">
-                                                <tr>
-                                                    <td>
-                                                        <table>
-                                                            <tr>
-                                                                <td>Task Name 1</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td> <input type="button" value="Incomplete" onclick="">
-                                                                    <input type="button" value="On Hold" onclick="">
-                                                                    <input type="button" value="In Progress" onclick="">
-                                                                    <input type="button" value="Completed" onclick=""></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>User Assigned:</td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <table>
-                                                            <tr>
-                                                                <td>Task Name 2</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td> <input type="button" value="Incomplete" onclick="">
-                                                                    <input type="button" value="On Hold" onclick="">
-                                                                    <input type="button" value="In Progress" onclick="">
-                                                                    <input type="button" value="Completed" onclick=""></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>User Assigned:</td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <table>
-                                                            <tr>
-                                                                <td>Task Name 3</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td> <input class="btn btn-danger" type="button" value="Incomplete" onclick="">
-                                                                    <input class="btn btn-warning" type="button" value="On Hold" onclick="">
-                                                                    <input class="btn btn-primary" type="button" value="In Progress" onclick="">
-                                                                    <input class="btn btn-success" type="button" value="Completed" onclick=""></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>User Assigned:</td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                </tr>
+                                                <table class="table table-responsive table-bordered">
+                                                    <tr>
+                                                        <td>
+                                                            <table>
+                                                                <tr>
+                                                                    <td>Task Name 1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td> <input type="button" value="Incomplete" onclick="">
+                                                                        <input type="button" value="On Hold" onclick="">
+                                                                        <input type="button" value="In Progress" onclick="">
+                                                                        <input type="button" value="Completed" onclick=""></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>User Assigned:</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <table>
+                                                                <tr>
+                                                                    <td>Task Name 2</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td> <input type="button" value="Incomplete" onclick="">
+                                                                        <input type="button" value="On Hold" onclick="">
+                                                                        <input type="button" value="In Progress" onclick="">
+                                                                        <input type="button" value="Completed" onclick=""></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>User Assigned:</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <table>
+                                                                <tr>
+                                                                    <td>Task Name 3</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td> <input class="btn btn-danger" type="button" value="Incomplete" onclick="">
+                                                                        <input class="btn btn-warning" type="button" value="On Hold" onclick="">
+                                                                        <input class="btn btn-primary" type="button" value="In Progress" onclick="">
+                                                                        <input class="btn btn-success" type="button" value="Completed" onclick=""></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>User Assigned:</td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
 
-                                            </table>
-                                            <h3>Work Orders Details</h3>
-                                            <table class="table table-responsive table-bordered">
-                                                <div class="col-md-12 column">
-                                                    <tr>
-                                                        <td>Word Order #:</td>
-                                                        <td>Due Date</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Created On:</td>
-                                                        <td>Created By:</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Assigned To:</td>
-                                                        <td>Last Updated:</td>
-                                                    </tr>
-                                            </table>
-                                            <h3>Time And Cost</h3>
-                                            <table class="table table-responsive table-bordered">
-                                                <div class="col-md-12 column">
-                                                    <tr>
-                                                        <td>Time:</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>  <input class="btn btn-success" type="button" value="Start timer" onclick=""></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Cost:</td>
-                                                    </tr>
-                                            </table>
+                                                </table>
+                                                <h3>Work Orders Details</h3>
+                                                <table class="table table-responsive table-bordered">
+                                                    <div class="span12 column">
+                                                        <tr>
+                                                            <td>Word Order #:</td>
+                                                            <td>Due Date</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Created On:</td>
+                                                            <td>Created By:</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Assigned To:</td>
+                                                            <td>Last Updated:</td>
+                                                        </tr>
+                                                </table>
+                                                <h3>Time And Cost</h3>
+                                                <table class="table table-responsive table-bordered">
+                                                    <div class="span12 column">
+                                                        <tr>
+                                                            <td>Time:</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>  <input class="btn btn-success" type="button" value="Start timer" onclick=""></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cost:</td>
+                                                        </tr>
+                                                </table>
+                                            </div>
+                                            <div class="form-group">
+                                                <?php echo form_label('Requires Signature', 'workorder_requires_signature', array('class' => 'control-label')); ?>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="switch">
+                                                    <input type="checkbox" name="workorder_requires_signature" <?php echo set_value('workorder_requires_signature', $workorder->requires_sign) == 1 ? 'checked' : '' ?>>
+                                                    <div class="slider round"></div>
+                                                </label>
+                                            </div>
+                                            <div class="form-group">
+                                                <?php echo form_submit("Save", "Save", array('class' => 'btn btn-primary pull-right')); ?>
+                                            </div>
+                                            <?php echo form_close(); ?>
                                         </div>
-                                        <div class="form-group">
-                                            <?php echo form_label('Requires Signature', 'workorder_requires_signature', array('class' => 'control-label')); ?>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="switch">
-                                                <input type="checkbox" name="workorder_requires_signature" <?php echo set_value('workorder_requires_signature', $workorder->requires_sign) == 1 ? 'checked' : '' ?>>
-                                                <div class="slider round"></div>
-                                            </label>
-                                        </div>
-                                        <div class="form-group">
-                                            <?php echo form_submit("Save", "Save", array('class' => 'btn btn-primary pull-right')); ?>
-                                        </div>
-                                        <?php echo form_close(); ?>
                                     </div>
-                                </div>
-                                <div class="tab-pane" id="panel-403986">
-                                    <div class="row clearfix">
-                                        <div class="col-md-12 column">
-                                            <h3>Update Notes</h3>
-                                            <div class="form-group">
-                                                <?php echo form_textarea('reques_description', '', array('class' => 'form-control', 'placeholder' => 'Post an Update', 'rows' => '3')); ?>
-                                            </div>
-                                            <div class="form-group">
-                                                <?php echo form_submit("save", "Post", array('class' => 'btn btn-primary pull-right')); ?>
+                                    <div class="tab-pane" id="panel-403986">
+                                        <div class="row-fluid clearfix">
+                                            <div class="span12 column">
+                                                <h3>Update Notes</h3>
+                                                <div class="form-group">
+                                                    <?php echo form_textarea('reques_description', '', array('class' => 'form-control', 'placeholder' => 'Post an Update', 'rows' => '3')); ?>
+                                                </div>
+                                                <div class="form-group">
+                                                    <?php echo form_submit("save", "Post", array('class' => 'btn btn-primary pull-right')); ?>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -212,14 +237,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
     </div>
 </div>
-<a href="<?php echo site_url('/WorkOrders/add'); ?>" class="btn paper-button paper-floating-action-button">
-    <i class="fa fa-plus"></i>
-</a>
-</div>
-<?php $this->load->view('blocks/footer'); ?>
+<a href="<?php echo site_url('/WorkOrders/add'); ?>" class="paper-button paper-floating-action-button"><i class="icon-plus"></i></a>
+

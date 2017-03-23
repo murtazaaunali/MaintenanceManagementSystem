@@ -1,13 +1,13 @@
-<?php $this->load->view('blocks/header'); ?>
-<?php $this->load->view('blocks/navigation'); ?><?php $this->load->view('blocks/top-navigation'); ?>
-<div class="col-md-12">
+
+
+<div class="span12">
     <div class="panel panel-primary">
         <div class="panel-body">
             <div class="container-fluid">
-                <div class="col-md-12">
+                <div class="span12">
                     <h4>Add New Team</h4>
-                    <div class="row">
-                        <div class="col-md-12">
+                    <div class="row-fluid">
+                        <div class="span12">
                             <div class="form-group">
                                 <?php echo form_label('Team Name', '', array('class' => 'control-label')); ?>
                                 <div class="form-group">
@@ -32,4 +32,3 @@
         </div>
     </div>
 </div>
-<?php $this->load->view('blocks/footer'); ?>

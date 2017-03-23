@@ -12,13 +12,18 @@
  * @author Murtaza
  */
 class Dashboard extends CI_Controller {
+
     public function __construct() {
         parent::__construct();
+        $this->output->set_title('Primo CMMS | Dashboard');
+        $this->output->set_template('default');
     }
-    public function index(){
-     $this->load->view('Dashboard/index');
+
+    public function index() {
+
+        $this->load->view('Dashboard/index');
     }
-    
+
     public function chart_by_status() {
         
     }
@@ -34,4 +39,5 @@ class Dashboard extends CI_Controller {
     public function chart_workorder_user() {
         
     }
+
 }
