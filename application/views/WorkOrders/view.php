@@ -42,6 +42,7 @@
         </div>
     </div>
     <div class="span6">
+        <div class="widget-box">
         <div class="widget-content nopadding">
             <h3>Test Tasks</h3>
             <div class="row-fluid">
@@ -192,6 +193,7 @@
         </div>
 
     </div>
+        </div>
 </div>
 <a href="<?php echo site_url('/WorkOrders/add'); ?>" class="paper-button paper-floating-action-button"><i class="icon-plus"></i></a>
 
