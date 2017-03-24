@@ -182,8 +182,10 @@
                                 <div id="tab2" class="tab-pane">
                                     <div class="span12 column">
                                         <h3>Update Notes</h3>
-                                        <div class="form-group">
-                                            <?php echo form_textarea('reques_description', '', array('class' => 'form-control', 'placeholder' => 'Post an Update', 'rows' => '3')); ?>
+                                        <div class="control-group">
+                                            <div class="controls">
+                                                <?php echo form_textarea('reques_description', '', array('class' => 'form-control', 'placeholder' => 'Post an Update', 'rows' => '3')); ?>
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <?php echo form_submit("save", "Post", array('class' => 'btn btn-primary pull-right')); ?>
