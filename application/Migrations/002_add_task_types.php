@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
-class Migration_Add_tasks extends CI_Migration {
+class Migration_Add_task_types extends CI_Migration {
 
     public function up() {
         $this->dbforge->add_field(
@@ -39,11 +39,11 @@ class Migration_Add_tasks extends CI_Migration {
         );
 
         $this->dbforge->add_key('id', TRUE);
-        $this->dbforge->create_table('tasks');
+        $this->dbforge->create_table('task_types');
     }
 
     public function down() {
-        $this->dbforge->drop_table('tasks');
+        $this->dbforge->drop_table('task_types');
     }
 
 }
