@@ -43,6 +43,7 @@
     </div>
     <div class="span6">
         <div class="widget-content nopadding">
+            <h3>Test Tasks</h3>
             <div class="row-fluid">
                 <div class="span12">
                     <ul class="quick-actions">
@@ -63,50 +64,7 @@
                 <div class="widget-content tab-content">
                     <div id="tab1" class="tab-pane active">
                         <p>And is full of waffle to It has multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end. </p>
-                    </div>
-                    <div id="tab2" class="tab-pane">
-                        <p> waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end. </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-primary">
-            <div class="panel-body">
-                <h3>Test Tasks</h3>
-                <div class="row-fluid clearfix">
-
-                    <div class="row-fluid clearfix">
-                        <div class="span12 column">
-                            <div class="tabbable" id="tabs-145895">
-                                <ul class="nav nav-tabs">
-                                    <li class="active">
-                                        <a href="#panel-168166" data-toggle="tab">Details</a>
-                                    </li>
-                                    <li>
-                                        <a href="#panel-403986" data-toggle="tab">Updates</a>
-                                    </li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div class="tab-pane active" id="panel-168166">
-                                        <div class="row-fluid clearfix">
-                                            <div class="span12">
-                                                <div class="row-fluid clearfix">
-                                                    <div class="col-xs-3">
-                                                        <a href="#" class="btn btn-danger btn-circle btn-lg"><i class="fa fa-unlock-alt"></i></a>
-                                                    </div>
-
-                                                    <div class="col-xs-3">
-                                                        <a href="#" class="btn btn-info btn-circle btn-lg"><i class="fa fa-repeat"></i></a>
-                                                    </div>
-                                                    <div class="col-xs-3">
-                                                        <a href="#" class="btn btn-warning btn-circle btn-lg"><i class="fa fa-stop"></i></a>
-                                                    </div>
-                                                    <div class="col-xs-3">
-                                                        <a href="#" class="btn btn-success btn-circle btn-lg"><i class="fa fa-lock"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="span12 column">
+                    <div class="span12 column">
                                                 <h3>Location Details</h3>
                                                 <table class="table table-responsive table-bordered">
                                                     <tr>
@@ -205,7 +163,7 @@
                                                         </tr>
                                                 </table>
                                             </div>
-                                            <div class="form-group">
+                                                      <div class="form-group">
                                                 <?php echo form_label('Requires Signature', 'workorder_requires_signature', array('class' => 'control-label')); ?>
                                             </div>
                                             <div class="form-group">
@@ -217,12 +175,11 @@
                                             <div class="form-group">
                                                 <?php echo form_submit("Save", "Save", array('class' => 'btn btn-primary pull-right')); ?>
                                             </div>
-                                            <?php echo form_close(); ?>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane" id="panel-403986">
-                                        <div class="row-fluid clearfix">
-                                            <div class="span12 column">
+                    </div>
+                                                    
+                    <div id="tab2" class="tab-pane">
+                        <p> waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end. </p>
+                   <div class="span12 column">
                                                 <h3>Update Notes</h3>
                                                 <div class="form-group">
                                                     <?php echo form_textarea('reques_description', '', array('class' => 'form-control', 'placeholder' => 'Post an Update', 'rows' => '3')); ?>
@@ -231,16 +188,11 @@
                                                     <?php echo form_submit("save", "Post", array('class' => 'btn btn-primary pull-right')); ?>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
+        
     </div>
 </div>
 <a href="<?php echo site_url('/WorkOrders/add'); ?>" class="paper-button paper-floating-action-button"><i class="icon-plus"></i></a>
