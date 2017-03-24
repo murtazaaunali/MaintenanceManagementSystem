@@ -63,136 +63,134 @@
                 </div>
                 <div class="widget-content tab-content">
                     <div id="tab1" class="tab-pane active">
-                        <p>And is full of waffle to It has multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end. </p>
-                    <div class="span12 column">
-                                                <h3>Location Details</h3>
-                                                <table class="table table-responsive table-bordered">
-                                                    <tr>
-                                                        <td>Location Name</td>
-                                                        <td>Location Address </td>
-                                                    </tr>
-                                                </table>
+                        <div class="span12 column">
+                            <h3>Location Details</h3>
+                            <table class="table table-responsive table-bordered">
+                                <tr>
+                                    <td>Location Name</td>
+                                    <td>Location Address </td>
+                                </tr>
+                            </table>
 
-                                                <h3>Tasks</h3>
+                            <h3>Tasks</h3>
 
 
-                                                <table class="table table-responsive table-bordered">
-                                                    <tr>
-                                                        <td>
-                                                            <table>
-                                                                <tr>
-                                                                    <td>Task Name 1</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td> <input type="button" value="Incomplete" onclick="">
-                                                                        <input type="button" value="On Hold" onclick="">
-                                                                        <input type="button" value="In Progress" onclick="">
-                                                                        <input type="button" value="Completed" onclick=""></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>User Assigned:</td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <table>
-                                                                <tr>
-                                                                    <td>Task Name 2</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td> <input type="button" value="Incomplete" onclick="">
-                                                                        <input type="button" value="On Hold" onclick="">
-                                                                        <input type="button" value="In Progress" onclick="">
-                                                                        <input type="button" value="Completed" onclick=""></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>User Assigned:</td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <table>
-                                                                <tr>
-                                                                    <td>Task Name 3</td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td> <input class="btn btn-danger" type="button" value="Incomplete" onclick="">
-                                                                        <input class="btn btn-warning" type="button" value="On Hold" onclick="">
-                                                                        <input class="btn btn-primary" type="button" value="In Progress" onclick="">
-                                                                        <input class="btn btn-success" type="button" value="Completed" onclick=""></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>User Assigned:</td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
+                            <table class="table table-responsive table-bordered">
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td>Task Name 1</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <input class="btn btn-danger" type="button" value="Incomplete" onclick="">
+                                                    <input class="btn btn-warning" type="button" value="On Hold" onclick="">
+                                                    <input class="btn btn-primary" type="button" value="In Progress" onclick="">
+                                                    <input class="btn btn-success" type="button" value="Completed" onclick=""></td>
+                                            </tr>
+                                            <tr>
+                                                <td>User Assigned:</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td>Task Name 2</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <input class="btn btn-danger" type="button" value="Incomplete" onclick="">
+                                                    <input class="btn btn-warning" type="button" value="On Hold" onclick="">
+                                                    <input class="btn btn-primary" type="button" value="In Progress" onclick="">
+                                                    <input class="btn btn-success" type="button" value="Completed" onclick=""></td>
+                                            </tr>
+                                            <tr>
+                                                <td>User Assigned:</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td>Task Name 3</td>
+                                            </tr>
+                                            <tr>
+                                                <td> <input class="btn btn-danger" type="button" value="Incomplete" onclick="">
+                                                    <input class="btn btn-warning" type="button" value="On Hold" onclick="">
+                                                    <input class="btn btn-primary" type="button" value="In Progress" onclick="">
+                                                    <input class="btn btn-success" type="button" value="Completed" onclick=""></td>
+                                            </tr>
+                                            <tr>
+                                                <td>User Assigned:</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
 
-                                                </table>
-                                                <h3>Work Orders Details</h3>
-                                                <table class="table table-responsive table-bordered">
-                                                    <div class="span12 column">
-                                                        <tr>
-                                                            <td>Word Order #:</td>
-                                                            <td>Due Date</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Created On:</td>
-                                                            <td>Created By:</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Assigned To:</td>
-                                                            <td>Last Updated:</td>
-                                                        </tr>
-                                                </table>
-                                                <h3>Time And Cost</h3>
-                                                <table class="table table-responsive table-bordered">
-                                                    <div class="span12 column">
-                                                        <tr>
-                                                            <td>Time:</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>  <input class="btn btn-success" type="button" value="Start timer" onclick=""></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Cost:</td>
-                                                        </tr>
-                                                </table>
-                                            </div>
-                                                      <div class="form-group">
-                                                <?php echo form_label('Requires Signature', 'workorder_requires_signature', array('class' => 'control-label')); ?>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="switch">
-                                                    <input type="checkbox" name="workorder_requires_signature" <?php echo set_value('workorder_requires_signature', $workorder->requires_sign) == 1 ? 'checked' : '' ?>>
-                                                    <div class="slider round"></div>
-                                                </label>
-                                            </div>
-                                            <div class="form-group">
-                                                <?php echo form_submit("Save", "Save", array('class' => 'btn btn-primary pull-right')); ?>
-                                            </div>
+                            </table>
+                            <h3>Work Orders Details</h3>
+                            <table class="table table-responsive table-bordered">
+                                <div class="span12 column">
+                                    <tr>
+                                        <td>Word Order #:</td>
+                                        <td>Due Date</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Created On:</td>
+                                        <td>Created By:</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Assigned To:</td>
+                                        <td>Last Updated:</td>
+                                    </tr>
+                            </table>
+                            <h3>Time And Cost</h3>
+                            <table class="table table-responsive table-bordered">
+                                <div class="span12 column">
+                                    <tr>
+                                        <td>Time:</td>
+                                    </tr>
+                                    <tr>
+                                        <td>  <input class="btn btn-success" type="button" value="Start timer" onclick=""></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cost:</td>
+                                    </tr>
+                            </table>
+                        </div>
+                        <div class="form-group">
+                            <?php echo form_label('Requires Signature', 'workorder_requires_signature', array('class' => 'control-label')); ?>
+                        </div>
+                        <div class="form-group">
+                            <label class="switch">
+                                <input type="checkbox" name="workorder_requires_signature" <?php echo set_value('workorder_requires_signature', $workorder->requires_sign) == 1 ? 'checked' : '' ?>>
+                                <div class="slider round"></div>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <?php echo form_submit("Save", "Save", array('class' => 'btn btn-primary pull-right')); ?>
+                        </div>
                     </div>
-                                                    
+
                     <div id="tab2" class="tab-pane">
-                        <p> waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end. </p>
-                   <div class="span12 column">
-                                                <h3>Update Notes</h3>
-                                                <div class="form-group">
-                                                    <?php echo form_textarea('reques_description', '', array('class' => 'form-control', 'placeholder' => 'Post an Update', 'rows' => '3')); ?>
-                                                </div>
-                                                <div class="form-group">
-                                                    <?php echo form_submit("save", "Post", array('class' => 'btn btn-primary pull-right')); ?>
-                                                </div>
-                                            </div>
+                        <div class="span12 column">
+                            <h3>Update Notes</h3>
+                            <div class="form-group">
+                                <?php echo form_textarea('reques_description', '', array('class' => 'form-control', 'placeholder' => 'Post an Update', 'rows' => '3')); ?>
+                            </div>
+                            <div class="form-group">
+                                <?php echo form_submit("save", "Post", array('class' => 'btn btn-primary pull-right')); ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
     </div>
 </div>
 <a href="<?php echo site_url('/WorkOrders/add'); ?>" class="paper-button paper-floating-action-button"><i class="icon-plus"></i></a>
