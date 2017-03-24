@@ -32,41 +32,40 @@
                             </label>
                         </div>
                         <div class="form-group">
-                            <?php echo form_dropdown('workorder_location', $workorder_locations, FALSE, array('class' => 'form-control')) ?>
+                            <?php echo form_dropdown('workorder_location', $workorder_locations, FALSE, array('class' => 'span11')) ?>
                         </div>
                         <div class="form-group">
-                            <?php echo form_dropdown('workorder_category', $workorder_categories, FALSE, array('class' => 'form-control')) ?>
+                            <?php echo form_dropdown('workorder_category', $workorder_categories, FALSE, array('class' => 'span11')) ?>
                         </div>
                         <div class="form-group">
-                            <?php echo form_label('Assign Staff', 'workorder_priority', array('class' => 'control-label')); ?>
-                            <?php echo form_dropdown('workorder_worker', array('Select Main Worker', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'form-control')) ?>
+                            <?php echo form_label('Assign Staff', 'workorder_priority', array('class' => 'span11')); ?>
+                            <?php echo form_dropdown('workorder_worker', array('Select Main Worker', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'span11')) ?>
                         </div>
                         <div class="form-group">
-                            <?php echo form_dropdown('workorder_team', array('Select Team', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'form-control')) ?>
+                            <?php echo form_dropdown('workorder_team', array('Select Team', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'span11')) ?>
                         </div>
                         <div class="form-group">
-                            <?php echo form_label('Assign Due Date', 'workorder_priority', array('class' => 'control-label')); ?>
-                            <?php echo form_input(array('type' => 'datetime', 'name' => 'workorder_duedate', 'class' => 'form-control')) ?>
+                            <?php echo form_label('Assign Due Date', 'workorder_priority', array('class' => 'span11')); ?>
+                            <?php echo form_input(array('type' => 'datetime', 'name' => 'workorder_duedate', 'class' => 'span11')) ?>
                         </div>
                         <div class="form-group">
-                            <?php echo form_label('End Due Date', 'workorder_priority', array('class' => 'control-label')); ?>
-                            <?php echo form_input(array('type' => 'datetime', 'name' => 'workorder_end_duedate', 'class' => 'form-control')) ?>
+                            <?php echo form_label('End Due Date', 'workorder_priority', array('class' => 'span11')); ?>
+                            <?php echo form_input(array('type' => 'datetime', 'name' => 'workorder_end_duedate', 'class' => 'span11')) ?>
                         </div>
                         <div class="form-group">
-                            <?php echo form_dropdown('workorder_repeating_schedule', array('Select Repeating Schedule', 'daily' => 'Daily', 'weekdays' => 'Week days', 'every-week' => 'Every Week', 'every-two-weeks' => 'Every Two Weeks', 'every-month' => 'Every Month', 'every-year' => 'Every Year'), FALSE, array('class' => 'form-control')) ?>
+                            <?php echo form_dropdown('workorder_repeating_schedule', array('Select Repeating Schedule', 'daily' => 'Daily', 'weekdays' => 'Week days', 'every-week' => 'Every Week', 'every-two-weeks' => 'Every Two Weeks', 'every-month' => 'Every Month', 'every-year' => 'Every Year'), FALSE, array('class' => 'span11')) ?>
                         </div>
                         <div class="form-group">
-                            <?php echo form_label('Tasks', 'workorder_tasks', array('class' => 'control-label')); ?>
+                            <?php echo form_label('Tasks', 'workorder_tasks', array('class' => 'span11')); ?>
                             <table class="table">
                                 <tr>
-                                    <td><?php echo form_dropdown('workorder_task_type', $workorder_task_types, FALSE, array('class' => 'form-control')); ?></td>
-                                    <td><?php echo form_input('workorder_task', '', array('class' => 'form-control', 'placeholder' => 'Task')); ?></td>
-                                    <td><?php echo form_checkbox('newsletter', 'accept', TRUE); ?></td>
+                                    <td><?php echo form_dropdown('workorder_task_type', $workorder_task_types, FALSE, array('class' => 'span11')); ?></td>
+                                    <td><?php echo form_input('workorder_task', '', array('class' => 'span11', 'placeholder' => 'Task')); ?></td>
                                 </tr>
                             </table>
                         </div>
                         <div class="form-group">
-                            <?php echo form_label('Requires Signature', 'workorder_requires_signature', array('class' => 'control-label')); ?>
+                            <?php echo form_label('Requires Signature', 'workorder_requires_signature', array('class' => 'span11')); ?>
                         </div>
                         <div class="form-group">
                             <label class="switch">
