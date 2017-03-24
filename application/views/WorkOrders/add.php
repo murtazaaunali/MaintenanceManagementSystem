@@ -19,17 +19,15 @@
                                 <?php echo form_textarea('workorder_description', '', array('class' => 'span11', 'placeholder' => 'Detailed description', 'rows' => '3')); ?>
                             </div>
                         </div>
-                        <?php echo form_label('Set Priority', 'workorder_priority', array('class' => 'control-label')); ?>
-                        <div class="form-group">
-                            <label class="radio-inline">
-                                <?php echo form_radio('workorder_priority', '1', TRUE); ?> Low
-                            </label>
-                            <label class="radio-inline">
-                                <?php echo form_radio('workorder_priority', '2', FALSE); ?> Medium
-                            </label>
-                            <label class="radio-inline">
-                                <?php echo form_radio('workorder_priority', '3', FALSE); ?> High
-                            </label>
+                        <div class="control-group">
+                            <?php echo form_label('Set Priority', 'workorder_priority', array('class' => 'control-label')); ?>
+                            <div class="controls">
+                                <div data-toggle="buttons-radio" class="btn-group">
+                                    <button class="btn btn-large btn-danger" type="button">!</button>
+                                    <button class="btn btn-large btn-danger" type="button">!!</button>
+                                    <button class="btn btn-large btn-danger" type="button">!!!</button>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
                             <?php echo form_dropdown('workorder_location', $workorder_locations, FALSE, array('class' => 'span11')) ?>
