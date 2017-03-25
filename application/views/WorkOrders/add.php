@@ -59,9 +59,9 @@
                             <?php echo form_dropdown('workorder_repeating_schedule', array('Select Repeating Schedule', 'daily' => 'Daily', 'weekdays' => 'Week days', 'every-week' => 'Every Week', 'every-two-weeks' => 'Every Two Weeks', 'every-month' => 'Every Month', 'every-year' => 'Every Year'), FALSE, array('class' => 'span12')) ?>
                         </div>
                         <div class="control-group">
-                            <?php echo form_label('Tasks', 'workorder_tasks', array('class' => 'span6')); ?>
-                            <div class="span2">
-                                Add Delete
+                            <?php echo form_label('Tasks', 'workorder_tasks', array('class' => 'span10')); ?>
+                            <div class="span1">
+                                <a href=""><i class="fa fa-plus"></i></a>
                             </div>
                             <table class="table">
                                 <tr>
