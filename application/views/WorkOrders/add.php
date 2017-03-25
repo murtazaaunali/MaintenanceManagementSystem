@@ -45,12 +45,9 @@
                         <div class="control-group">
                             <?php echo form_label('Assign Due Date', 'workorder_start_date', array('class' => 'control-label')); ?>
                             <div class="controls">
-                                <div data-date="12-02-2012" class="input-append date datepicker">
-                                    <input type="text" value="12-02-2012"  data-date-for
-                                </div>
+                                <input type="text" data-date="01-02-2013" data-date-format="dd-mm-yyyy" value="01-02-2013" class="datepicker span11">
                             </div>
                         </div>
-
                         <div class="control-group">
                             <?php echo form_label('End Due Date', 'workorder_priority', array('class' => 'control-label')); ?>
                             <?php echo form_input(array('type' => 'datetime', 'name' => 'workorder_end_duedate', 'class' => 'span12')) ?>
@@ -61,7 +58,7 @@
                         <div class="control-group">
                             <?php echo form_label('Tasks', 'workorder_tasks', array('class' => 'span10')); ?>
                             <div class="span1">
-                                <a href=""><i class="fa fa-plus"></i></a>
+                                <a href=""><i class="icon "></i></a>
                             </div>
                             <table class="table">
                                 <tr>

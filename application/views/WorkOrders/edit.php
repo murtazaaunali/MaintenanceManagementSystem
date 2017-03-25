@@ -66,13 +66,13 @@
                                     endif;
                                     ?>" type="button" value="1">!</button>
                                     <button class="btn btn-large btn-danger <?php
-                                            if ($Workorder->priority == 2): echo "active";
-                                            endif;
-                                            ?>" type="button" value="2">!!</button>
+                                    if ($Workorder->priority == 2): echo "active";
+                                    endif;
+                                    ?>" type="button" value="2">!!</button>
                                     <button class="btn btn-large btn-danger <?php
                                     if ($Workorder->priority == 3): echo "active";
                                     endif;
-                                            ?>" type="button" value="3">!!!</button>
+                                    ?>" type="button" value="3">!!!</button>
                                 </div>
                             </div>
                         </div>
@@ -98,7 +98,7 @@
                             <?php echo form_dropdown('workorder_repeating_schedule', array('Select Repeating Schedule', '1' => 'Daily', '2' => 'Week days', '3' => 'Every Week', '4' => 'Every Two Weeks', '5' => 'Every Month', '6' => 'Every Year'), set_value('workorder_repeating_schedule', $Workorder->repeating_schedule), array('class' => 'span12')) ?>
                         </div>
                         <div class="form-group">
-<?php echo form_label('Requires Signature', 'workorder_requires_signature', array('class' => 'control-label')); ?>
+                            <?php echo form_label('Requires Signature', 'workorder_requires_signature', array('class' => 'control-label')); ?>
                         </div>
                         <div class="form-group">
                             <label class="switch">
@@ -107,9 +107,9 @@
                             </label>
                         </div>
                         <div class="form-group">
-<?php echo form_submit("Save", "Save", array('class' => 'btn btn-primary pull-right')); ?>
+                            <?php echo form_submit("Save", "Save", array('class' => 'btn btn-primary pull-right')); ?>
                         </div>
-<?php echo form_close(); ?>
+                        <?php echo form_close(); ?>
                     </div>
                 </div>
             </div>
