@@ -35,7 +35,7 @@ class WorkOrders extends CI_Controller {
         $this->data['page_title'] = 'Work Orders > Add New Work Order';
         $this->data['workorder_locations'] = $this->Locations_m->get_dropdown();
         $this->data['workorder_categories'] = $this->Categories_m->get_dropdown();
-        
+
         $this->data['workorder_task_types'] = $this->Task_Types_m->get_dropdown();
         $this->load->view('WorkOrders/Add', $this->data);
         if ($this->input->post()) {
@@ -68,8 +68,12 @@ class WorkOrders extends CI_Controller {
     public function edit($id = NULL) {
         if ($id) {
             $this->data['page_title'] = 'Work Orders > Edit > Order Title';
-            $this->data['workorders'] = $this->Workorders_m->get_all();
-            $this->data['workorder'] = $this->Workorders_m->get($id);
+            $this->data['Workorders'] = $this->Workorders_m->get_all();
+            $this->data['Workorder'] = $this->Workorders_m->get_by('id', $id);
+
+            if ($this->input->post()) {
+                print_r($this->input->post());
+            }
             $this->load->view('WorkOrders/Edit', $this->data);
         } else {
             redirect(site_url('Workorders/index'));
