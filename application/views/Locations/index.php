@@ -1,10 +1,9 @@
-
-
-<div class="span12">
-    <div class="panel-group">
-        <div class="panel panel-default">
-            <div class="panel-collapse collapse in">
-                <div class="panel-body">
+<div class="row-fluid">
+    <div class="span12">
+        <div class="widget-box">
+            <div class="widget-title"> <span class="icon"> <i class="icon-file"></i> </span>
+                <h5>Locations</h5>
+            </div>
                     <ul class="timeline list-unstyled">
                         <li class="timeline-item first-item">
                             <ul class="list-unstyled tasks-list">
@@ -88,7 +87,6 @@
             </div>
         </div>
     </div>
-    <a href="<?php echo site_url('/Locations/add'); ?>" class="btn paper-button paper-floating-action-button">
-        <i class="fa fa-plus"></i>
-    </a>
+     <a href="<?php echo site_url('/Locations/add'); ?>" class="paper-button paper-floating-action-button"><i class="icon-plus"></i></a>
+</div>
 </div>

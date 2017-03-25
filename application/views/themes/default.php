@@ -26,7 +26,6 @@
         <script src="<?php echo site_url('assets/themes/default/js/bootstrap.min.js'); ?>"></script> 
         <script src="<?php echo site_url('assets/themes/default/js/bootstrap-colorpicker.js'); ?>"></script> 
         <script src="<?php echo site_url('assets/themes/default/js/bootstrap-datepicker.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/query.toggle.buttons.js'); ?>"></script> 
         <script src="<?php echo site_url('assets/themes/default/js/Chart.bundle.js'); ?>"></script> 
     </head>
     <body>
