@@ -1,94 +1,25 @@
-
-
-<div class="span12">
-    <div class="panel-group">
-        <div class="panel panel-default">
-            <div class="panel-collapse collapse in">
-                <div class="panel-body">
-                    <ul class="timeline list-unstyled">
-                        <li class="timeline-item first-item">
-                            <ul class="list-unstyled tasks-list">
-                                <li class="task-item show-pointer active">
-                                    <div class="task-item-container task-open">
-                                        <div class="media">
-                                            <div class="media-body">
-                                                <h2 class="media-heading">
-                                                    Testing testing...
-                                                </h2>
-                                            </div>
-                                            <div class="media-right">
-                                                <div class="task-status-box">
-                                                    <a href="<?php echo site_url('Teams/edit'); ?>">
-                                                        <span class="status-circle task-open"><i class="fa fa-pencil"></i></span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="task-item show-pointer active">
-                                    <div class="task-item-container task-open">
-                                        <div class="media">
-                                            <div class="media-body">
-                                                <h2 class="media-heading">
-                                                    Testing testing...
-                                                </h2>
-                                            </div>
-                                            <div class="media-right">
-                                                <div class="task-status-box">
-                                                    <a href="<?php echo site_url('Teams/edit'); ?>">
-                                                    <span class="status-circle task-open"><i class="fa fa-pencil"></i></span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="task-item show-pointer active">
-                                    <div class="task-item-container task-open">
-                                        <div class="media">
-                                            <div class="media-body">
-                                                <h2 class="media-heading">
-                                                    Testing testing...
-                                                </h2>
-                                            </div>
-                                            <div class="media-right">
-                                                <div class="task-status-box">
-                                                    <a href="<?php echo site_url('Teams/edit'); ?>">
-                                                    <span class="status-circle task-open"><i class="fa fa-pencil"></i></span>
-                                                    </a>
-                          
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="task-item show-pointer active">
-                                    <div class="task-item-container task-open">
-                                        <div class="media">
-                                            <div class="media-body">
-                                                <h2 class="media-heading">
-                                                    Testing testing...
-                                                </h2>
-                                            </div>
-                                            <div class="media-right">
-                                                <div class="task-status-box">
-                                                    <a href="<?php echo site_url('Teams/edit'); ?>">
-                                                    <span class="status-circle task-open"><i class="fa fa-pencil"></i></span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+<div class="row-fluid">
+    <div class="span6">
+        <div class="widget-box">
+            <div class="widget-title"> <span class="icon"> <i class="icon-file"></i> </span>
+                <h5>Teams</h5>
             </div>
+            <ul class="recent-posts">
+                <li>
+                    <div class="article-post">
+                        <div class="fr"><a href="<?php echo site_url('Teams/edit/'); ?>" class="btn btn-primary btn-mini">Edit</a></div>
+                        <p> Testing</p>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
-    <a href="<?php echo site_url('/Teams/add'); ?>" class="btn paper-button paper-floating-action-button">
-        <i class="fa fa-plus"></i>
-    </a>
+    <div class="span6">
+        <div class="no-task-open">
+            <img src="<?php echo site_url('/assets/themes/default/img/arrow.svg'); ?>" class="center" alt="begin" />
+            <h1>Start here</h1>
+            <h2 class="text-center">Begin by selecting a Work Order</h2>
+        </div>
+        <a href="<?php echo site_url('/Teams/add'); ?>" class="paper-button paper-floating-action-button"><i class="icon-plus"></i></a>
+    </div>
 </div>
