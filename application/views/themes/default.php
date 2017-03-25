@@ -9,9 +9,14 @@
         <meta name="googlebot" content="all, index, follow" />
         <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/bootstrap.min.css'); ?>" />
         <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/bootstrap-responsive.min.css'); ?>" />
+        <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/colorpicker.css'); ?>" />
+        <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/datepicker.css'); ?>" />
+        <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/uniform.css'); ?>" />
+        <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/select2.css'); ?>" />
         <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/fullcalendar.css'); ?>" />
         <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/matrix-style.css'); ?>" />
         <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/matrix-media.css'); ?>" />
+        <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/bootstrap-wysihtml5.css'); ?>" />
         <link href="<?php echo site_url('assets/themes/default/font-awesome/css/font-awesome.css'); ?>" rel="stylesheet" />
         <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/jquery.gritter.css'); ?>" />
         <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
@@ -19,6 +24,9 @@
         <script src="<?php echo site_url('assets/themes/default/js/jquery.min.js'); ?>"></script> 
         <script src="<?php echo site_url('assets/themes/default/js/jquery.ui.custom.js'); ?>"></script> 
         <script src="<?php echo site_url('assets/themes/default/js/bootstrap.min.js'); ?>"></script> 
+        <script src="<?php echo site_url('assets/themes/default/js/bootstrap-colorpicker.js'); ?>"></script> 
+        <script src="<?php echo site_url('assets/themes/default/js/bootstrap-datepicker.js'); ?>"></script> 
+        <script src="<?php echo site_url('assets/themes/default/js/query.toggle.buttons.js'); ?>"></script> 
         <script src="<?php echo site_url('assets/themes/default/js/Chart.bundle.js'); ?>"></script> 
     </head>
     <body>
@@ -118,6 +126,11 @@
         <script src="<?php echo site_url('assets/themes/default/js/matrix.popover.js'); ?>"></script> 
         <script src="<?php echo site_url('assets/themes/default/js/jquery.dataTables.min.js'); ?>"></script> 
         <script src="<?php echo site_url('assets/themes/default/js/matrix.tables.js'); ?>"></script> 
+        <script src="<?php echo site_url('assets/themes/default/js/matrix.js'); ?>"></script> 
+        <script src="<?php echo site_url('assets/themes/default/js/matrix.form_common.js'); ?>"></script> 
+        <script src="<?php echo site_url('assets/themes/default/js/wysihtml5-0.3.0.js'); ?>"></script> 
+        <script src="<?php echo site_url('assets/themes/default/js/jquery.peity.min.js'); ?>"></script> 
+        <script src="<?php echo site_url('assets/themes/default/js/bootstrap-wysihtml5.js'); ?>"></script> 
 
         <script type="text/javascript">
             // This function is called from the pop-up menus to transfer to
