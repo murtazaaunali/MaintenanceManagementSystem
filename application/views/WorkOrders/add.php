@@ -43,11 +43,11 @@
                             <?php echo form_dropdown('workorder_team', array('Select Team', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'span12')) ?>
                         </div>
                         <div class="form-group">
-                            <?php echo form_label('Assign Due Date', 'workorder_priority', array('class' => 'span12')); ?>
+                            <?php echo form_label('Assign Due Date', 'workorder_priority', array('class' => 'control-label')); ?>
                             <?php echo form_input(array('type' => 'datetime', 'name' => 'workorder_duedate', 'class' => 'span12')) ?>
                         </div>
                         <div class="form-group">
-                            <?php echo form_label('End Due Date', 'workorder_priority', array('class' => 'span12')); ?>
+                            <?php echo form_label('End Due Date', 'workorder_priority', array('class' => 'control-label')); ?>
                             <?php echo form_input(array('type' => 'datetime', 'name' => 'workorder_end_duedate', 'class' => 'span12')) ?>
                         </div>
                         <div class="form-group">
@@ -63,7 +63,7 @@
                             </table>
                         </div>
                         <div class="form-group">
-                            <?php echo form_label('Requires Signature', 'workorder_requires_signature', array('class' => 'form-control')); ?>
+                            <?php echo form_label('Requires Signature', 'workorder_requires_signature', array('class' => 'control-label')); ?>
                         </div>
                         <div class="form-group">
                             <label class="switch">
