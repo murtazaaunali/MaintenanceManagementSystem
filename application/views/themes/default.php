@@ -9,34 +9,25 @@
         <meta name="googlebot" content="all, index, follow" />
         <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/bootstrap.min.css'); ?>" />
         <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/bootstrap-responsive.min.css'); ?>" />
-        <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/colorpicker.css'); ?>" />
-        <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/datepicker.css'); ?>" />
-        <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/uniform.css'); ?>" />
-        <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/select2.css'); ?>" />
-        <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/fullcalendar.css'); ?>" />
+        <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/bootstrap-datepicker.min.css'); ?>" />
+        <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/select2.min.css'); ?>" />
         <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/matrix-style.css'); ?>" />
         <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/matrix-media.css'); ?>" />
-        <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/bootstrap-wysihtml5.css'); ?>" />
         <link href="<?php echo site_url('assets/themes/default/font-awesome/css/font-awesome.css'); ?>" rel="stylesheet" />
-        <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/jquery.gritter.css'); ?>" />
         <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-        <script src="<?php echo site_url('assets/themes/default/js/excanvas.min.js'); ?>"></script> 
         <script src="<?php echo site_url('assets/themes/default/js/jquery.min.js'); ?>"></script> 
         <script src="<?php echo site_url('assets/themes/default/js/jquery.ui.custom.js'); ?>"></script> 
         <script src="<?php echo site_url('assets/themes/default/js/bootstrap.min.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/bootstrap-colorpicker.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/bootstrap-datepicker.js'); ?>"></script> 
+        <script src="<?php echo site_url('assets/themes/default/js/bootstrap-datepicker.min.js'); ?>"></script> 
+        <script src="<?php echo site_url('assets/themes/default/js/select2.full.min.js'); ?>"></script> 
         <script src="<?php echo site_url('assets/themes/default/js/Chart.bundle.js'); ?>"></script> 
     </head>
     <body>
-
         <!--Header-part-->
         <div id="header">
             <h1><a href="dashboard.html">Matrix Admin</a></h1>
         </div>
         <!--close-Header-part--> 
-
-
         <!--top-Header-menu-->
         <div id="user-nav" class="navbar navbar-inverse">
             <ul class="nav">
@@ -95,37 +86,16 @@
                 <?php echo $output; ?>
             </div>
         </div>
-
         <!--end-main-container-part-->
-
         <!--Footer-part-->
-
         <div class="row-fluid">
             <div id="footer" class="span12"> <?php echo date('Y'); ?> &copy; Primo Maintenance Management System. Designed and Developed by <a href="http://gobrig.com">GoBrig</a> </div>
         </div>
-
         <!--end-Footer-part-->
-        <script src="<?php echo site_url('assets/themes/default/js/jquery.flot.min.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/jquery.flot.resize.min.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/jquery.peity.min.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/fullcalendar.min.js'); ?>"></script> 
         <script src="<?php echo site_url('assets/themes/default/js/matrix.js'); ?>"></script> 
         <script src="<?php echo site_url('assets/themes/default/js/matrix.dashboard.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/jquery.gritter.min.js'); ?>"></script> 
         <script src="<?php echo site_url('assets/themes/default/js/matrix.interface.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/matrix.chat.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/jquery.validate.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/matrix.form_validation.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/jquery.wizard.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/jquery.uniform.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/select2.min.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/matrix.popover.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/jquery.dataTables.min.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/matrix.tables.js'); ?>"></script> 
         <script src="<?php echo site_url('assets/themes/default/js/matrix.js'); ?>"></script> 
         <script src="<?php echo site_url('assets/themes/default/js/matrix.form_common.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/wysihtml5-0.3.0.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/jquery.peity.min.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/bootstrap-wysihtml5.js'); ?>"></script> 
     </body>
 </html>

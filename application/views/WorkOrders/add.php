@@ -22,10 +22,16 @@
                         <div class="control-group">
                             <?php echo form_label('Set Priority', 'workorder_priority', array('class' => 'control-label')); ?>
                             <div class="controls">
-                                <div data-toggle="buttons-radio" class="btn-group">
-                                    <button class="btn btn-large btn-danger" type="button">!</button>
-                                    <button class="btn btn-large btn-danger" type="button">!!</button>
-                                    <button class="btn btn-large btn-danger" type="button">!!!</button>
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-danger active">
+                                        <input type="radio" name="workorder_priority" id="workorder_priority" value="1" checked>
+                                        ! </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="workorder_priority" id="workorder_priority" value="2">
+                                        !! </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="workorder_priority" id="workorder_priority" value="3">
+                                        !!! </label>
                                 </div>
                             </div>
                         </div>
@@ -45,12 +51,22 @@
                         <div class="control-group">
                             <?php echo form_label('Assign Due Date', 'workorder_start_date', array('class' => 'control-label')); ?>
                             <div class="controls">
-                                <input type="text" data-date="01-02-2013" data-date-format="dd-mm-yyyy" value="01-02-2013" class="datepicker span11">
+                                <div class="input-group date" id="datepicker1">
+                                    <input type="text" class="form-control" name="workorder_start_date" id="workorder_start_date" />
+                                    <span class="input-group-addon">
+                                        <span class="icon icon-calendar"></span>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                         <div class="control-group">
-                            <?php echo form_label('End Due Date', 'workorder_priority', array('class' => 'control-label')); ?>
-                            <?php echo form_input(array('type' => 'datetime', 'name' => 'workorder_end_duedate', 'class' => 'span12')) ?>
+                            <?php echo form_label('End Due Date', 'workorder_end_date', array('class' => 'control-label')); ?>
+                            <div class="input-group date" id="datepicker2">
+                                <input type="text" class="form-control" name="workorder_end_date" id="workorder_end_date" />
+                                <span class="input-group-addon">
+                                    <span class="icon icon-calendar"></span>
+                                </span>
+                            </div>
                         </div>
                         <div class="control-group">
                             <?php echo form_dropdown('workorder_repeating_schedule', array('Select Repeating Schedule', 'daily' => 'Daily', 'weekdays' => 'Week days', 'every-week' => 'Every Week', 'every-two-weeks' => 'Every Two Weeks', 'every-month' => 'Every Month', 'every-year' => 'Every Year'), FALSE, array('class' => 'span12')) ?>
@@ -70,12 +86,10 @@
                         <div class="control-group">
                             <?php echo form_label('Requires Signature', 'workorder_requires_signature', array('class' => 'control-label')); ?>
                         </div>
-                        <div class="control-group">
-                            <label class="switch">
-                                <input type="checkbox" name="workorder_requires_signature" value="1" checked>
-                                <div class="slider round"></div>
-                            </label>
-                        </div>
+                        <label class="switch">
+                            <input type="checkbox" name="workorder_requires_signature" value="1" checked>
+                            <div class="slider round"></div>
+                        </label>
                         <div class="control-group">
                             <?php echo form_submit("Save", "Save", array('class' => 'btn btn-primary pull-right')); ?>
                         </div>

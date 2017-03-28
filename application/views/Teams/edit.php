@@ -37,9 +37,9 @@
                                         <div class="control-group">
                                             <label class="control-label">Select Employees</label>
                                             <div class="controls">
-                                                <select multiple >
+                                                <select multiple="multiple">
                                                     <option>First option</option>
-                                                    <option selected>Second option</option>
+                                                    <option selected="selected">Second option</option>
                                                     <option>Third option</option>
                                                     <option>Fourth option</option>
                                                     <option>Fifth option</option>
@@ -49,11 +49,9 @@
                                                 </select>
                                             </div>
                                         </div>
-
                                         <div class="form-group">
                                             <?php echo form_submit("Save", "Save", array('class' => 'btn btn-primary pull-right')); ?>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -63,3 +61,4 @@
             </div>
         </div>
     </div>
+</div>

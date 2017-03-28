@@ -159,6 +159,17 @@ $(document).ready(function () {
     $('#lightbox').live('click', function () {
         $('#lightbox').hide(200);
     });
+    $('select').select2();
 
+    $('#datepicker1, #datepicker2').datepicker({
+        todayBtn: "linked",
+        multidate: false,
+        keyboardNavigation: false,
+        daysOfWeekDisabled: "5",
+        daysOfWeekHighlighted: "5",
+        calendarWeeks: true,
+        todayHighlight: true,
+        autoclose: true
+    });
 });
 
