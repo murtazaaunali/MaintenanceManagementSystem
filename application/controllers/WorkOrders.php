@@ -39,22 +39,26 @@ class WorkOrders extends CI_Controller {
         $this->data['workorder_task_types'] = $this->Task_Types_m->get_dropdown();
         $this->load->view('WorkOrders/Add', $this->data);
         if ($this->input->post()) {
-            $this->Workorders_m->insert(array(
+           $insert=$this->Workorders_m->insert(array(
                 'title' => $this->input->post('workorder_title'),
                 'description' => $this->input->post('workorder_description'),
                 'priority' => $this->input->post('workorder_priority'),
                 'location_id' => $this->input->post('workorder_location'),
                 'category_id' => $this->input->post('workorder_category'),
-                'worker_id' => $this->input->post('workorder_worker'),
-                'team_id' => $this->input->post('workorder_team'),
-                'start_date' => $this->input->post('workorder_duedate'),
-                'end_date' => $this->input->post('workorder_end_duedate'),
+                'start_date' => $this->input->post('start_date'),
+                'end_date' => $this->input->post('end_date'),
                 'requires_sign' => $this->input->post('workorder_requires_signature'),
                 'repeating_schedule' => $this->input->post('workorder_repeating_schedule'),
                 'status' => '1',
                 'modified_by' => '1'
             ));
-            redirect(site_url('Workorders/index'));
+            if ($insert === FALSE){
+                $this->load->view('Erorr');
+                }
+            else {
+                    redirect('WorkOrders');
+                
+            }
         }
     }
 

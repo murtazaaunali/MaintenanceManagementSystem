@@ -162,6 +162,7 @@ $(document).ready(function () {
     $('select').select2();
 
     $('#datepicker1, #datepicker2').datepicker({
+        format : "yyyy-mm-dd",
         todayBtn: "linked",
         multidate: false,
         keyboardNavigation: false,

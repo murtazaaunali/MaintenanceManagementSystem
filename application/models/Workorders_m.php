@@ -32,5 +32,13 @@ class Workorders_m extends MY_Model {
         $workorders['date_modified'] = date('Y-m-d H:i:s');
         return $workorders;
     }
+        public function get_dropdown() {
+        $return[''] = 'Select Workorder';
+        $query = $this->db->get('workorders');
+        foreach ($query->result_array() as $row) {
+            $return[$row['id']] = $row['title'];
+        }
+        return $return;
+    }
 
 }

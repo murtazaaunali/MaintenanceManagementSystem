@@ -12,13 +12,15 @@
  * @author Murtaza
  */
 class Requests extends CI_Controller {
-    
+
     public $page_title;
 
     function __construct() {
         parent::__construct();
         $this->output->set_title('Primo CMMS | Requests');
         $this->output->set_template('default');
+        $this->load->model('Requests_m');
+        $this->load->model('Workorders_m');
     }
 
     public function index() {
@@ -27,15 +29,35 @@ class Requests extends CI_Controller {
     }
 
     public function add() {
-        $this->data['page_title'] = 'Work Orders > Add New Work Order';
+        $this->data['page_title'] = 'Requests > Add New Request';
+        $this->data['request_Workorders'] = $this->Workorders_m->get_dropdown();
         $this->load->view("Requests/Add", $this->data);
+        if ($this->input->post()) {
+            $insert = $this->Requests_m->insert(array(
+                'title' => $this->input->post('request_info'),
+                'description' => $this->input->post('request_description'),
+                'priority' => $this->input->post('request_priority'),
+                'workorder_name' => $this->input->post('request_workorder_name'),
+                'status' => '1',
+                'date_created' => $this->input->post('date_created'),
+                'date_modified' => $this->input->post('date_modified'),
+                'modified_by' => '1'
+            ));
+            if ($insert === FALSE) {
+                $this->load->view('Erorr');
+            } else {
+                redirect('Requests/index');
+            }
+        }
     }
 
     public function edit($id = NULL) {
         $this->data['page_title'] = 'Work Orders > Edit > Order Title';
         $this->load->view("Requests/Edit");
     }
+
     public function change_status() {
         
     }
+
 }

@@ -35,24 +35,28 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="form-group">
+                            <?php echo form_label('Select location ID', 'workorder_priority', array('class' => 'span12')); ?>
                             <?php echo form_dropdown('workorder_location', $workorder_locations, FALSE, array('class' => 'span12')) ?>
                         </div>
+
                         <div class="form-group">
-                            <?php echo form_dropdown('workorder_category', $workorder_categories, FALSE, array('class' => 'span12')) ?>
+                            <?php echo form_label('Select category ID', 'workorder_priority', array('class' => 'span12')); ?>
+                            <?php echo form_dropdown('workorder_category', array('Select ID', '1', '2', '3'), FALSE, array('class' => 'span12')) ?>
                         </div>
                         <div class="form-group">
                             <?php echo form_label('Assign Staff', 'workorder_priority', array('class' => 'span12')); ?>
                             <?php echo form_dropdown('workorder_worker', array('Select Main Worker', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'span12')) ?>
                         </div>
                         <div class="form-group">
-                            <?php echo form_dropdown('workorder_team', array('Select Team', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'span12')) ?>
+                            <?php echo form_dropdown('workorder_team', array('Select Team', 'Location1', 'Location2', 'Location3'), FALSE, array('class' => 'span12')) ?>
                         </div>
                         <div class="control-group">
-                            <?php echo form_label('Assign Due Date', 'workorder_start_date', array('class' => 'control-label')); ?>
+                            <?php echo form_label('Assign Start Date', 'start_date', array('class' => 'control-label')); ?>
                             <div class="controls">
                                 <div class="input-group date" id="datepicker1">
-                                    <input type="text" class="form-control" name="workorder_start_date" id="workorder_start_date" />
+                                    <input type="text" class="form-control" name="start_date" id="workorder_start_date" />
                                     <span class="input-group-addon">
                                         <span class="icon icon-calendar"></span>
                                     </span>
@@ -60,16 +64,16 @@
                             </div>
                         </div>
                         <div class="control-group">
-                            <?php echo form_label('End Due Date', 'workorder_end_date', array('class' => 'control-label')); ?>
+                            <?php echo form_label('End Due Date', 'end_date', array('class' => 'control-label')); ?>
                             <div class="input-group date" id="datepicker2">
-                                <input type="text" class="form-control" name="workorder_end_date" id="workorder_end_date" />
+                                <input type="text" class="form-control" name="end_date" id="workorder_end_date" />
                                 <span class="input-group-addon">
                                     <span class="icon icon-calendar"></span>
                                 </span>
                             </div>
                         </div>
                         <div class="control-group">
-                            <?php echo form_dropdown('workorder_repeating_schedule', array('Select Repeating Schedule', 'daily' => 'Daily', 'weekdays' => 'Week days', 'every-week' => 'Every Week', 'every-two-weeks' => 'Every Two Weeks', 'every-month' => 'Every Month', 'every-year' => 'Every Year'), FALSE, array('class' => 'span12')) ?>
+                            <?php echo form_dropdown('workorder_repeating_schedule', array('Select Repeating Schedule', '1' => 'Daily', '2' => 'Week days', '3' => 'Every Week', '4' => 'Every Two Weeks', '5' => 'Every Month', '6' => 'Every Year'), FALSE, array('class' => 'span12')) ?>
                         </div>
                         <div class="control-group">
                             <?php echo form_label('Tasks', 'workorder_tasks', array('class' => 'span10')); ?>

@@ -23,14 +23,14 @@ class Locations_m extends MY_Model {
     public $before_create = array('timestamps_before_create');
     public $before_update = array('timestamps_before_update');
 
-    protected function timestamps_before_create($workorders) {
-        $workorders['date_created'] = $workorders['date_modified'] = date('Y-m-d H:i:s');
-        return $workorders;
+    protected function timestamps_before_create($locations) {
+        $locations['date_created'] = $locations['date_modified'] = date('Y-m-d H:i:s');
+        return $locations;
     }
 
-    protected function timestamps_before_update($workorders) {
-        $workorders['date_modified'] = date('Y-m-d H:i:s');
-        return $workorders;
+    protected function timestamps_before_update($locations) {
+        $locations['date_modified'] = date('Y-m-d H:i:s');
+        return $locations;
     }
 
     public function get_dropdown() {
