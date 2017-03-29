@@ -24,7 +24,7 @@
                             </div>
                             <?php echo form_label('Nationality', '', array('class' => 'control-label')); ?>
                             <div class="form-group">
-                                <?php echo form_input('nationlity', '', array('class' => 'span12', 'placeholder' => 'Nationality*')) ?>
+                                <?php echo form_input('nationality', '', array('class' => 'span12', 'placeholder' => 'Nationality*')) ?>
                             </div>
                             <?php echo form_label('Email', '', array('class' => 'control-label')); ?>
                             <div class="form-group">
