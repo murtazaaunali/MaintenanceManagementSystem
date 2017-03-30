@@ -7,7 +7,7 @@
  */
 
 /**
- * Description of Employees
+ * Description of Employees_m
  *
  * @author Murtaza
  */
@@ -19,6 +19,7 @@ class Employees extends CI_Controller {
         parent::__construct();
         $this->output->set_title('Primo CMMS | Employee');
         $this->output->set_template('default');
+        $this->load->model('Employees_m');
     }
 
     public function index() {

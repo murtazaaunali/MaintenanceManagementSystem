@@ -52,8 +52,25 @@ class Requests extends CI_Controller {
     }
 
     public function edit($id = NULL) {
-        $this->data['page_title'] = 'Work Orders > Edit > Order Title';
-        $this->load->view("Requests/Edit");
+        if ($id) {
+            $this->data['page_title'] = 'Rquests > Edit > Request';
+            $this->data['request_Workorders'] = $this->Workorders_m->get_dropdown();
+            $this->load->view("Requests/Edit", $this->data);
+            if ($this->input->post()) {
+                $this->Requests_m->update($this->input->post('id'), array(
+                    'title' => $this->input->post('request_title'),
+                    'description' => $this->input->post('request_description'),
+                    'priority' => $this->input->post('request_priority'),
+                    'status' => '1',
+                    'date_created' => $this->input->post('date_created'),
+                    'date_modified' => $this->input->post('date_modified'),
+                    'modified_by' => '1'
+                ));
+            }
+            $this->load->view('Requests/Edit', $this->data);
+        } else {
+            redirect(site_url('Requests/index'));
+        }
     }
 
     public function change_status() {

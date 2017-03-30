@@ -24,47 +24,30 @@
                 <div class="span12">
                     <div class="form-group">
                         <h4 class="control-label">Work Request Info</h4>
-                        <?php echo form_input('request_tittle', '', array('class' => 'span12', 'placeholder' => 'Request title*')) ?>
+                        <?php echo form_input('request_title', '', array('class' => 'span12', 'placeholder' => 'Request title*')) ?>
                     </div>
                     <div class="form-group">
-                        <?php echo form_textarea('workorder_title', '', array('class' => 'span12', 'placeholder' => 'Detailed description', 'rows' => '3')); ?>
+                        <?php echo form_textarea('request_description', '', array('class' => 'span12', 'placeholder' => 'Detailed description', 'rows' => '3')); ?>
                     </div>
-                    <?php echo form_label('Set Priority', 'workorder_priority', array('class' => 'control-label')); ?>
+                    <?php echo form_label('Set Priority', 'request_priority', array('class' => 'control-label')); ?>
                     <div class="form-group">
                         <label class="radio-inline">
-                            <?php echo form_radio('workorder_priority', '0', FALSE); ?> None
+                            <?php echo form_radio('request_priority', '0', FALSE); ?> None
                         </label>
                         <label class="radio-inline">
-                            <?php echo form_radio('workorder_priority', '1', FALSE); ?> Low
+                            <?php echo form_radio('request_priority', '1', FALSE); ?> Low
                         </label>
                         <label class="radio-inline">
-                            <?php echo form_radio('workorder_priority', '2', FALSE); ?> Medium
+                            <?php echo form_radio('request_priority', '2', FALSE); ?> Medium
                         </label>
                         <label class="radio-inline">
-                            <?php echo form_radio('workorder_priority', '3', FALSE); ?> High
+                            <?php echo form_radio('request_priority', '3', FALSE); ?> High
                         </label>
                     </div>
-                    <div class="form-group">
-                        <?php echo form_dropdown('workorder_location', array('Select Location', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'span12')) ?>
-                    </div>
-                    <div class="form-group">
-                        <?php echo form_label('Assign Staff', 'workorder_priority', array('class' => 'control-label')); ?>
-                        <?php echo form_dropdown('workorder_worker', array('Select Main Worker', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'span12')) ?>
-                    </div>
-                    <div class="form-group">
-                        <?php echo form_dropdown('workorder_team', array('Select Team', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'span12')) ?>
-                    </div>
-                    <div class="form-group">
-                        <?php echo form_label('Assign Due Date', 'workorder_priority', array('class' => 'control-label')); ?>
-                        <?php echo form_input(array('type' => 'date', 'name' => 'workorder_duedate', 'class' => 'span12')) ?>
-                    </div>
-                    <div class="form-group">
-                        <?php echo form_label('End Due Date', 'workorder_priority', array('class' => 'control-label')); ?>
-                        <?php echo form_input(array('type' => 'date', 'name' => 'workorder_end_duedate', 'class' => 'span12')) ?>
-                    </div>
-                    <div class="form-group">
-                        <?php echo form_dropdown('workorder_repeating_schedule', array('Select Repeating Schedule', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'span12')) ?>
-                    </div>
+                  <div class="control-group">
+                                <label class="control-label">Select Workorder</label>
+                                <?php echo form_dropdown('request_workorder_name', $request_Workorders, FALSE, array('class' => 'span12')) ?>
+                            </div>
                     <div class="form-group">
                             <?php echo form_submit("Save", "Save", array('class' => 'btn btn-primary pull-right')); ?>
                         </div>
@@ -74,5 +57,4 @@
             </div>
         </div>
     </div>
-</div>
 </div>

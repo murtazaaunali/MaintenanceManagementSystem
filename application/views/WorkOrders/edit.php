@@ -50,6 +50,7 @@
                 <div class="row-fluid">
                     <div class="span12">
                         <?php echo form_open(); ?>
+                        <?php echo form_hidden('id', $this->uri->segment(3)); ?>
                         <div class="form-group">
                             <h4 class="control-label">Work Order Info</h4>
                             <?php echo form_input('workorder_title', set_value('workorder_title', $Workorder->title), array('class' => 'span12')); ?>
@@ -60,19 +61,25 @@
                         <div class="control-group">
                             <?php echo form_label('Set Priority', 'workorder_priority', array('class' => 'control-label')); ?>
                             <div class="controls">
-                                <div data-toggle="buttons-radio" class="btn-group">
-                                    <button class="btn btn-large btn-danger <?php
-                                    if ($Workorder->priority == 1): echo "active";
-                                    endif;
-                                    ?>" type="button" value="1">!</button>
-                                    <button class="btn btn-large btn-danger <?php
-                                    if ($Workorder->priority == 2): echo "active";
-                                    endif;
-                                    ?>" type="button" value="2">!!</button>
-                                    <button class="btn btn-large btn-danger <?php
-                                    if ($Workorder->priority == 3): echo "active";
-                                    endif;
-                                    ?>" type="button" value="3">!!!</button>
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-danger active">
+                                        <input type="radio" name="workorder_priority" id="workorder_priority" value="1" <?php
+                                        if ($Workorder->priority == 1): echo "checked";
+                                        endif;
+                                        ?>>
+                                        ! </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="workorder_priority" id="workorder_priority" value="2" <?php
+                                        if ($Workorder->priority == 2): echo "checked";
+                                        endif;
+                                        ?>>
+                                        !! </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="workorder_priority" id="workorder_priority" value="3" <?php
+                                        if ($Workorder->priority == 3): echo "checked";
+                                        endif;
+                                        ?>>
+                                        !!! </label>
                                 </div>
                             </div>
                         </div>
@@ -80,21 +87,39 @@
                             <?php echo form_dropdown('workorder_location', array('Select Main Worker', '1' => 'Location1', '2' => 'Location2', '3' => 'Loacation3'), set_value('workorder_location', $Workorder->location_id), array('class' => 'span12')) ?>
                         </div>
                         <div class="form-group">
-                            <?php echo form_label('Assign Staff', 'workorder_priority', array('class' => 'control-label')); ?>
-                            <?php echo form_dropdown('workorder_worker', set_value('workorder_worker', $Workorder->category_id), TRUE, array('class' => 'span12')) ?>
+                            <?php echo form_label('Assign Staff', 'workorder_staff', array('class' => 'control-label')); ?>
+                            <?php echo form_dropdown('workorder_worker', $workorder_Employees, TRUE, array('class' => 'span12')) ?>
                         </div>
                         <div class="form-group">
-                            <?php echo form_dropdown('workorder_team', array('Select Team', 'Location1', 'Location2', 'Loacation3'), FALSE, array('class' => 'span12')) ?>
+                            <?php echo form_label('Assign Team', 'workorder_team', array('class' => 'control-label')); ?>
+                            <?php echo form_dropdown('workorder_team', $workorder_Teams, FALSE, array('class' => 'span12')) ?>
                         </div>
                         <div class="form-group">
-                            <?php echo form_label('Assign Due Date', 'workorder_priority', array('class' => 'control-label')); ?>
-                            <?php echo form_input(array('type' => 'date', 'name' => 'workorder_duedate', 'value' => set_value('workorder_duedate', $Workorder->start_date), 'class' => 'span12')) ?>
+                            <div class="control-group">
+                                <?php echo form_label('Assign Start Date', 'start_date', array('class' => 'control-label')); ?>
+                                <div class="controls">
+                                    <div class="input-group date" id="datepicker1">
+                                        <input type="text" class="form-control" name="start_date" id="workorder_start_date" />
+                                        <span class="input-group-addon">
+                                            <span class="icon icon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <?php echo form_label('End Due Date', 'workorder_priority', array('class' => 'control-label')); ?>
-                            <?php echo form_input(array('type' => 'date', 'name' => 'workorder_end_duedate', 'value' => set_value('workorder_end_duedate', $Workorder->end_date), 'class' => 'span12')) ?>
+                            <div class="control-group">
+                                <?php echo form_label('End Due Date', 'end_date', array('class' => 'control-label')); ?>
+                                <div class="input-group date" id="datepicker2">
+                                    <input type="text" class="form-control" name="end_date" id="workorder_end_date" />
+                                    <span class="input-group-addon">
+                                        <span class="icon icon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-group">
+                            <?php echo form_label('Repeating Schedule', 'workorder_priority', array('class' => 'control-label')); ?>
                             <?php echo form_dropdown('workorder_repeating_schedule', array('Select Repeating Schedule', '1' => 'Daily', '2' => 'Week days', '3' => 'Every Week', '4' => 'Every Two Weeks', '5' => 'Every Month', '6' => 'Every Year'), set_value('workorder_repeating_schedule', $Workorder->repeating_schedule), array('class' => 'span12')) ?>
                         </div>
                         <div class="form-group">

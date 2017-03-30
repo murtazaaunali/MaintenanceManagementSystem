@@ -20,6 +20,8 @@ class WorkOrders extends CI_Controller {
         $this->output->set_title('Primo CMMS | Work Orders');
         $this->output->set_template('default');
         $this->load->model('Workorders_m');
+        $this->load->model('Employees_m');
+        $this->load->model('Teams_m');
         $this->load->model('Locations_m');
         $this->load->model('Categories_m');
         $this->load->model('Task_Types_m');
@@ -35,11 +37,12 @@ class WorkOrders extends CI_Controller {
         $this->data['page_title'] = 'Work Orders > Add New Work Order';
         $this->data['workorder_locations'] = $this->Locations_m->get_dropdown();
         $this->data['workorder_categories'] = $this->Categories_m->get_dropdown();
-
         $this->data['workorder_task_types'] = $this->Task_Types_m->get_dropdown();
+        $this->data['workorder_Employees'] = $this->Employees_m->get_dropdown();
+        $this->data['workorder_Teams'] = $this->Teams_m->get_dropdown();
         $this->load->view('WorkOrders/Add', $this->data);
         if ($this->input->post()) {
-           $insert=$this->Workorders_m->insert(array(
+            $insert = $this->Workorders_m->insert(array(
                 'title' => $this->input->post('workorder_title'),
                 'description' => $this->input->post('workorder_description'),
                 'priority' => $this->input->post('workorder_priority'),
@@ -52,12 +55,10 @@ class WorkOrders extends CI_Controller {
                 'status' => '1',
                 'modified_by' => '1'
             ));
-            if ($insert === FALSE){
+            if ($insert === FALSE) {
                 $this->load->view('Erorr');
-                }
-            else {
-                    redirect('WorkOrders');
-                
+            } else {
+                redirect('WorkOrders');
             }
         }
     }
@@ -74,9 +75,26 @@ class WorkOrders extends CI_Controller {
             $this->data['page_title'] = 'Work Orders > Edit > Order Title';
             $this->data['Workorders'] = $this->Workorders_m->get_all();
             $this->data['Workorder'] = $this->Workorders_m->get_by('id', $id);
+            $this->data['workorder_Employees'] = $this->Employees_m->get_dropdown();
+            $this->data['workorder_Teams'] = $this->Teams_m->get_dropdown();
+
+
 
             if ($this->input->post()) {
-                print_r($this->input->post());
+
+                $this->Workorders_m->update($this->input->post('id'), array(
+                    'title' => $this->input->post('workorder_title'),
+                    'description' => $this->input->post('workorder_description'),
+                    'priority' => $this->input->post('workorder_priority'),
+                    'location_id' => $this->input->post('workorder_location'),
+                    'assign_employee' => $this->input->post('workorder_worker'),
+                    'assign_team' => $this->input->post('workorder_team'),
+                    'start_date' => $this->input->post('start_date'),
+                    'end_date' => $this->input->post('end_date'),
+                    'repeating_schedule' => $this->input->post('workorder_repeating_schedule'),
+                    'status' => '1',
+                    'modified_by' => '1'
+                ));
             }
             $this->load->view('WorkOrders/Edit', $this->data);
         } else {
