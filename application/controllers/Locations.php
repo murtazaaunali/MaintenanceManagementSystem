@@ -52,13 +52,35 @@ class Locations extends CI_Controller {
     }
 
     public function edit($id = NULL) {
+        if($id){
         $this->data['page_title'] = 'Location > Edit > Locations';
-        $this->data['locations'] = $this->Locations_m->get_all();
-        $this->load->view("Locations/Edit", $this->data);
+        $this->data['Locations'] = $this->Locations_m->get_all();
+        $this->data['location'] = $this->Locations_m->get_by('id', $id);
+        
+        
+           if ($this->input->post()) {
+                
+                $this->Locations_m->update($this->input->post('id'), array(
+                    'name' => $this->input->post('location_name'),
+                    'address' => $this->input->post('location_address'),
+                    'contact_number' => $this->input->post('contact_number'),
+                    'nationality' => $this->input->post('nationality'),
+                    'email' => $this->input->post('email'),
+                    'status' => '1',
+                    'date_modified' => $this->input->post('date_modified'),
+                    'modified_by' => '1'
+                ));
+            }
+            $this->load->view("Locations/Edit", $this->data);
+        } else {
+            redirect(site_url('Locations/index'));
+        }
     }
+   
 
     public function delete() {
         
     }
 
 }
+

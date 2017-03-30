@@ -5,7 +5,7 @@
                 <h5>Requests</h5>
             </div>
             <ul class="recent-posts">
-                <?php foreach ($requests as $request): ?>
+                <?php foreach ($Requests as $request): ?>
                     <li>
                         <div class="article-post">
                             <div class="fr"><a href="<?php echo site_url('Requests/edit/' . $request->id); ?>" class="btn btn-primary btn-mini">Edit</a></div>

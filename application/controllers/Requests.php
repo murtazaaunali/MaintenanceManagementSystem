@@ -55,7 +55,7 @@ class Requests extends CI_Controller {
     public function edit($id = NULL) {
         if ($id) {
             $this->data['page_title'] = 'Requests > Edit > Request Title';
-            $this->data['requests'] = $this->Requests_m->get_all();
+            $this->data['Requests'] = $this->Requests_m->get_all();
             $this->data['request'] = $this->Requests_m->get_by('id', $id);
             $this->data['request_Workorders'] = $this->Workorders_m->get_dropdown();
             
