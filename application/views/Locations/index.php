@@ -9,7 +9,7 @@
                     <li>
                         <div class="article-post">
                             <div class="fr"><a href="<?php echo site_url('Locations/edit/' . $location->id); ?>" class="btn btn-primary btn-mini">Edit</a></div>
-                            <p><?php echo $location->name; ?></p>
+                            <p><a href="<?php echo site_url('Locations/edit/' . $location->id); ?>"><?php echo substr($location->name, 0, 85); ?>...</a> </p>
                         </div>
                     </li>
                 <?php endforeach; ?>

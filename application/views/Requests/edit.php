@@ -34,24 +34,38 @@
                             <?php echo form_textarea('request_description', set_value('request_description', $Request->description), array('class' => 'span12', 'placeholder' => 'Detailed description', 'rows' => '3')); ?>
                         </div>
                         <?php echo form_label('Set Priority', 'request_priority', array('class' => 'control-label')); ?>
-                        <div class="form-group">
-                            <label class="radio-inline">
-                                <?php echo form_radio('request_priority', '0', FALSE); ?> None
-                            </label>
-                            <label class="radio-inline">
-                                <?php echo form_radio('request_priority', '1', FALSE); ?> Low
-                            </label>
-                            <label class="radio-inline">
-                                <?php echo form_radio('request_priority', '2', FALSE); ?> Medium
-                            </label>
-                            <label class="radio-inline">
-                                <?php echo form_radio('request_priority', '3', FALSE); ?> High
-                            </label>
-                        </div>
+                       <div class="controls">
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-danger active">
+                                        <input type="radio" name="request_priority" id="request_priority" value="1" <?php
+                                        if ($Request->priority == 0): echo "checked";
+                                        endif;
+                                        ?>>
+                                         </label>
+                                    <label class="btn btn-danger active">
+                                        <input type="radio" name="request_priority" id="request_priority" value="1" <?php
+                                        if ($Request->priority == 1): echo "checked";
+                                        endif;
+                                        ?>>
+                                        ! </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="request_priority" id="request_priority" value="2" <?php
+                                        if ($Request->priority == 2): echo "checked";
+                                        endif;
+                                        ?>>
+                                        !! </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="request_priority" id="request_priority" value="3" <?php
+                                        if ($Request->priority == 3): echo "checked";
+                                        endif;
+                                        ?>>
+                                        !!! </label>
+                                </div>
+                            </div>
                         <div class="form-group">
                             <div class="control-group">
                                 <label class="control-label">Select Workorder</label>
-                                <?php echo form_dropdown('request_workorder_name', $request_Workorders, FALSE, array('class' => 'span12')); ?>
+                                <?php echo form_dropdown('request_workorder_name', $request_Workorders,set_value('request_workorder', $Request->workorder_name), FALSE, array('class' => 'span12')); ?>
                             </div>
                         </div>
                         <div class="form-group">

@@ -17,20 +17,23 @@
                         </div>
                         <br>
                         <?php echo form_label('Set Priority', 'request_priority', array('class' => 'control-label')); ?>
-                        <div class="form-group">
-                            <label class="radio-inline">
-                                <?php echo form_radio('request_priority', '0', FALSE); ?> None
-                            </label>
-                            <label class="radio-inline">
-                                <?php echo form_radio('request_priority', '1', FALSE); ?> Low
-                            </label>
-                            <label class="radio-inline">
-                                <?php echo form_radio('request_priority', '2', FALSE); ?> Medium
-                            </label>
-                            <label class="radio-inline">
-                                <?php echo form_radio('request_priority', '3', FALSE); ?> High
-                            </label>
-                        </div>
+                              <div class="controls">
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-danger active">
+                                        <input type="radio" name="request_priority" id="request_priority" value="0">
+                                         </label>
+                                    <label class="btn btn-danger active">
+                                        <input type="radio" name="request_priority" id="request_priority" value="1">
+                                        ! </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="request_priority" id="request_priority" value="2">
+                                        
+                                        !! </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="request_priority" id="request_priority" value="3">
+                                        !!! </label>
+                                </div>
+                            </div>
                         <br>
                             <div class="control-group">
                                 <label class="control-label">Select Workorder</label>

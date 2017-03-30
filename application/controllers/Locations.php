@@ -55,7 +55,7 @@ class Locations extends CI_Controller {
         if($id){
         $this->data['page_title'] = 'Location > Edit > Locations';
         $this->data['Locations'] = $this->Locations_m->get_all();
-        $this->data['location'] = $this->Locations_m->get_by('id', $id);
+        $this->data['Location'] = $this->Locations_m->get_by('id', $id);
         
         
            if ($this->input->post()) {

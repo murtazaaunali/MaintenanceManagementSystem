@@ -88,18 +88,18 @@
                         </div>
                         <div class="form-group">
                             <?php echo form_label('Assign Staff', 'workorder_staff', array('class' => 'control-label')); ?>
-                            <?php echo form_dropdown('workorder_worker', $workorder_Employees, TRUE, array('class' => 'span12')); ?>
+                            <?php echo form_dropdown('workorder_worker', $workorder_Employees,set_value('workorder_employee', $Workorder->assign_employee), TRUE, array('class' => 'span12')); ?>
                         </div>
                         <div class="form-group">
                             <?php echo form_label('Assign Team', 'workorder_team', array('class' => 'control-label')); ?>
-                            <?php echo form_dropdown('workorder_team', $workorder_Teams, FALSE, array('class' => 'span12')); ?>
+                            <?php echo form_dropdown('workorder_team', $workorder_Teams,set_value('workorder_team', $Workorder->assign_team), FALSE, array('class' => 'span12')); ?>
                         </div>
                         <div class="form-group">
                             <div class="control-group">
                                 <?php echo form_label('Assign Start Date', 'start_date', array('class' => 'control-label')); ?>
                                 <div class="controls">
                                     <div class="input-group date" id="datepicker1">
-                                        <input type="text" class="form-control" name="start_date" id="workorder_start_date" />
+                                        <input type="text" class="form-control" name="start_date" id="workorder_start_date" value="<?php echo $Workorder->start_date ?>" />
                                         <span class="input-group-addon">
                                             <span class="icon icon-calendar"></span>
                                         </span>
@@ -111,7 +111,7 @@
                             <div class="control-group">
                                 <?php echo form_label('End Due Date', 'end_date', array('class' => 'control-label')); ?>
                                 <div class="input-group date" id="datepicker2">
-                                    <input type="text" class="form-control" name="end_date" id="workorder_end_date" />
+                                    <input type="text" class="form-control" name="end_date" id="workorder_end_date" value="<?php echo $Workorder->end_date ?>" />
                                     <span class="input-group-addon">
                                         <span class="icon icon-calendar"></span>
                                     </span>

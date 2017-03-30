@@ -29,24 +29,24 @@
                         <div class="form-group">
                             <?php echo form_label('Name', '', array('class' => 'control-label')); ?>
                             <div class="form-group">
-                                <?php echo form_input('location_name', set_value('location_name', $location->name), array('class' => 'span12', 'placeholder' => 'Name of the Location*')) ?>
+                                <?php echo form_input('location_name', set_value('location_name', $Location->name), array('class' => 'span12', 'placeholder' => 'Name of the Location*')) ?>
                             </div>
                         </div>
                             <?php echo form_label('Address', '', array('class' => 'control-label')); ?>
                             <div class="form-group">
-                                <?php echo form_input('location_address', set_value('location_address', $location->address), array('class' => 'span12', 'placeholder' => 'Address of the Location*')) ?>
+                                <?php echo form_input('location_address', set_value('location_address', $Location->address), array('class' => 'span12', 'placeholder' => 'Address of the Location*')) ?>
                             </div>
                             <?php echo form_label('Contact Number', '', array('class' => 'control-label')); ?>
                             <div class="form-group">
-                                <?php echo form_input('contact_number', set_value('contact_number', $location->contact_number), array('class' => 'span12', 'placeholder' => '+971-xxxxxxxxx*')) ?>
+                                <?php echo form_input('contact_number', set_value('contact_number', $Location->contact_number), array('class' => 'span12', 'placeholder' => '+971-xxxxxxxxx*')) ?>
                             </div>
                             <?php echo form_label('Nationality', '', array('class' => 'control-label')); ?>
                             <div class="form-group">
-                                <?php echo form_input('nationality', set_value('nationality', $location->nationality), array('class' => 'span12', 'placeholder' => 'Nationality*')) ?>
+                                <?php echo form_input('nationality', set_value('nationality', $Location->nationality), array('class' => 'span12', 'placeholder' => 'Nationality*')) ?>
                             </div>
                             <?php echo form_label('Email', '', array('class' => 'control-label')); ?>
                             <div class="form-group">
-                                <?php echo form_input('email', set_value('email', $location->email), array('class' => 'span12', 'placeholder' => 'abc@example.com*')) ?>
+                                <?php echo form_input('email', set_value('email', $Location->email), array('class' => 'span12', 'placeholder' => 'abc@example.com*')) ?>
                             </div>
 
                             <div class="form-block">
