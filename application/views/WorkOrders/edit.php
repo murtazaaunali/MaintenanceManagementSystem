@@ -84,15 +84,15 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <?php echo form_dropdown('workorder_location', array('Select Main Worker', '1' => 'Location1', '2' => 'Location2', '3' => 'Loacation3'), set_value('workorder_location', $Workorder->location_id), array('class' => 'span12')) ?>
+                            <?php echo form_dropdown('workorder_location', array('Select Main Worker', '1' => 'Location1', '2' => 'Location2', '3' => 'Loacation3'), set_value('workorder_location', $Workorder->location_id), array('class' => 'span12')); ?>
                         </div>
                         <div class="form-group">
                             <?php echo form_label('Assign Staff', 'workorder_staff', array('class' => 'control-label')); ?>
-                            <?php echo form_dropdown('workorder_worker', $workorder_Employees, TRUE, array('class' => 'span12')) ?>
+                            <?php echo form_dropdown('workorder_worker', $workorder_Employees, TRUE, array('class' => 'span12')); ?>
                         </div>
                         <div class="form-group">
                             <?php echo form_label('Assign Team', 'workorder_team', array('class' => 'control-label')); ?>
-                            <?php echo form_dropdown('workorder_team', $workorder_Teams, FALSE, array('class' => 'span12')) ?>
+                            <?php echo form_dropdown('workorder_team', $workorder_Teams, FALSE, array('class' => 'span12')); ?>
                         </div>
                         <div class="form-group">
                             <div class="control-group">
@@ -120,7 +120,7 @@
                         </div>
                         <div class="form-group">
                             <?php echo form_label('Repeating Schedule', 'workorder_priority', array('class' => 'control-label')); ?>
-                            <?php echo form_dropdown('workorder_repeating_schedule', array('Select Repeating Schedule', '1' => 'Daily', '2' => 'Week days', '3' => 'Every Week', '4' => 'Every Two Weeks', '5' => 'Every Month', '6' => 'Every Year'), set_value('workorder_repeating_schedule', $Workorder->repeating_schedule), array('class' => 'span12')) ?>
+                            <?php echo form_dropdown('workorder_repeating_schedule', array('Select Repeating Schedule', '1' => 'Daily', '2' => 'Week days', '3' => 'Every Week', '4' => 'Every Two Weeks', '5' => 'Every Month', '6' => 'Every Year'), set_value('workorder_repeating_schedule', $Workorder->repeating_schedule), array('class' => 'span12')); ?>
                         </div>
                         <div class="form-group">
                             <?php echo form_label('Requires Signature', 'workorder_requires_signature', array('class' => 'control-label')); ?>

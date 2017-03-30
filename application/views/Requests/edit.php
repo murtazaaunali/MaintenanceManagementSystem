@@ -9,7 +9,7 @@
                     <li>
                         <div class="article-post">
                             <div class="fr"><a href="<?php echo site_url('Requests/edit/' . $request->id); ?>" class="btn btn-primary btn-mini">Edit</a></div>
-                            <p><?php echo $request->title; ?></p>
+                            <p><a href="<?php echo site_url('Requests/edit/' . $request->id); ?>"><?php echo substr($request->title, 0, 85); ?>...</a> </p>
                         </div>
                     </li>
                 <?php endforeach; ?>
@@ -28,10 +28,10 @@
                         <?php echo form_hidden('id', $this->uri->segment(3)); ?>
                         <div class="form-group">
                             <h4 class="control-label">Work Request Info</h4>
-                            <?php echo form_input('request_title', set_value('request_title', $request->title), array('class' => 'span12', 'placeholder' => 'Request title*')) ?>
+                            <?php echo form_input('request_title', set_value('request_title', $request->title), array('class' => 'span12', 'placeholder' => 'Request title*')); ?>
                         </div>
                         <div class="form-group">
-                            <?php echo form_textarea('request_description', set_value('request_title', $request->title), array('class' => 'span12', 'placeholder' => 'Detailed description', 'rows' => '3')); ?>
+                            <?php echo form_textarea('request_description', set_value('request_description', $request->description), array('class' => 'span12', 'placeholder' => 'Detailed description', 'rows' => '3')); ?>
                         </div>
                         <?php echo form_label('Set Priority', 'request_priority', array('class' => 'control-label')); ?>
                         <div class="form-group">
@@ -51,7 +51,7 @@
                         <div class="form-group">
                             <div class="control-group">
                                 <label class="control-label">Select Workorder</label>
-                                <?php echo form_dropdown('request_workorder_name', $request_Workorders, FALSE, array('class' => 'span12')) ?>
+                                <?php echo form_dropdown('request_workorder_name', $request_Workorders, FALSE, array('class' => 'span12')); ?>
                             </div>
                         </div>
                         <div class="form-group">

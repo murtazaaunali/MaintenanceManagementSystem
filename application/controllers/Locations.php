@@ -23,7 +23,8 @@ class Locations extends CI_Controller {
     }
 
     public function index() {
-        $this->data['page_title'] = 'Work Orders';
+        $this->data['page_title'] = 'Locations';
+        $this->data['locations'] = $this->Locations_m->get_all();
         $this->load->view("Locations/Index", $this->data);
     }
 
@@ -51,8 +52,9 @@ class Locations extends CI_Controller {
     }
 
     public function edit($id = NULL) {
-        $this->data['page_title'] = 'Work Orders > Edit > Order Title';
-        $this->load->view("Locations/Edit");
+        $this->data['page_title'] = 'Location > Edit > Locations';
+        $this->data['locations'] = $this->Locations_m->get_all();
+        $this->load->view("Locations/Edit", $this->data);
     }
 
     public function delete() {

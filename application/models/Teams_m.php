@@ -35,7 +35,7 @@ class Teams_m extends MY_Model {
 
     public function get_dropdown() {
         $return[''] = 'Select Teams';
-        $query = $this->db->where('status','1')->get('teams');
+        $query = $this->db->get('teams');
         foreach ($query->result_array() as $row) {
             $return[$row['id']] = $row['name'];
         }

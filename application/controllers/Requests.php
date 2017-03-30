@@ -54,18 +54,19 @@ class Requests extends CI_Controller {
 
     public function edit($id = NULL) {
         if ($id) {
-            $this->data['page_title'] = 'Requests > Edit > Request';
+            $this->data['page_title'] = 'Requests > Edit > Request Title';
             $this->data['requests'] = $this->Requests_m->get_all();
             $this->data['request'] = $this->Requests_m->get_by('id', $id);
             $this->data['request_Workorders'] = $this->Workorders_m->get_dropdown();
+            
             if ($this->input->post()) {
+                
                 $this->Requests_m->update($this->input->post('id'), array(
                     'title' => $this->input->post('request_title'),
                     'description' => $this->input->post('request_description'),
                     'priority' => $this->input->post('request_priority'),
                     'workorder_name' => $this->input->post('request_workorder_name'),
                     'status' => '1',
-                    'date_created' => $this->input->post('date_created'),
                     'date_modified' => $this->input->post('date_modified'),
                     'modified_by' => '1'
                 ));
