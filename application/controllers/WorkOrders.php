@@ -17,8 +17,10 @@ class WorkOrders extends CI_Controller {
 
     function __construct() {
         parent::__construct();
+        if (!$this->input->is_ajax_request()) {
         $this->output->set_title('Primo CMMS | Work Orders');
         $this->output->set_template('default');
+        }
         $this->load->model('Workorders_m');
         $this->load->model('Employees_m');
         $this->load->model('Teams_m');
@@ -100,6 +102,26 @@ class WorkOrders extends CI_Controller {
         } else {
             redirect(site_url('Workorders/index'));
         }
+    }
+
+    public function get_task_row() {
+        $workorder_task_types = $this->Task_Types_m->get_dropdown();
+        echo '
+        <tr id="task_row1">
+                                        <td>'.
+                                            form_dropdown('workorder_task_type[]', $workorder_task_types, FALSE, array('class' => 'span12')).'
+                                        </td>
+                                        <td>
+                                            '.form_input('workorder_task[]', '', array('class' => 'span12', 'placeholder' => 'Task')).'
+                                        </td>
+                                        <td>
+                                            '.form_input('workorder_task_description[]', '', array('class' => 'span12', 'placeholder' => 'Description')).'
+                                        </td>
+                                        <td>
+                                            <button type="btn btn-success"><i class="icon icon-ok"></i></button>
+                                            <button type="btn btn-danger"><i class="icon icon-remove"></i></button>
+                                        </td>
+                                    </tr>';
     }
 
     public function change_status() {

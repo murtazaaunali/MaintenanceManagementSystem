@@ -1,6 +1,6 @@
 <div class="row-fluid">
     <div class="span12">
-        <div class="widget-box"> 
+        <div class="widget-box">
             <div class="widget-title"> <span class="icon"> <i class="icon-file"></i> </span>
                 <h5>Add New Work Order</h5>
             </div>
@@ -86,13 +86,12 @@
                         <div class="control-group">
                             <?php echo form_label('Tasks', 'workorder_tasks', array('class' => 'span10')); ?>
                             <div class="span1">
-                                <a href=""><i class="icon "></i></a>
+                                <a class="pull-right" id="add_row"><i class="icon icon-plus"></i></a>
                             </div>
-                            <table class="table">
-                                <tr>
-                                    <td><?php echo form_dropdown('workorder_task_type', $workorder_task_types, FALSE, array('class' => 'span12')); ?></td>
-                                    <td><?php echo form_input('workorder_task', '', array('class' => 'span12', 'placeholder' => 'Task')); ?></td>
-                                </tr>
+                            <table class="table table-bordered table-striped">
+                                <tbody id="tasks">
+
+                                </tbody>
                             </table>
                         </div>
                         <div class="control-group">
