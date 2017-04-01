@@ -28,9 +28,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 $config['levels_and_roles'] = [
-	'1' => 'customer',
+	'1' => 'worker',
 	'6' => 'manager',
-	'9' => 'admin'
+	'9' => 'admin',
 ];
 
 /*
@@ -72,7 +72,7 @@ $config['add_acl_query_to_auth_functions'] = FALSE;
 | 
 */
 
-$config['max_allowed_attempts'] = 5;
+$config['max_allowed_attempts'] = 50;
 
 /*
 | -----------------------------------------------------------------
@@ -87,7 +87,7 @@ $config['max_allowed_attempts'] = 5;
 | 
 */
 
-$config['deny_access_at'] = 10;
+$config['deny_access_at'] = 0;
 
 /*
 | -----------------------------------------------------------------
@@ -178,7 +178,7 @@ $config['encrypt_all_cookies'] = TRUE;
 |
 */
 
-$config['allow_remember_me'] = FALSE;
+$config['allow_remember_me'] = TRUE;
 
 /*
 | -----------------------------------------------------------------
