@@ -5,12 +5,14 @@
                 <h5>Employees</h5>
             </div>
             <ul class="recent-posts">
-                <li>
-                    <div class="article-post">
-                        <div class="fr"><a href="<?php echo site_url('Employees/edit/'); ?>" class="btn btn-primary btn-mini">Edit</a></div>
-                        <p> Testing</p>
-                    </div>
-                </li>
+                <?php foreach ($employees as $employee): ?>
+                    <li>
+                        <div class="article-post">
+                            <div class="fr"><a href="<?php echo site_url('Employees/edit/' . $employee->id); ?>" class="btn btn-primary btn-mini">Edit</a></div>
+                            <p><a href="<?php echo site_url('Employees/edit/' . $employee->id); ?>"><?php echo substr($employee->first_name, 0, 85); ?>...</a> </p>
+                        </div>
+                    </li>
+                <?php endforeach; ?>
             </ul>
         </div>
     </div>

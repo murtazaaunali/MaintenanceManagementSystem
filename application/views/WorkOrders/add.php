@@ -104,6 +104,10 @@
                         <div class="control-group">
                             <?php echo form_submit("Save", "Save", array('class' => 'btn btn-primary pull-right')); ?>
                         </div>
+                        <div class="control-group">
+                            
+</form>
+                        </div>
                     </div>
                     <?php echo form_close(); ?>
                 </div>

@@ -16,8 +16,5 @@
             </ul>
         </div>
     </div>
-</div>
-</div>
 <a href="<?php echo site_url('/Locations/add'); ?>" class="paper-button paper-floating-action-button"><i class="icon-plus"></i></a>
-</div>
 </div>
