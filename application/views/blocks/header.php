@@ -43,13 +43,13 @@
                     </ul>
                 </li>
                 <li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Settings</span></a></li>
-                <li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+                <li class=""><a title="" href="<?php echo site_url('Login/Index/'); ?>"><i class="icon icon-share-alt"></i> <span class="text">Log In</span></a></li>
             </ul>
         </div>
         <!--close-top-Header-menu-->
-        <!--start-top-serch-->
+        <!--start-top-search-->
         <div id="search">
             <input type="text" placeholder="Search here..."/>
             <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
         </div>
-        <!--close-top-serch-->
+        <!--close-top-search-->
