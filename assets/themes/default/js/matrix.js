@@ -156,4 +156,8 @@ $(document).ready(function () {
                     $('#tasks').append(response);
                 });
     });
+
+    $("#del_row").on('click', function (e) {
+        $('#tasks tr:last').remove();
+    });
 });

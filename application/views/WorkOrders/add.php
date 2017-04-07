@@ -11,7 +11,7 @@
                         <div class="control-groups">
                             <h5>Work Order Info</h5>
                             <div class="controls">
-                                <?php echo form_input('workorder_title', '', array('class' => 'span12', 'placeholder' => 'Work order title*','required'=>'required')) ?>
+                                <?php echo form_input('workorder_title', '', array('class' => 'span12', 'placeholder' => 'Work order title*', 'required' => 'required')) ?>
                             </div>
                         </div>
                         <div class="control-group">
@@ -43,7 +43,7 @@
                         <br>
                         <div class="form-group">
                             <?php echo form_label('Select category ID', 'workorder_priority', array('class' => 'span12')); ?>
-                            <?php echo form_dropdown('workorder_category', array('Select ID', '1', '2', '3'), FALSE, array('class' => 'span12', 'required'=>'required')); ?>
+                            <?php echo form_dropdown('workorder_category', array('Select ID', '1', '2', '3'), FALSE, array('class' => 'span12', 'required' => 'required')); ?>
                         </div>
                         <br>
                         <div class="form-group">
@@ -86,7 +86,10 @@
                         <div class="control-group">
                             <?php echo form_label('Tasks', 'workorder_tasks', array('class' => 'span10')); ?>
                             <div class="span1">
-                                <a class="pull-right" id="add_row"><i class="icon icon-plus"></i></a>
+                                <div class="row-fluid">
+                                    <div class="span6"><a class="pull-right" id="add_row"><i class="icon icon-plus"></i></a></div>
+                                    <div class="span6"><a class="pull-right" id="del_row"><i class="icon icon-remove"></i></a></div>
+                                </div>
                             </div>
                             <table class="table table-bordered table-striped">
                                 <tbody id="tasks">
@@ -105,8 +108,8 @@
                             <?php echo form_submit("Save", "Save", array('class' => 'btn btn-primary pull-right')); ?>
                         </div>
                         <div class="control-group">
-                            
-</form>
+
+                            </form>
                         </div>
                     </div>
                     <?php echo form_close(); ?>
