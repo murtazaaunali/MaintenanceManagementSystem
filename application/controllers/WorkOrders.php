@@ -118,7 +118,6 @@ class WorkOrders extends CI_Controller {
                                             '.form_input('workorder_task_description[]', '', array('class' => 'span12', 'placeholder' => 'Description')).'
                                         </td>
                                         <td>
-                                            <button type="btn btn-success"><i class="icon icon-ok"></i></button>
                                             <button type="btn btn-danger"><i class="icon icon-remove"></i></button>
                                         </td>
                                     </tr>';

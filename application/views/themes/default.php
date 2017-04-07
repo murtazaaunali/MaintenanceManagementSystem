@@ -9,7 +9,6 @@
         <meta name="googlebot" content="all, index, follow" />
         <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/bootstrap.min.css'); ?>" />
         <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/bootstrap-responsive.min.css'); ?>" />
-        <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/matrix-login.css'); ?>" />
         <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/bootstrap-datepicker.min.css'); ?>" />
         <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/select2.min.css'); ?>" />
         <link rel="stylesheet" href="<?php echo site_url('assets/themes/default/css/matrix-style.css'); ?>" />
@@ -93,9 +92,7 @@
             <div id="footer" class="span12"> <?php echo date('Y'); ?> &copy; Primo Maintenance Management System. Designed and Developed by <a href="http://gobrig.com">GoBrig</a> </div>
         </div>
         <!--end-Footer-part-->
-        <script src="<?php echo site_url('assets/themes/default/js/matrix.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/jquery.min.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/matrix.login.js'); ?>"></script> 
+        <script src="<?php echo site_url('assets/themes/default/js/matrix.js'); ?>"></script>
         <script src="<?php echo site_url('assets/themes/default/js/matrix.dashboard.js'); ?>"></script> 
         <script src="<?php echo site_url('assets/themes/default/js/matrix.interface.js'); ?>"></script> 
         <script src="<?php echo site_url('assets/themes/default/js/matrix.js'); ?>"></script> 

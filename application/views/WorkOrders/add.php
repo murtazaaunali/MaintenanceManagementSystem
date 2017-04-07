@@ -11,7 +11,7 @@
                         <div class="control-groups">
                             <h5>Work Order Info</h5>
                             <div class="controls">
-                                <?php echo form_input('workorder_title', '', array('class' => 'span12', 'placeholder' => 'Work order title*')) ?>
+                                <?php echo form_input('workorder_title', '', array('class' => 'span12', 'placeholder' => 'Work order title*','required'=>'required')) ?>
                             </div>
                         </div>
                         <div class="control-group">
@@ -37,23 +37,23 @@
                         </div>
                         <br>
                         <div class="form-group">
-                            <?php echo form_label('Select location ID', 'workorder_priority', array('class' => 'span12')); ?>
-                            <?php echo form_dropdown('workorder_location', $workorder_locations, FALSE, array('class' => 'span12')) ?>
+                            <?php echo form_label('Select location ID', 'workorder_locatiton', array('class' => 'span12')); ?>
+                            <?php echo form_dropdown('workorder_location', $workorder_locations, FALSE, array('class' => 'span12')); ?>
                         </div>
                         <br>
                         <div class="form-group">
                             <?php echo form_label('Select category ID', 'workorder_priority', array('class' => 'span12')); ?>
-                            <?php echo form_dropdown('workorder_category', array('Select ID', '1', '2', '3'), FALSE, array('class' => 'span12')) ?>
+                            <?php echo form_dropdown('workorder_category', array('Select ID', '1', '2', '3'), FALSE, array('class' => 'span12', 'required'=>'required')); ?>
                         </div>
                         <br>
                         <div class="form-group">
                             <?php echo form_label('Assign Staff', 'workorder_priority', array('class' => 'span12')); ?>
-                            <?php echo form_dropdown('workorder_worker', $workorder_Employees, FALSE, array('class' => 'span12')) ?>
+                            <?php echo form_dropdown('workorder_worker', $workorder_Employees, FALSE, array('class' => 'span12',)); ?>
                         </div>
                         <br>
                         <div class="form-group">
                             <?php echo form_label('Assign Team', 'workorder_priority', array('class' => 'span12')); ?>
-                            <?php echo form_dropdown('workorder_team', $workorder_Teams, FALSE, array('class' => 'span12')) ?>
+                            <?php echo form_dropdown('workorder_team', $workorder_Teams, FALSE, array('class' => 'span12')); ?>
                         </div>
                         <br>
                         <div class="control-group">
