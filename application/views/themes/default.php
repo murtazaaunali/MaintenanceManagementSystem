@@ -92,11 +92,10 @@
             <div id="footer" class="span12"> <?php echo date('Y'); ?> &copy; Primo Maintenance Management System. Designed and Developed by <a href="http://gobrig.com">GoBrig</a> </div>
         </div>
         <!--end-Footer-part-->
-        <script src="<?php echo site_url('assets/themes/default/js/matrix.js'); ?>"></script>
         <script src="<?php echo site_url('assets/themes/default/js/matrix.dashboard.js'); ?>"></script> 
         <script src="<?php echo site_url('assets/themes/default/js/matrix.interface.js'); ?>"></script> 
-        <script src="<?php echo site_url('assets/themes/default/js/matrix.js'); ?>"></script> 
         <script src="<?php echo site_url('assets/themes/default/js/matrix.form_common.js'); ?>"></script> 
-        
+        <script src="<?php echo site_url('assets/themes/default/js/matrix.js'); ?>"></script> 
+
     </body>
 </html>

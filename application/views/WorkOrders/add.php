@@ -92,9 +92,7 @@
                                 </div>
                             </div>
                             <table class="table table-bordered table-striped">
-                                <tbody id="tasks">
-
-                                </tbody>
+                                <tbody id="tasks"></tbody>
                             </table>
                         </div>
                         <div class="control-group">
