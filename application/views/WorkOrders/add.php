@@ -43,7 +43,7 @@
                         <br>
                         <div class="form-group">
                             <?php echo form_label('Select category ID', 'workorder_priority', array('class' => 'span12')); ?>
-                            <?php echo form_dropdown('workorder_category', array('Select ID', '1', '2', '3'), FALSE, array('class' => 'span12', 'required' => 'required')); ?>
+                            <?php echo form_dropdown('workorder_category', $workorder_categories, FALSE, array('class' => 'span12', 'required' => 'required')); ?>
                         </div>
                         <br>
                         <div class="form-group">

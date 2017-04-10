@@ -6,7 +6,7 @@
             </div>
             <div class="widget-content nopadding">
                 <ul class="recent-posts">
-                    <?php foreach ($workorders as $workorder): ?>
+                    <?php foreach ($Workorder as $workorders): ?>
                         <li>
                             <?php
                             switch ($workorder->status) {
@@ -31,9 +31,9 @@
                             }
                             ?>                                
                             <div class="article-post">
-                                <div class="fr"><a href="<?php echo site_url('WorkOrders/view/' . $workorder->id); ?>" class="btn btn-default btn-mini">View</a> <a href="<?php echo site_url('WorkOrders/edit/' . $workorder->id); ?>" class="btn btn-primary btn-mini">Edit</a></div>
-                                <span class="user-info"> #<?php echo $workorder->id; ?> By: john Deo / <?php echo $workorder->date_created; ?> </span>
-                                <p><a href="<?php echo site_url('WorkOrders/view/' . $workorder->id); ?>"><?php echo substr($workorder->title, 0, 85); ?>...</a> </p>
+                                <div class="fr"><a href="<?php echo site_url('WorkOrders/view/' . $workorders->id); ?>" class="btn btn-default btn-mini">View</a> <a href="<?php echo site_url('WorkOrders/edit/' . $workorders->id); ?>" class="btn btn-primary btn-mini">Edit</a></div>
+                                <span class="user-info"> #<?php echo $workorders->id; ?> By: john Deo / <?php echo $workorder->date_created; ?> </span>
+                                <p><a href="<?php echo site_url('WorkOrders/view/' . $workorders->id); ?>"><?php echo substr($workorders->title, 0, 85); ?>...</a> </p>
                             </div>
                         </li>
                     <?php endforeach; ?>
@@ -43,9 +43,12 @@
     </div>
 
     <div class="span6">
+        <?php
+        print_r($workorder);
+        ?>
         <div class="widget-box">
             <div class="widget-title"> <span class="icon"> <i class="icon-file"></i> </span>
-                <h5>Test Tasks</h5>
+                <h5><?php echo ucwords($workorder->title); ?></h5>
             </div>
             <div class="widget-content nopadding">
                 <div class="row-fluid">
@@ -72,10 +75,14 @@
                                     <div class="span12 column">
                                         <h5>Location Details</h5>
                                         <table class="table table-responsive table-bordered">
-                                            <tr>
-                                                <td>Location Name</td>
-                                                <td>Location Address </td>
-                                            </tr>
+                                            <?php foreach ($locations as $location): ?>
+                                                <?php if ($location->id === $workorder->location_id): ?>
+                                                    <tr>
+                                                        <td><?php echo $location->name; ?></td>
+                                                        <td><?php echo $location->address; ?></td>
+                                                    </tr>
+                                                <?php endif; ?>
+                                            <?php endforeach; ?>
                                         </table>
                                         <h5>Tasks</h5>
                                         <table class="table table-responsive table-bordered">

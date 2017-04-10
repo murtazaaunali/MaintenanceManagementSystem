@@ -44,31 +44,44 @@ class WorkOrders extends CI_Controller {
         $this->data['workorder_Teams'] = $this->Teams_m->get_dropdown();
         $this->load->view('WorkOrders/Add', $this->data);
         if ($this->input->post()) {
-            $insert = $this->Workorders_m->insert(array(
-                'title' => $this->input->post('workorder_title'),
-                'description' => $this->input->post('workorder_description'),
-                'priority' => $this->input->post('workorder_priority'),
-                'location_id' => $this->input->post('workorder_location'),
-                'category_id' => $this->input->post('workorder_category'),
-                'start_date' => $this->input->post('start_date'),
-                'end_date' => $this->input->post('end_date'),
-                'requires_sign' => $this->input->post('workorder_requires_signature'),
-                'repeating_schedule' => $this->input->post('workorder_repeating_schedule'),
-                'status' => '1',
-                'modified_by' => '1'
-            ));
-            if ($insert === FALSE) {
-                $this->load->view('Erorr');
-            } else {
-                redirect('WorkOrders');
+//            $insert = $this->Workorders_m->insert(array(
+//                'title' => $this->input->post('workorder_title'),
+//                'description' => $this->input->post('workorder_description'),
+//                'priority' => $this->input->post('workorder_priority'),
+//                'location_id' => $this->input->post('workorder_location'),
+//                'category_id' => $this->input->post('workorder_category'),
+//                'start_date' => $this->input->post('start_date'),
+//                'end_date' => $this->input->post('end_date'),
+//                'requires_sign' => $this->input->post('workorder_requires_signature'),
+//                'repeating_schedule' => $this->input->post('workorder_repeating_schedule'),
+//                'status' => '1',
+//                'modified_by' => '1'
+//            ));
+//            foreach($this->input->post('workorder_task') as $task) {
+//                $insert_task = $this->Tasks_m->insert();
+//            } 
+//            if ($insert === FALSE) {
+//                $this->load->view('Erorr');
+//            } else {
+//                redirect('WorkOrders');
+//            }
+            $tasks = array();
+            foreach ($this->input->post('workorder_task') as $key=>$value) {
+                $tasks[$key] = $value;
+                foreach ($tasks as $index=>$index_value) {
+                    echo $tasks[$index];
+                }
             }
+            
+            print_r($tasks);
         }
     }
 
     public function view($id = null) {
         $this->data['page_title'] = 'Work Orders > Work Order Title';
-        $this->data['workorders'] = $this->Workorders_m->get_all();
+        $this->data['Workorder'] = $this->Workorders_m->get_all();
         $this->data['workorder'] = $this->Workorders_m->get($id);
+        $this->data['locations'] = $this->Locations_m->get_all();
         $this->load->view('WorkOrders/View', $this->data);
     }
 
@@ -110,13 +123,13 @@ class WorkOrders extends CI_Controller {
         echo '
         <tr id="task_row_' . $rowid . '">
                                         <td>' .
-        form_dropdown('workorder_task_type[]', $workorder_task_types, FALSE, array('class' => 'span12')) . '
+        form_dropdown('workorder_task[type][]', $workorder_task_types, FALSE, array('class' => 'span12')) . '
                                         </td>
                                         <td>
-                                            ' . form_input('workorder_task[]', '', array('class' => 'span12', 'placeholder' => 'Task')) . '
+                                            ' . form_input('workorder_task[title][]', '', array('class' => 'span12', 'placeholder' => 'Task')) . '
                                         </td>S
                                         <td>
-                                            ' . form_input('workorder_task_description[]', '', array('class' => 'span12', 'placeholder' => 'Description')) . '
+                                            ' . form_input('workorder_task[description][]', '', array('class' => 'span12', 'placeholder' => 'Description')) . '
                                         </td>
                                     </tr>';
     }

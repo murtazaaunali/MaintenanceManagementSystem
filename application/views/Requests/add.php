@@ -10,17 +10,17 @@
                     <div class="span12">
                         <?php echo form_label('Request Info', '', array('class' => 'control-label')); ?>
                         <div class="form-group">
-                            <?php echo form_input('request_info', '', array('class' => 'span12', 'placeholder' => 'Request Tittle*')) ?>
+                            <?php echo form_input('request_info', '', array('class' => 'span12', 'placeholder' => 'Request Tittle*','required'=>'required')) ?>
                         </div>
                         <div class="form-group">
-                            <?php echo form_textarea('request_description', '', array('class' => 'span12', 'placeholder' => 'Detailed description', 'row-fluids' => '3')); ?>
+                            <?php echo form_textarea('request_description', '', array('class' => 'span12', 'placeholder' => 'Detailed description', 'row-fluids' => '3','required'=>'required')); ?>
                         </div>
                         <br>
                         <?php echo form_label('Set Priority', 'request_priority', array('class' => 'control-label')); ?>
                               <div class="controls">
                                 <div class="btn-group" data-toggle="buttons">
                                     <label class="btn btn-danger active">
-                                        <input type="radio" name="request_priority" id="request_priority" value="0">
+                                        <input type="radio" name="request_priority" id="request_priority" value="0" checked>
                                          </label>
                                     <label class="btn btn-danger active">
                                         <input type="radio" name="request_priority" id="request_priority" value="1">

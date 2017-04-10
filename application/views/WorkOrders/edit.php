@@ -53,7 +53,7 @@
                         <?php echo form_hidden('id', $this->uri->segment(3)); ?>
                         <div class="form-group">
                             <h4 class="control-label">Work Order Info</h4>
-                            <?php echo form_input('workorder_title', set_value('workorder_title', $Workorder->title), array('class' => 'span12')); ?>
+                            <?php echo form_input('workorder_title', set_value('workorder_title', $Workorder->title), array('class' => 'span12' ,'required'=>'required')); ?>
                         </div>
                         <div class="form-group">
                             <?php echo form_textarea('workorder_description', set_value('workorder_description', $Workorder->description), array('class' => 'span12', 'placeholder' => 'Detailed description', 'rows' => '3')); ?>
@@ -84,7 +84,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <?php echo form_dropdown('workorder_location', array('Select Main Worker', '1' => 'Location1', '2' => 'Location2', '3' => 'Loacation3'), set_value('workorder_location', $Workorder->location_id), array('class' => 'span12')); ?>
+                            <?php echo form_dropdown('workorder_location', array('Select Main Worker', '1' => 'Location1', '2' => 'Location2', '3' => 'Loacation3'), set_value('workorder_location', $Workorder->location_id), array('class' => 'span12','required'=>'required')); ?>
                         </div>
                         <div class="form-group">
                             <?php echo form_label('Assign Staff', 'workorder_staff', array('class' => 'control-label')); ?>

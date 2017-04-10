@@ -11,24 +11,24 @@
                         <div class="form-group">
                             <?php echo form_label('Name', '', array('class' => 'control-label')); ?>
                             <div class="form-group">
-                                <?php echo form_input('Location_name', '', array('class' => 'span12', 'placeholder' => 'Name of the Location*')) ?>
+                                <?php echo form_input('Location_name', '', array('class' => 'span12', 'placeholder' => 'Name of the Location*' ,'required'=>'required')) ?>
                             </div>
 
-                            <?php echo form_label('Address', '', array('class' => 'control-label')); ?>
+                            <?php echo form_label('Address', '', array('class' => 'control-label' )); ?>
                             <div class="form-group">
-                                <?php echo form_input('Location_address', '', array('class' => 'span12', 'placeholder' => 'Address of the Location*')) ?>
+                                <?php echo form_input('Location_address', '', array('class' => 'span12', 'placeholder' => 'Address of the Location*' ,'required'=>'required')) ?>
                             </div>
                              <?php echo form_label('Contact Number', '', array('class' => 'control-label')); ?>
                             <div class="form-group">
-                                <?php echo form_input('contact_number', '', array('class' => 'span12', 'placeholder' => '+971-xxxxxxxxx*')) ?>
+                                <?php echo form_input('contact_number', '', array('class' => 'span12', 'placeholder' => '+971-xxxxxxxxx*' ,'required'=>'required')) ?>
                             </div>
                             <?php echo form_label('Nationality', '', array('class' => 'control-label')); ?>
                             <div class="form-group">
-                                <?php echo form_input('nationality', '', array('class' => 'span12', 'placeholder' => 'Nationality*')) ?>
+                                <?php echo form_input('nationality', '', array('class' => 'span12', 'placeholder' => 'Nationality*' ,'required'=>'required')) ?>
                             </div>
                             <?php echo form_label('Email', '', array('class' => 'control-label')); ?>
                             <div class="form-group">
-                                <?php echo form_input('email', '', array('class' => 'span12', 'placeholder' => 'abc@example.com*')) ?>
+                                <?php echo form_input('email', '', array('class' => 'span12', 'placeholder' => 'abc@example.com*' ,'required'=>'required')) ?>
                             </div>
 
                             <div class="form-block">
