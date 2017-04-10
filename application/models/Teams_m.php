@@ -13,7 +13,7 @@
  */
 class Teams_m extends MY_Model {
 
-    public $_table = '$teams';
+    public $_table = 'teams';
     public $primary_key = 'id';
 
     public function __construct() {

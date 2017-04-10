@@ -105,6 +105,8 @@ class WorkOrders extends CI_Controller {
             $this->data['Workorder'] = $this->Workorders_m->get_by('id', $id);
             $this->data['workorder_Employees'] = $this->Employees_m->get_dropdown();
             $this->data['workorder_Teams'] = $this->Teams_m->get_dropdown();
+            $this->data['workorder_Tasks'] = $this->Tasks_m->get_many_by('workorder_id', $id);
+            $this->data['workorder_task_types'] = $this->Task_Types_m->get_dropdown();
             if ($this->input->post()) {
 
                 $this->Workorders_m->update($this->input->post('id'), array(
@@ -112,8 +114,8 @@ class WorkOrders extends CI_Controller {
                     'description' => $this->input->post('workorder_description'),
                     'priority' => $this->input->post('workorder_priority'),
                     'location_id' => $this->input->post('workorder_location'),
-                    'assign_employee' => $this->input->post('workorder_worker'),
-                    'assign_team' => $this->input->post('workorder_team'),
+                    'employee_id' => $this->input->post('workorder_worker'),
+                    'team_id' => $this->input->post('workorder_team'),
                     'start_date' => $this->input->post('start_date'),
                     'end_date' => $this->input->post('end_date'),
                     'repeating_schedule' => $this->input->post('workorder_repeating_schedule'),
@@ -128,12 +130,13 @@ class WorkOrders extends CI_Controller {
     }
 
     public function get_task_row() {
-        $workorder_task_types = $this->Task_Types_m->get_dropdown();
-        $rowid = rand(3, 6);
-        echo '
+        if ($this->input->is_ajax_request()) {
+            $workorder_task_types = $this->Task_Types_m->get_dropdown();
+            $rowid = rand(3, 6);
+            echo '
         <tr id="task_row_' . $rowid . '">'
-        . '<td>' .
-        form_dropdown('workorder_task_type[]', $workorder_task_types, FALSE, array('class' => 'span12')) . '
+            . '<td>' .
+            form_dropdown('workorder_task_type[]', $workorder_task_types, FALSE, array('class' => 'span12')) . '
                     </td>
                     <td>
                 ' . form_input('workorder_task_title[]', '', array('class' => 'span12', 'placeholder' => 'Task')) . '
@@ -142,6 +145,7 @@ class WorkOrders extends CI_Controller {
                 ' . form_input('workorder_task_description[]', '', array('class' => 'span12', 'placeholder' => 'Description')) . '
                     </td>
         </tr>';
+        }
     }
 
     public function change_status() {

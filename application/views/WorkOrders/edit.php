@@ -53,7 +53,7 @@
                         <?php echo form_hidden('id', $this->uri->segment(3)); ?>
                         <div class="form-group">
                             <h4 class="control-label">Work Order Info</h4>
-                            <?php echo form_input('workorder_title', set_value('workorder_title', $Workorder->title), array('class' => 'span12' ,'required'=>'required')); ?>
+                            <?php echo form_input('workorder_title', set_value('workorder_title', $Workorder->title), array('class' => 'span12', 'required' => 'required')); ?>
                         </div>
                         <div class="form-group">
                             <?php echo form_textarea('workorder_description', set_value('workorder_description', $Workorder->description), array('class' => 'span12', 'placeholder' => 'Detailed description', 'rows' => '3')); ?>
@@ -84,15 +84,15 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <?php echo form_dropdown('workorder_location', array('Select Main Worker', '1' => 'Location1', '2' => 'Location2', '3' => 'Loacation3'), set_value('workorder_location', $Workorder->location_id), array('class' => 'span12','required'=>'required')); ?>
+                            <?php echo form_dropdown('workorder_location', array('Select Main Worker', '1' => 'Location1', '2' => 'Location2', '3' => 'Loacation3'), set_value('workorder_location', $Workorder->location_id), array('class' => 'span12', 'required' => 'required')); ?>
                         </div>
                         <div class="form-group">
                             <?php echo form_label('Assign Staff', 'workorder_staff', array('class' => 'control-label')); ?>
-                            <?php echo form_dropdown('workorder_worker', $workorder_Employees,set_value('workorder_employee', $Workorder->assign_employee), TRUE, array('class' => 'span12')); ?>
+                            <?php echo form_dropdown('workorder_worker', $workorder_Employees, set_value('workorder_worker', $Workorder->employee_id), TRUE, array('class' => 'span12')); ?>
                         </div>
                         <div class="form-group">
                             <?php echo form_label('Assign Team', 'workorder_team', array('class' => 'control-label')); ?>
-                            <?php echo form_dropdown('workorder_team', $workorder_Teams,set_value('workorder_team', $Workorder->assign_team), FALSE, array('class' => 'span12')); ?>
+                            <?php echo form_dropdown('workorder_team', $workorder_Teams, set_value('workorder_team', $Workorder->team_id), FALSE, array('class' => 'span12')); ?>
                         </div>
                         <div class="form-group">
                             <div class="control-group">
@@ -121,6 +121,36 @@
                         <div class="form-group">
                             <?php echo form_label('Repeating Schedule', 'workorder_priority', array('class' => 'control-label')); ?>
                             <?php echo form_dropdown('workorder_repeating_schedule', array('Select Repeating Schedule', '1' => 'Daily', '2' => 'Week days', '3' => 'Every Week', '4' => 'Every Two Weeks', '5' => 'Every Month', '6' => 'Every Year'), set_value('workorder_repeating_schedule', $Workorder->repeating_schedule), array('class' => 'span12')); ?>
+                        </div>
+                        <div class="control-group">
+                            <?php echo form_label('Tasks', 'workorder_tasks', array('class' => 'span10')); ?>
+                            <div class="span1">
+                                <div class="row-fluid">
+                                    <div class="span6"><a class="pull-right" id="add_row"><i class="icon icon-plus"></i></a></div>
+                                    <div class="span6"><a class="pull-right" id="del_row"><i class="icon icon-remove"></i></a></div>
+                                </div>
+                            </div>
+                            <table class="table table-bordered table-striped">
+                                <tbody id="tasks">
+                                    <?php
+                                    foreach ($workorder_Tasks as $tasks) {
+                                        
+                                        echo '
+        <tr id="task_row">'
+                                        . '<td>' .
+                                        form_dropdown('workorder_task_type[]', $workorder_task_types, $tasks->type, array('class' => 'span12')) . '
+                    </td>
+                    <td>
+                ' . form_input('workorder_task_title[]', '', array('class' => 'span12', 'placeholder' => 'Task')) . '
+                    </td>
+                    <td>
+                ' . form_input('workorder_task_description[]', '', array('class' => 'span12', 'placeholder' => 'Description')) . '
+                    </td>
+        </tr>';
+                                    }
+                                    ?>
+                                </tbody>
+                            </table>
                         </div>
                         <div class="form-group">
                             <?php echo form_label('Requires Signature', 'workorder_requires_signature', array('class' => 'control-label')); ?>
