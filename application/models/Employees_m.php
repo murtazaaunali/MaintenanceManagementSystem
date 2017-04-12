@@ -33,7 +33,6 @@ class Employees_m extends MY_Model {
         return $employees;
     }
         public function get_dropdown() {
-        $return[''] = 'Select Employees';
         $query = $this->db->get('employees');
         foreach ($query->result_array() as $row) {
             $return[$row['id']] = $row['first_name'];

@@ -6,16 +6,18 @@
         <div class="widget-content" >
             <div class="row-fluid">
                 <div class="span9">
+                    <?php echo json_encode($week); ?>
                     <canvas id="myChart"></canvas>
                     <script>
                         var ctx = document.getElementById("myChart");
                         var myChart = new Chart(ctx, {
                             type: 'line',
                             data: {
-                                xLabels: ["Mar 15", "Mar 16", "Mar 17", "Mar 18", "Mar 19", "Mar 20"],
+                                xLabels: [
+                                ],
                                 yLabels: "No of WOs completed",
                                 datasets: [{
-                                        label: '# of Votes',
+                                        label: '# of Work Order(s)',
                                         data: [12, 19, 3, 5, 2, 3],
                                         backgroundColor: [
                                             'rgba(255, 99, 132, 0.2)',
@@ -26,12 +28,8 @@
                                             'rgba(255, 159, 64, 0.2)'
                                         ],
                                         borderColor: [
-                                            'rgba(255,99,132,1)',
-                                            'rgba(54, 162, 235, 1)',
-                                            'rgba(255, 206, 86, 1)',
-                                            'rgba(75, 192, 192, 1)',
-                                            'rgba(153, 102, 255, 1)',
-                                            'rgba(255, 159, 64, 1)'
+                                            'rgba(238,88,74,1)'
+                                            
                                         ],
                                         borderWidth: 2,
                                         fill: false,
@@ -39,12 +37,12 @@
                                         borderDash: [],
                                         borderDashOffset: 0.0,
                                         borderJoinStyle: 'miter',
-                                        pointBorderColor: "rgba(75,192,192,1)",
+                                        pointBorderColor: "rgba(238,88,74,1)",
                                         pointBackgroundColor: "#fff",
                                         pointBorderWidth: 1,
                                         pointHoverRadius: 5,
-                                        pointHoverBackgroundColor: "rgba(75,192,192,1)",
-                                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                                        pointHoverBackgroundColor: "rgba(39,173,116,1)",
+                                        pointHoverBorderColor: "rgba(39,173,116,1)",
                                         pointHoverBorderWidth: 2,
                                         pointRadius: 1,
                                         pointHitRadius: 10,

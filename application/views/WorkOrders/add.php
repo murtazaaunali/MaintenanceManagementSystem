@@ -37,12 +37,12 @@
                         </div>
                         <br>
                         <div class="form-group">
-                            <?php echo form_label('Select location ID', 'workorder_locatiton', array('class' => 'span12')); ?>
+                            <?php echo form_label('Select Location', 'workorder_locatiton', array('class' => 'span12')); ?>
                             <?php echo form_dropdown('workorder_location', $workorder_locations, FALSE, array('class' => 'span12')); ?>
                         </div>
                         <br>
                         <div class="form-group">
-                            <?php echo form_label('Select category ID', 'workorder_priority', array('class' => 'span12')); ?>
+                            <?php echo form_label('Select Category', 'workorder_priority', array('class' => 'span12')); ?>
                             <?php echo form_dropdown('workorder_category', $workorder_categories, FALSE, array('class' => 'span12', 'required' => 'required')); ?>
                         </div>
                         <br>

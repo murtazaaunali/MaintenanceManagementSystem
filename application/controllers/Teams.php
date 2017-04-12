@@ -19,8 +19,9 @@ class Teams extends CI_Controller {
         parent::__construct();
         $this->output->set_title('Primo CMMS | Teams');
         $this->output->set_template('default');
-        
+
         $this->load->model('Teams_m');
+        $this->load->model('Employee_Team_m');
         $this->load->model('Employees_m');
     }
 
@@ -36,15 +37,25 @@ class Teams extends CI_Controller {
         $this->load->view("Teams/Add", $this->data);
 
         if ($this->input->post()) {
+            print_r($this->input->post());
             $insert = $this->Teams_m->insert(array(
                 'name' => $this->input->post('team_name'),
                 'description' => $this->input->post('team_description'),
-                'emp_name' => $this->input->post('team_employee'),
                 'status' => '1',
-                'date_created' => $this->input->post('date_created'),
-                'date_modified' => $this->input->post('date_modified'),
                 'modified_by' => '1'
             ));
+
+            $team_id = $this->Teams_m->get_next_id() - 1;
+            foreach ($this->input->post('team_employee') as $employee_id) {
+                print_r($employee_id);
+                $insert = $this->Employee_Team_m->insert(array(
+                    'employee_id' => $employee_id,
+                    'team_id' => $team_id
+                ));
+            }
+
+
+
             if ($insert === FALSE) {
                 $this->load->view('Erorr');
             } else {

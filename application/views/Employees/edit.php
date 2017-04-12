@@ -29,17 +29,17 @@
                         <div class="form-group">
                             <?php echo form_label('Email', '', array('class' => 'control-label')); ?>
                             <div class="form-group">
-                                <?php echo form_input('email', set_value('email', $employees->email), array('class' => 'span12', 'placeholder' => 'abc@example.com(will also be the username)*')) ?>
+                                <?php echo form_input('email', set_value('email', $employees->email), array('class' => 'span12', 'readonly' => 'readonly', 'placeholder' => 'abc@example.com(will also be the username)*')) ?>
                             </div>
                         </div>
                         <div class="form-group">
                             <?php echo form_label('Password', '', array('class' => 'control-label')); ?>
                             <div class="form-group">
-                                <?php echo form_password('password', set_value('password', $employees->password), array('class' => 'span12', 'placeholder' => 'Password*')); ?>
+                                <?php echo form_password('password', '', array('class' => 'span12', 'placeholder' => 'Type password to change current password')); ?>
                             </div>
 
                             <label class="control-label">User Account Type</label>
-                            <?php echo form_dropdown('employee_type', set_value('employee_type', $employees->account_type), FALSE, array('class' => 'span12')); ?>
+                            <?php echo form_dropdown('employee_type', array('1' => 'Employee', '6' => 'Manager', '9' => 'Admin'), set_value('employee_type', $user->auth_level), array('class' => 'span12')); ?>
                         </div>
 
                         <div class="form-group">
@@ -72,10 +72,17 @@
                                 <?php echo form_input('company_name', set_value('company_name', $employees->company_name), array('class' => 'span12', 'placeholder' => 'Company Name*')) ?>
                             </div>
                         </div>
+                        <div class="control-group">
+                            <?php echo form_label('Employee Status', 'status', array('class' => 'control-label')); ?>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" name="status" value="1"  <?php if ($employees->status == 1) : ?>checked <?php endif; ?>>
+                            <div class="slider round"></div>
+                        </label>
                         <div class="form-group">
                             <?php echo form_submit("Save", "Save", array('class' => 'btn btn-primary pull-right')); ?>
                         </div>
-                        
+
                     </div>
                     <?php echo form_close(); ?>
                 </div>

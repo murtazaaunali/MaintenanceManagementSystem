@@ -25,7 +25,7 @@
                                         <label class="control-label">Select Employees</label>
                                         <div class="controls">
 
-                                            <?php echo form_dropdown('team_employee', $team_Employees, FALSE, array('class' => 'span12', 'multiple' => 'multiple')); ?>
+                                            <?php echo form_dropdown('team_employee[]', $team_Employees, FALSE, array('class' => 'span12', 'multiple' => 'multiple')); ?>
 
                                         </div>
                                     </div>

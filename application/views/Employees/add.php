@@ -7,6 +7,7 @@
             <div class="widget-content">
                 <div class="row-fluid">
                     <div class="span12">
+                        <?php echo form_open(); ?>
                         <div class="form-group">
                             <?php echo form_label('Email', '', array('class' => 'control-label')); ?>
                             <div class="form-group">
@@ -19,7 +20,9 @@
                                 </div>
                                 <div class="form-group">
                                     <?php echo form_label('User Account Type', 'workorder_priority', array('class' => 'control-label')); ?>
-                                    <?php echo form_dropdown('employee_type', array('Select type', 'Admin', 'Manager', 'Employee'), FALSE, array('class' => 'span12')) ?>
+                                    <?php
+                                    echo form_dropdown('employee_type', array('1' => 'Employee', '6' => 'Manager', '9' => 'Admin',), FALSE, array('class' => 'span12'))
+                                    ?>
                                 </div>   
                                 <div class="form-group">
                                     <?php echo form_label('First Name', '', array('class' => 'control-label')); ?>
