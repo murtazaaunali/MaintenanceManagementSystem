@@ -28,13 +28,13 @@ class Teams extends CI_Controller {
     public function index() {
         $this->data['page_title'] = 'Teams';
         $this->data['Teams'] = $this->Teams_m->get_all();
-        $this->load->view("Teams/Index", $this->data);
+        $this->load->view("Teams/index", $this->data);
     }
 
     public function add() {
         $this->data['page_title'] = 'Teams > Add New Team';
         $this->data['team_Employees'] = $this->Employees_m->get_dropdown();
-        $this->load->view("Teams/Add", $this->data);
+        $this->load->view("Teams/add", $this->data);
 
         if ($this->input->post()) {
             print_r($this->input->post());
@@ -66,7 +66,7 @@ class Teams extends CI_Controller {
 
     public function edit($id = NULL) {
         $this->data['page_title'] = 'Work Orders > Edit > Order Title';
-        $this->load->view("Teams/Edit");
+        $this->load->view("Teams/edit");
     }
 
     public function add_employee() {

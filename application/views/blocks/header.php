@@ -43,7 +43,7 @@
                     </ul>
                 </li>
                 <li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Settings</span></a></li>
-                <li class=""><a title="" href="<?php echo site_url('Login/Index/'); ?>"><i class="icon icon-share-alt"></i> <span class="text">Log In</span></a></li>
+                <li class=""><a title="" href="<?php echo site_url('Login/index/'); ?>"><i class="icon icon-share-alt"></i> <span class="text">Log In</span></a></li>
             </ul>
         </div>
         <!--close-top-Header-menu-->

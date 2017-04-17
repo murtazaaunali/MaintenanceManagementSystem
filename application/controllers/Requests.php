@@ -26,13 +26,13 @@ class Requests extends CI_Controller {
     public function index() {
         $this->data['page_title'] = 'Work Orders';
         $this->data['requests'] = $this->Requests_m->get_all();
-        $this->load->view("Requests/Index", $this->data);
+        $this->load->view("Requests/index", $this->data);
     }
 
     public function add() {
         $this->data['page_title'] = 'Requests > Add New Request';
         $this->data['request_Workorders'] = $this->Workorders_m->get_dropdown();
-        $this->load->view("Requests/Add", $this->data);
+        $this->load->view("Requests/add", $this->data);
         if ($this->input->post()) {
             $insert = $this->Requests_m->insert(array(
                 'title' => $this->input->post('request_info'),

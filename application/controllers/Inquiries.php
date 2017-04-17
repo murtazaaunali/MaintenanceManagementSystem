@@ -27,7 +27,7 @@ class Inquiries extends CI_Controller {
     public function index() {
         $this->data['page_title'] = 'Inquiries';
         $this->data['inquiries'] = $this->Inquiries_m->get_all();
-        $this->load->view('Inquiries/Index', $this->data);
+        $this->load->view('Inquiries/index', $this->data);
     }
 
     public function view($id = null) {

@@ -26,12 +26,12 @@ class Employees extends CI_Controller {
     public function index() {
         $this->data['page_title'] = 'Employees';
         $this->data['employees'] = $this->Employees_m->get_all();
-        $this->load->view("Employees/Index", $this->data);
+        $this->load->view("Employees/index", $this->data);
     }
 
     public function add() {
         $this->data['page_title'] = 'Work Orders > Add New Work Order';
-        $this->load->view("Employees/Add", $this->data);
+        $this->load->view("Employees/add", $this->data);
         if ($this->input->post()) {
             $employee_id = $this->Users_m->get_unused_id();
             $insert_user = $this->Users_m->insert(array(
@@ -104,7 +104,7 @@ class Employees extends CI_Controller {
                     }
                 }
             }
-            $this->load->view("Employees/Edit", $this->data);
+            $this->load->view("Employees/edit", $this->data);
         } else {
             redirect(site_url('Employees/index'));
         }
