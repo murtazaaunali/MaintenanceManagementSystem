@@ -2,7 +2,7 @@
     <div class="span6">
         <div class="widget-box">
             <div class="widget-title"> <span class="icon"> <i class="icon-file"></i> </span>
-                <h5>Locations</h5>
+                <h5>Customers</h5>
             </div>
             <ul class="recent-posts">
                 <?php foreach ($locations as $location): ?>
