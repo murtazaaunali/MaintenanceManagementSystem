@@ -78,6 +78,11 @@
                             </div>
                         </div>
                         <br>
+                        <?php echo form_label('Rates', '', array('class' => 'control-label')); ?>
+                        <div class="form-group">
+                            <?php echo form_input('workorder_rate', '', array('class' => 'span12', 'placeholder' => 'Rates*','required'=>'required')) ?>
+                        </div>
+                        <br>
                         <div class="control-group">
                             <?php echo form_label('Repeating Schedule', 'workorder_priority', array('class' => 'control-label')); ?>
                             <?php echo form_dropdown('workorder_repeating_schedule', array('Select Repeating Schedule', '1' => 'Daily', '2' => 'Week days', '3' => 'Every Week', '4' => 'Every Two Weeks', '5' => 'Every Month', '6' => 'Every Year'), FALSE, array('class' => 'span12')) ?>
