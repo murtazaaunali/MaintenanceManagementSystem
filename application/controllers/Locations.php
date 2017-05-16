@@ -23,7 +23,7 @@ class Locations extends CI_Controller {
     }
 
     public function index() {
-        $this->data['page_title'] = 'Locations';
+        $this->data['page_title'] = 'Customers';
         $this->data['locations'] = $this->Locations_m->get_all();
         $this->load->view("Locations/index", $this->data);
     }
@@ -31,10 +31,13 @@ class Locations extends CI_Controller {
     public function add() {
         $this->data['page_title'] = 'Locations > Add New Locations';
         $this->load->view("Locations/add", $this->data);
+        $this->data['page_title'] = 'Customers > Add New Customers';
+        $this->load->view("Locations/Add", $this->data);
         if ($this->input->post()) {
             $insert = $this->Locations_m->insert(array(
                 'name' => $this->input->post('Location_name'),
                 'address' => $this->input->post('Location_address'),
+                'makani_no' => $this->input->post('makani_no'),
                 'contact_number' => $this->input->post('contact_number'),
                 'nationality' => $this->input->post('nationality'),
                 'email' => $this->input->post('email'),
@@ -53,7 +56,7 @@ class Locations extends CI_Controller {
 
     public function edit($id = NULL) {
         if($id){
-        $this->data['page_title'] = 'Location > Edit > Locations';
+        $this->data['page_title'] = 'Customers > Edit > Customers';
         $this->data['Locations'] = $this->Locations_m->get_all();
         $this->data['Location'] = $this->Locations_m->get_by('id', $id);
         
@@ -63,6 +66,7 @@ class Locations extends CI_Controller {
                 $this->Locations_m->update($this->input->post('id'), array(
                     'name' => $this->input->post('location_name'),
                     'address' => $this->input->post('location_address'),
+                    'makani_no' => $this->input->post('makani_no'),
                     'contact_number' => $this->input->post('contact_number'),
                     'nationality' => $this->input->post('nationality'),
                     'email' => $this->input->post('email'),

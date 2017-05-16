@@ -43,10 +43,8 @@
     </div>
 
     <div class="span6">
-        <?php
-        print_r($workorder);
-        ?>
         <div class="widget-box">
+            <?php print_r($workorder); ?>
             <div class="widget-title"> <span class="icon"> <i class="icon-file"></i> </span>
                 <h5><?php echo ucwords($workorder->title); ?></h5>
             </div>
@@ -158,8 +156,8 @@
                                                     <td>Last Updated:</td>
                                                 </tr>
                                         </table>
-                                        <h5>Time And Cost</h5>
-                                        <table class="table table-responsive table-bordered">
+                                        <!--<h5>Time And Cost</h5>-->
+                                        <!-- <table class="table table-responsive table-bordered">
                                             <div class="span12 column">
                                                 <tr>
                                                     <td>Time:</td>
@@ -170,17 +168,17 @@
                                                 <tr>
                                                     <td>Cost:</td>
                                                 </tr>
-                                        </table>
+                                        </table>-->
                                     </div>
-                                    <div class="form-group">
-                                        <?php echo form_label('Requires Signature', 'workorder_requires_signature', array('class' => 'control-label')); ?>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="switch">
-                                            <input type="checkbox" name="workorder_requires_signature" <?php echo set_value('workorder_requires_signature', $workorder->requires_sign) == 1 ? 'checked' : '' ?>>
-                                            <div class="slider round"></div>
-                                        </label>
-                                    </div>
+                                    <!--                                    <div class="form-group">
+                                    <?php //echo form_label('Requires Signature', 'workorder_requires_signature', array('class' => 'control-label')); ?>
+                                                                        </div>-->
+                                    <!--                                    <div class="form-group">
+                                                                            <label class="switch">
+                                                                                <input type="checkbox" name="workorder_requires_signature" <?php //echo set_value('workorder_requires_signature', $workorder->requires_sign) == 1 ? 'checked' : ''   ?>>
+                                                                                <div class="slider round"></div>
+                                                                            </label>
+                                                                        </div>-->
                                     <div class="form-group">
                                         <?php echo form_submit("Save", "Save", array('class' => 'btn btn-primary pull-right')); ?>
                                     </div>
@@ -194,9 +192,6 @@
                                                 <?php echo form_textarea('reques_description', '', array('class' => 'span12', 'placeholder' => 'Post an Update', 'rows' => '3')); ?>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <?php echo form_submit("save", "Post", array('class' => 'btn btn-primary pull-right')); ?>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -208,5 +203,5 @@
     </div>
 </div>
 
-<a href="<?php echo site_url('/WorkOrders/add'); ?>" class="paper-button paper-floating-action-button"><i class="icon-plus"></i></a>
+<!--<a href="<?php //echo site_url('/WorkOrders/add'); ?>" class="paper-button paper-floating-action-button"><i class="icon-plus"></i></a>-->
 

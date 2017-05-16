@@ -2,7 +2,7 @@
     <div class="span6">
         <div class="widget-box">
             <div class="widget-title"> <span class="icon"> <i class="icon-file"></i> </span>
-                <h5>Locations</h5>
+                <h5>Customers</h5>
             </div>
             <ul class="recent-posts">
                 <?php foreach ($Locations as $location): ?>
@@ -35,6 +35,10 @@
                             <?php echo form_label('Address', '', array('class' => 'control-label')); ?>
                             <div class="form-group">
                                 <?php echo form_input('location_address', set_value('location_address', $Location->address), array('class' => 'span12', 'placeholder' => 'Address of the Location*' ,'required'=>'required')) ?>
+                            </div>
+                        <?php echo form_label('makani Number', '', array('class' => 'control-label')); ?>
+                            <div class="form-group">
+                                <?php echo form_input('makani_no', set_value('makani_no', $Location->makani_no), array('class' => 'span12', 'placeholder' => 'Makani No.*' ,'required'=>'required')) ?>
                             </div>
                             <?php echo form_label('Contact Number', '', array('class' => 'control-label')); ?>
                             <div class="form-group">

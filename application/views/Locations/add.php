@@ -2,7 +2,7 @@
     <div class="span12">
         <div class="widget-box"> 
             <div class="widget-title"> <span class="icon"> <i class="icon-file"></i> </span>
-                <h5>Add New Location</h5>
+                <h5>Add New Customers</h5>
             </div>
             <div class="widget-content">
                 <div class="row-fluid">
@@ -17,6 +17,10 @@
                             <?php echo form_label('Address', '', array('class' => 'control-label' )); ?>
                             <div class="form-group">
                                 <?php echo form_input('Location_address', '', array('class' => 'span12', 'placeholder' => 'Address of the Location*' ,'required'=>'required')) ?>
+                            </div>
+                            <?php echo form_label('makani Number', '', array('class' => 'control-label')); ?>
+                            <div class="form-group">
+                                <?php echo form_input('makani_no', '', array('class' => 'span12', 'placeholder' => 'Makani No.*' ,'required'=>'required')) ?>
                             </div>
                              <?php echo form_label('Contact Number', '', array('class' => 'control-label')); ?>
                             <div class="form-group">
