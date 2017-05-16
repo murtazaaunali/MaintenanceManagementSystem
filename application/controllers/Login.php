@@ -22,7 +22,7 @@ class Login extends CI_Controller {
 
     public function index() {
         $this->data['page_title'] = 'Login';
-        $this->load->view("Login/Index", $this->data);
+        $this->load->view("Login/index", $this->data);
     }
 
 }

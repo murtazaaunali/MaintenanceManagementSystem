@@ -27,14 +27,14 @@ class Inquiries extends CI_Controller {
     public function index() {
         $this->data['page_title'] = 'Inquiries';
         $this->data['inquiries'] = $this->Inquiries_m->get_all();
-        $this->load->view('Inquiries/Index', $this->data);
+        $this->load->view('Inquiries/index', $this->data);
     }
 
     public function view($id = null) {
         $this->data['page_title'] = 'Inquiries > Inquiries Title';
         $this->data['inquiries'] = $this->Inquiries_m->get_all();
         $this->data['Inquiry'] = $this->Inquiries_m->get($id);
-        $this->load->view('Inquiries/View', $this->data);
+        $this->load->view('Inquiries/view', $this->data);
     }
 
     public function change_status() {

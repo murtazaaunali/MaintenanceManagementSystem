@@ -25,12 +25,12 @@ class Employees extends CI_Controller {
     public function index() {
         $this->data['page_title'] = 'Employees';
         $this->data['employees'] = $this->Employees_m->get_all();
-        $this->load->view("Employees/Index", $this->data);
+        $this->load->view("Employees/index", $this->data);
     }
 
     public function add() {
         $this->data['page_title'] = 'Work Orders > Add New Work Order';
-        $this->load->view("Employees/Add", $this->data);
+        $this->load->view("Employees/add", $this->data);
     }
 
     public function edit($id = NULL) {
@@ -55,7 +55,7 @@ class Employees extends CI_Controller {
                     'modified_by' => '1'
                 ));
             }
-            $this->load->view("Employees/Edit", $this->data);
+            $this->load->view("Employees/edit", $this->data);
         } else {
             redirect(site_url('Employees/index'));
         }

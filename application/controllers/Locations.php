@@ -25,12 +25,12 @@ class Locations extends CI_Controller {
     public function index() {
         $this->data['page_title'] = 'Customers';
         $this->data['locations'] = $this->Locations_m->get_all();
-        $this->load->view("Locations/Index", $this->data);
+        $this->load->view("Locations/index", $this->data);
     }
 
     public function add() {
         $this->data['page_title'] = 'Customers > Add New Customers';
-        $this->load->view("Locations/Add", $this->data);
+        $this->load->view("Locations/add", $this->data);
         if ($this->input->post()) {
             $insert = $this->Locations_m->insert(array(
                 'name' => $this->input->post('Location_name'),
@@ -73,7 +73,7 @@ class Locations extends CI_Controller {
                     'modified_by' => '1'
                 ));
             }
-            $this->load->view("Locations/Edit", $this->data);
+            $this->load->view("Locations/edit", $this->data);
         } else {
             redirect(site_url('Locations/index'));
         }

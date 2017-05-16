@@ -33,7 +33,7 @@ class WorkOrders extends CI_Controller {
     public function index() {
         $this->data['page_title'] = 'Work Orders';
         $this->data['workorders'] = $this->Workorders_m->get_all();
-        $this->load->view('WorkOrders/Index', $this->data);
+        $this->load->view('WorkOrders/index', $this->data);
     }
 
     public function add() {
@@ -43,7 +43,7 @@ class WorkOrders extends CI_Controller {
         $this->data['workorder_task_types'] = $this->Task_Types_m->get_dropdown();
         $this->data['workorder_Employees'] = $this->Employees_m->get_dropdown();
         $this->data['workorder_Teams'] = $this->Teams_m->get_dropdown();
-        $this->load->view('WorkOrders/Add', $this->data);
+        $this->load->view('WorkOrders/add', $this->data);
         if ($this->input->post()) {
             $insert = $this->Workorders_m->insert(array(
                 'title' => $this->input->post('workorder_title'),
@@ -96,7 +96,7 @@ class WorkOrders extends CI_Controller {
         $this->data['Workorder'] = $this->Workorders_m->get_all();
         $this->data['workorder'] = $this->Workorders_m->get($id);
         $this->data['locations'] = $this->Locations_m->get_all();
-        $this->load->view('WorkOrders/View', $this->data);
+        $this->load->view('WorkOrders/view', $this->data);
     }
 
     public function edit($id = NULL) {
@@ -125,7 +125,7 @@ class WorkOrders extends CI_Controller {
                     'modified_by' => '1'
                 ));
             }
-            $this->load->view('WorkOrders/Edit', $this->data);
+            $this->load->view('WorkOrders/edit', $this->data);
         } else {
             redirect(site_url('Workorders/index'));
         }
