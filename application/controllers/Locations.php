@@ -32,7 +32,7 @@ class Locations extends CI_Controller {
         $this->data['page_title'] = 'Locations > Add New Locations';
         $this->load->view("Locations/add", $this->data);
         $this->data['page_title'] = 'Customers > Add New Customers';
-        $this->load->view("Locations/Add", $this->data);
+        $this->load->view("Locations/add", $this->data);
         if ($this->input->post()) {
             $insert = $this->Locations_m->insert(array(
                 'name' => $this->input->post('Location_name'),

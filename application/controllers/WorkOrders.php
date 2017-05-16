@@ -55,6 +55,7 @@ class WorkOrders extends CI_Controller {
                 'team_id' => $this->input->post('workorder_team'),
                 'start_date' => $this->input->post('start_date'),
                 'end_date' => $this->input->post('end_date'),
+                'rates' => $this->input->post('workorder_rate'),
                 'requires_sign' => $this->input->post('workorder_requires_signature'),
                 'repeating_schedule' => $this->input->post('workorder_repeating_schedule'),
                 'status' => '1',
@@ -95,7 +96,7 @@ class WorkOrders extends CI_Controller {
         $this->data['Workorder'] = $this->Workorders_m->get_all();
         $this->data['workorder'] = $this->Workorders_m->get($id);
         $this->data['locations'] = $this->Locations_m->get_all();
-        $this->load->view('WorkOrders/View', $this->data);
+        $this->load->view('WorkOrders/view', $this->data);
     }
 
     public function edit($id = NULL) {
@@ -118,6 +119,7 @@ class WorkOrders extends CI_Controller {
                     'team_id' => $this->input->post('workorder_team'),
                     'start_date' => $this->input->post('start_date'),
                     'end_date' => $this->input->post('end_date'),
+                    'rates' => $this->input->post('workorder_rate'),
                     'repeating_schedule' => $this->input->post('workorder_repeating_schedule'),
                     'status' => '1',
                     'modified_by' => '1'

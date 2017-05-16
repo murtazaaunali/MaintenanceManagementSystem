@@ -34,7 +34,7 @@ class Inquiries extends CI_Controller {
         $this->data['page_title'] = 'Inquiries > Inquiries Title';
         $this->data['inquiries'] = $this->Inquiries_m->get_all();
         $this->data['Inquiry'] = $this->Inquiries_m->get($id);
-        $this->load->view('Inquiries/View', $this->data);
+        $this->load->view('Inquiries/view', $this->data);
     }
 
     public function change_status() {
