@@ -55,7 +55,7 @@ class WorkOrders extends CI_Controller {
                 'team_id' => $this->input->post('workorder_team'),
                 'start_date' => $this->input->post('start_date'),
                 'end_date' => $this->input->post('end_date'),
-                'rate' => $this->input->post('workorder_rate'),
+                'rates' => $this->input->post('workorder_rate'),
                 'requires_sign' => $this->input->post('workorder_requires_signature'),
                 'repeating_schedule' => $this->input->post('workorder_repeating_schedule'),
                 'status' => '1',
@@ -119,7 +119,7 @@ class WorkOrders extends CI_Controller {
                     'team_id' => $this->input->post('workorder_team'),
                     'start_date' => $this->input->post('start_date'),
                     'end_date' => $this->input->post('end_date'),
-                    'rate' => $this->input->post('workorder_rate'),
+                    'rates' => $this->input->post('workorder_rate'),
                     'repeating_schedule' => $this->input->post('workorder_repeating_schedule'),
                     'status' => '1',
                     'modified_by' => '1'

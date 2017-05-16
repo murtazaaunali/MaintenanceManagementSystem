@@ -80,7 +80,7 @@
                         <br>
                         <?php echo form_label('Rates', '', array('class' => 'control-label')); ?>
                         <div class="form-group">
-                            <?php echo form_input('workorder_rate', '', array('class' => 'span12', 'placeholder' => 'Rates*','required'=>'required')) ?>
+                            <?php echo form_input('workorder_rates', '', array('class' => 'span12', 'placeholder' => 'Rates*','required'=>'required')) ?>
                         </div>
                         <br>
                         <div class="control-group">

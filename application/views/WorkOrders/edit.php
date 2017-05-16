@@ -120,7 +120,7 @@
                         </div>
                             <?php echo form_label('Rates', '', array('class' => 'control-label')); ?>
                         <div class="form-group">
-                            <?php echo form_input('workorder_rate', set_value('workorder_rate', $Workorder->rate), array('class' => 'span12', 'placeholder' => 'Rates*','required'=>'required')) ?>
+                            <?php echo form_input('workorder_rate', set_value('workorder_rates', $Workorder->rates), array('class' => 'span12', 'placeholder' => 'Rates*','required'=>'required')) ?>
                         </div>
                         <div class="form-group">
                             <?php echo form_label('Repeating Schedule', 'workorder_priority', array('class' => 'control-label')); ?>
