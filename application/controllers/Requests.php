@@ -17,6 +17,10 @@ class Requests extends CI_Controller {
 
     function __construct() {
         parent::__construct();
+        if (!$this->ion_auth->logged_in()) {
+            // redirect them to the login page
+            redirect('auth/login', 'refresh');
+        }
         $this->output->set_title('Primo CMMS | Requests');
         $this->output->set_template('default');
         $this->load->model('Requests_m');
@@ -25,7 +29,13 @@ class Requests extends CI_Controller {
 
     public function index() {
         $this->data['page_title'] = 'Work Orders';
-        $this->data['requests'] = $this->Requests_m->get_all();
+        if ($this->ion_auth->is_admin()) {
+            $this->data['requests'] = $this->Requests_m->get_all();
+        } else {
+            $user = $this->ion_auth->user()->row();
+            $this->data['requests'] = $this->Requests_m->get_many_by(array('modified_by' => $user->id));
+        }
+
         $this->load->view("Requests/index", $this->data);
     }
 
@@ -42,7 +52,7 @@ class Requests extends CI_Controller {
                 'status' => '1',
                 'date_created' => $this->input->post('date_created'),
                 'date_modified' => $this->input->post('date_modified'),
-                'modified_by' => '1'
+                'modified_by' => $this->ion_auth->user()->row()->id
             ));
             if ($insert === FALSE) {
                 $this->load->view('Erorr');
@@ -58,9 +68,9 @@ class Requests extends CI_Controller {
             $this->data['Requests'] = $this->Requests_m->get_all();
             $this->data['Request'] = $this->Requests_m->get_by('id', $id);
             $this->data['request_Workorders'] = $this->Workorders_m->get_dropdown();
-            
+
             if ($this->input->post()) {
-                
+
                 $this->Requests_m->update($this->input->post('id'), array(
                     'title' => $this->input->post('request_title'),
                     'description' => $this->input->post('request_description'),
@@ -68,7 +78,7 @@ class Requests extends CI_Controller {
                     'workorder_name' => $this->input->post('request_workorder_name'),
                     'status' => '1',
                     'date_modified' => $this->input->post('date_modified'),
-                    'modified_by' => '1'
+                    'modified_by' => $this->ion_auth->user()->row()->id
                 ));
             }
             $this->load->view('Requests/edit', $this->data);

@@ -15,16 +15,21 @@ class Users extends MY_Controller {
 
     public function __construct() {
         parent::__construct();
+        if (!$this->ion_auth->logged_in()) {
+            // redirect them to the login page
+            redirect('auth/login', 'refresh');
+        }
     }
-
+    
     public function login() {
         // Method should not be directly accessible
-        if ($this->uri->uri_string() == 'examples/login')
+        if ($this->uri->uri_string() == 'Users/login') {
             show_404();
-
-        if ($this->input->post())
+        }
+        if ($this->input->post()) {
             $this->require_min_level(1);
-
+        }
+        
         $this->setup_login_form();
 
         $this->output->set_title('Primo CMMS | Login');

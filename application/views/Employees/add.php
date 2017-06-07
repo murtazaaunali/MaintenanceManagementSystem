@@ -21,7 +21,7 @@
                                 <div class="form-group">
                                     <?php echo form_label('User Account Type', 'workorder_priority', array('class' => 'control-label')); ?>
                                     <?php
-                                    echo form_dropdown('employee_type', array('1' => 'Employee', '6' => 'Manager', '9' => 'Admin',), FALSE, array('class' => 'span12'))
+                                    echo form_dropdown('employee_type', array('1' => 'Admin', '2' => 'Employee', '3' => 'Manager'), FALSE, array('class' => 'span12'))
                                     ?>
                                 </div>   
                                 <div class="form-group">

@@ -11,19 +11,19 @@
                             <?php
                             switch ($workorder->status) {
                                 case "0":
-                                    echo '<span class="label label-important">Closed</span>';
+                                    echo '<span class="label label-success">Closed</span>';
                                     break;
 
                                 case "1":
-                                    echo '<span class="label label-success">Open</span>';
+                                    echo '<span class="label label-important">Open</span>';
                                     break;
 
                                 case "2":
-                                    echo '<span class="label label-info">In progress</span>';
+                                    echo '<span class="label label-info">In Progress</span>';
                                     break;
 
                                 case "3":
-                                    echo '<span class="label label-warning">On hold</span>';
+                                    echo '<span class="label label-warning">On Hold</span>';
                                     break;
 
                                 default :

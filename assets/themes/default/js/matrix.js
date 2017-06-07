@@ -160,4 +160,49 @@ $(document).ready(function () {
     $("#del_row").on('click', function (e) {
         $('#tasks tr:last').remove();
     });
+
+    $("#open_status").on('click', function (e) {
+        var Wid = $(this).attr('data-workorder');
+        $.ajax({
+            method: "POST",
+            url: "/WorkOrders/change_status",
+            data: {status: 1, Wid: Wid}
+        }).done(function (response) {
+            location.reload();
+        });
+    });
+
+    $("#hold_status").on('click', function (e) {
+        var Wid = $(this).attr('data-workorder');
+        $.ajax({
+            method: "POST",
+            url: "/WorkOrders/change_status",
+            data: {status: 3, Wid: Wid}
+        }).done(function (response) {
+            location.reload();
+        });
+    });
+
+    $("#progress_status").on('click', function (e) {
+        var Wid = $(this).attr('data-workorder');
+        $.ajax({
+            method: "POST",
+            url: "/WorkOrders/change_status",
+            data: {status: 2, Wid: Wid}
+        }).done(function (response) {
+            location.reload();
+        });
+    });
+
+    $("#close_status").on('click', function (e) {
+        var Wid = $(this).attr('data-workorder');
+        $.ajax({
+            method: "POST",
+            url: "/WorkOrders/change_status",
+            data: {status: 0, Wid: Wid}
+        }).done(function (response) {
+            location.reload();
+        });
+    });
 });
+

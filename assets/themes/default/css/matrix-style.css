@@ -1698,3 +1698,65 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+
+/* Status Styles */
+
+.task-status-btn {
+    padding: 0;
+    margin-top: 30px;
+}
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+    margin-left: -5px;
+}
+.list-inline>li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.task-status-btn li {
+    margin: 0 20px;
+    cursor: pointer;
+}
+.task-status-btn li .status-circle {
+    background: #979797;
+    cursor: pointer;
+    transition: all 300ms ease;
+    margin: 0 auto 3px;
+    color: #FFF;
+    font-size: 18px;
+}
+.status-circle {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+}
+.task-status-btn li p.status-title {
+    font-size: 14px;
+    margin-bottom: 0;
+    transition: all 300ms ease;
+    text-align: center;
+}
+.task-status-btn li.active, .task-status-btn li:hover {
+    transition: all 250ms ease;
+}
+.task-status-btn li {
+    margin: 0 20px;
+    cursor: pointer;
+}
+.task-status-btn li.active.open .status-circle, .task-status-btn li:hover.open .status-circle {
+    background: #ff3b30;
+}
+.task-status-btn li.active.on-hold .status-circle, .task-status-btn li:hover.on-hold .status-circle {
+    background: #ffc107;
+}
+.task-status-btn li.active.in-progress .status-circle, .task-status-btn li:hover.in-progress .status-circle {
+    background: #607A8B;
+}
+.task-status-btn li.active.closed .status-circle, .task-status-btn li:hover.closed .status-circle {
+    background: #00C04F;
+}

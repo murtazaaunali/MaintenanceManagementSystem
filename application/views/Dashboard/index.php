@@ -5,20 +5,18 @@
         </div>
         <div class="widget-content" >
             <div class="row-fluid">
-                <div class="span9">
-                    <?php echo json_encode($week); ?>
-                    <canvas id="myChart"></canvas>
+                <div class="span12">
+                    <canvas id="chart_workorder_completed"></canvas>
                     <script>
-                        var ctx = document.getElementById("myChart");
-                        var myChart = new Chart(ctx, {
+                        var chart_workorder_completed = document.getElementById("chart_workorder_completed");
+                        var Chart1 = new Chart(chart_workorder_completed, {
                             type: 'line',
                             data: {
-                                xLabels: [
-                                ],
+                                xLabels: <?php echo json_encode($week); ?>,
                                 yLabels: "No of WOs completed",
                                 datasets: [{
                                         label: '# of Work Order(s)',
-                                        data: [12, 19, 3, 5, 2, 3],
+                                        data: <?php echo json_encode($workorders_this_week); ?>,
                                         backgroundColor: [
                                             'rgba(255, 99, 132, 0.2)',
                                             'rgba(54, 162, 235, 0.2)',
@@ -29,7 +27,7 @@
                                         ],
                                         borderColor: [
                                             'rgba(238,88,74,1)'
-                                            
+
                                         ],
                                         borderWidth: 2,
                                         fill: false,
@@ -62,93 +60,203 @@
                         });
                     </script>
                 </div>
-                <div class="span3">
-                    <ul class="site-stats">
-                        <li class="bg_lh"><i class="icon-user"></i> <strong>2</strong> <small>Open</small></li>
-                        <li class="bg_lh"><i class="icon-plus"></i> <strong>120</strong> <small>On Hold</small></li>
-                        <li class="bg_lh"><i class="icon-shopping-cart"></i> <strong>656</strong> <small>In Progress</small></li>
-                        <li class="bg_lh"><i class="icon-tag"></i> <strong>9540</strong> <small>Closed</small></li>
-                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span3">
+        <div class="widget-box">
+            <div class="widget-title bg_lg">
+                <h5>Open</h5>
+                <span>All Time</span>
+            </div>
+            <div class="widget-content" >
+                <div class="row-fluid">
+                    <div class="span12"><h2 class="text-center"><?php echo $number_open_workorders; ?></h2><p class="text-center">Work order(s)</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="span3">
+        <div class="widget-box">
+            <div class="widget-title bg_lg">
+                <h5>On Hold</h5>
+                <span>All Time</span>
+            </div>
+            <div class="widget-content" >
+                <div class="row-fluid">
+                    <div class="span12">
+                        <h2 class="text-center"><?php echo $number_hold_workorders; ?></h2>
+                        <p class="text-center">Work order(s)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="span3">
+        <div class="widget-box">
+            <div class="widget-title bg_lg">
+                <h5>Closed</h5>
+                <span>All Time</span>
+            </div>
+            <div class="widget-content" >
+                <div class="row-fluid">
+                    <div class="span12"><h2 class="text-center"><?php echo $number_closed_workorders; ?></h2><p class="text-center">Work order(s)</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="span3">
+        <div class="widget-box">
+            <div class="widget-title bg_lg">
+                <h5>Completed</h5>
+                <span>All Time</span>
+            </div>
+            <div class="widget-content" >
+                <div class="row-fluid">
+                    <div class="span12"><h2 class="text-center"><?php echo $number_completed_workorders; ?></h2><p class="text-center">Work order(s)</p></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<hr/>
 <div class="row-fluid">
     <div class="span6">
-        <div class="widget-box">
-            <div class="widget-title bg_lg"><span class="icon"><i class="icon-signal"></i></span>
-                <h5>Number of Work Order Completed</h5>
-            </div>
-            <div class="widget-content" >
-                <div class="row-fluid">
-                    <div class="span12">
-                        <canvas id="myChart"></canvas>
-                        <script>
-                            var ctx = document.getElementById("myChart");
-                            var myChart = new Chart(ctx, {
-                                type: 'line',
-                                data: {
-                                    xLabels: ["Mar 15", "Mar 16", "Mar 17", "Mar 18", "Mar 19", "Mar 20"],
-                                    yLabels: "No of WOs completed",
-                                    datasets: [{
-                                            label: '# of Votes',
-                                            data: [12, 19, 3, 5, 2, 3],
-                                            backgroundColor: [
-                                                'rgba(255, 99, 132, 0.2)',
-                                                'rgba(54, 162, 235, 0.2)',
-                                                'rgba(255, 206, 86, 0.2)',
-                                                'rgba(75, 192, 192, 0.2)',
-                                                'rgba(153, 102, 255, 0.2)',
-                                                'rgba(255, 159, 64, 0.2)'
-                                            ],
-                                            borderColor: [
-                                                'rgba(255,99,132,1)',
-                                                'rgba(54, 162, 235, 1)',
-                                                'rgba(255, 206, 86, 1)',
-                                                'rgba(75, 192, 192, 1)',
-                                                'rgba(153, 102, 255, 1)',
-                                                'rgba(255, 159, 64, 1)'
-                                            ],
-                                            borderWidth: 2,
-                                            fill: false,
-                                            borderCapStyle: 'butt',
-                                            borderDash: [],
-                                            borderDashOffset: 0.0,
-                                            borderJoinStyle: 'miter',
-                                            pointBorderColor: "rgba(75,192,192,1)",
-                                            pointBackgroundColor: "#fff",
-                                            pointBorderWidth: 1,
-                                            pointHoverRadius: 5,
-                                            pointHoverBackgroundColor: "rgba(75,192,192,1)",
-                                            pointHoverBorderColor: "rgba(220,220,220,1)",
-                                            pointHoverBorderWidth: 2,
-                                            pointRadius: 1,
-                                            pointHitRadius: 10,
-                                            spanGaps: false,
-                                        }],
-                                },
-                                options: {
-                                    responsive: true,
-                                    scales: {
-                                        yAxes: [{
-                                                ticks: {
-                                                    beginAtZero: true
-                                                }
-                                            }]
+        <div class="row-fluid">
+            <div class="widget-box">
+                <div class="widget-title bg_lg"><span class="icon"><i class="icon-signal"></i></span>
+                    <h5>Number of Work Orders Completed by User</h5>
+                </div>
+                <div class="widget-content" >
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <?php echo json_encode($week); ?>
+                            <canvas id="workorders_by_users"></canvas>
+                            <script>
+                                var workorders_by_users = document.getElementById("workorders_by_users");
+                                var Chart2 = new Chart(workorders_by_users, {
+                                    type: 'bar',
+                                    data: {
+                                        xLabels: [
+                                        ],
+                                        yLabels: "No of WOs completed",
+                                        datasets: [{
+                                                label: '# of Work Order(s)',
+                                                data: [12, 19, 3, 5, 2, 3],
+                                                backgroundColor: [
+                                                    'rgba(255, 99, 132, 0.2)',
+                                                    'rgba(54, 162, 235, 0.2)',
+                                                    'rgba(255, 206, 86, 0.2)',
+                                                    'rgba(75, 192, 192, 0.2)',
+                                                    'rgba(153, 102, 255, 0.2)',
+                                                    'rgba(255, 159, 64, 0.2)'
+                                                ],
+                                                borderColor: [
+                                                    'rgba(238,88,74,1)'
+
+                                                ],
+                                                borderWidth: 2,
+                                                fill: false,
+                                                borderCapStyle: 'butt',
+                                                borderDash: [],
+                                                borderDashOffset: 0.0,
+                                                borderJoinStyle: 'miter',
+                                                pointBorderColor: "rgba(238,88,74,1)",
+                                                pointBackgroundColor: "#fff",
+                                                pointBorderWidth: 1,
+                                                pointHoverRadius: 5,
+                                                pointHoverBackgroundColor: "rgba(39,173,116,1)",
+                                                pointHoverBorderColor: "rgba(39,173,116,1)",
+                                                pointHoverBorderWidth: 2,
+                                                pointRadius: 1,
+                                                pointHitRadius: 10,
+                                                spanGaps: false,
+                                            }],
+                                    },
+                                    options: {
+                                        responsive: true,
+                                        scales: {
+                                            yAxes: [{
+                                                    ticks: {
+                                                        beginAtZero: true
+                                                    }
+                                                }]
+                                        }
                                     }
-                                }
-                            });
-                        </script>
+                                });
+                            </script>
+                        </div>
                     </div>
-                    <div class="span3">
-                        <ul class="site-stats">
-                            <li class="bg_lh"><i class="icon-user"></i> <strong>2</strong> <small>Open</small></li>
-                            <li class="bg_lh"><i class="icon-plus"></i> <strong>120</strong> <small>On Hold</small></li>
-                            <li class="bg_lh"><i class="icon-shopping-cart"></i> <strong>656</strong> <small>In Progress</small></li>
-                            <li class="bg_lh"><i class="icon-tag"></i> <strong>9540</strong> <small>Closed</small></li>
-                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="span6">
+        <div class="row-fluid">
+            <div class="widget-box">
+                <div class="widget-title bg_lg"><span class="icon"><i class="icon-signal"></i></span>
+                    <h5>Number of Work Order Completed</h5>
+                </div>
+                <div class="widget-content" >
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <?php echo json_encode($week); ?>
+                            <canvas id="myChart"></canvas>
+                            <script>
+                                var ctx = document.getElementById("myChart");
+                                var myChart = new Chart(ctx, {
+                                    type: 'line',
+                                    data: {
+                                        xLabels: [
+                                        ],
+                                        yLabels: "No of WOs completed",
+                                        datasets: [{
+                                                label: '# of Work Order(s)',
+                                                data: [12, 19, 3, 5, 2, 3],
+                                                backgroundColor: [
+                                                    'rgba(255, 99, 132, 0.2)',
+                                                    'rgba(54, 162, 235, 0.2)',
+                                                    'rgba(255, 206, 86, 0.2)',
+                                                    'rgba(75, 192, 192, 0.2)',
+                                                    'rgba(153, 102, 255, 0.2)',
+                                                    'rgba(255, 159, 64, 0.2)'
+                                                ],
+                                                borderColor: [
+                                                    'rgba(238,88,74,1)'
+
+                                                ],
+                                                borderWidth: 2,
+                                                fill: false,
+                                                borderCapStyle: 'butt',
+                                                borderDash: [],
+                                                borderDashOffset: 0.0,
+                                                borderJoinStyle: 'miter',
+                                                pointBorderColor: "rgba(238,88,74,1)",
+                                                pointBackgroundColor: "#fff",
+                                                pointBorderWidth: 1,
+                                                pointHoverRadius: 5,
+                                                pointHoverBackgroundColor: "rgba(39,173,116,1)",
+                                                pointHoverBorderColor: "rgba(39,173,116,1)",
+                                                pointHoverBorderWidth: 2,
+                                                pointRadius: 1,
+                                                pointHitRadius: 10,
+                                                spanGaps: false,
+                                            }],
+                                    },
+                                    options: {
+                                        responsive: true,
+                                        scales: {
+                                            yAxes: [{
+                                                    ticks: {
+                                                        beginAtZero: true
+                                                    }
+                                                }]
+                                        }
+                                    }
+                                });
+                            </script>
+                        </div>
                     </div>
                 </div>
             </div>

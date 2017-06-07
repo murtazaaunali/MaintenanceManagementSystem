@@ -2,12 +2,12 @@ html, body {    width: 100%;    height: 100%;}
 /*Bootstrap-overlay*/
 
 body {
- overflow-x: hidden;
- margin-top: -10px;  font-family: 'Open Sans', sans-serif; font-size:12px; color:#666;
+    overflow-x: hidden;
+    margin-top: -10px;  font-family: 'Open Sans', sans-serif; font-size:12px; color:#666;
 }
 a{color:#666;}
 a:hover, a:focus {
- text-decoration: none; color:#28b779;
+    text-decoration: none; color:#28b779;
 }
 .dropdown-menu .divider{ margin:4px 0px;}
 .dropdown-menu{ min-width:180px;}
@@ -42,7 +42,7 @@ hr{ border-top-color:#dadada;}
 body { background-color:#2E363F;    padding: 0;    margin-top:10%;}
 #logo, #loginbox {    width: 32%;    margin-left: auto;    margin-right: auto;    position: relative;}
 #logo img {  margin: 0 auto;    display: block;}
-#loginbox { overflow: hidden !important;    text-align: left;    position: relative; }
+#loginbox { overflow: hidden !important;    text-align: left;    position: relative; width: 60%; }
 #loginbox form{ width:100%; background:#2E363F; position:relative; top:0; left:0; }
 #loginbox .form-actions { padding: 14px 20px 15px;}
 #loginbox .form-actions .pull-left { margin-top:0px;}
@@ -57,11 +57,11 @@ body { background-color:#2E363F;    padding: 0;    margin-top:10%;}
 .form-vertical, .form-actions {  margin-bottom: 0; background:none; border-top:1px solid #3f4954; }
 #loginbox .normal_text{ padding:15px 10px; text-align:center; font-size:14px; line-height:20px; background:#2E363F; color:#fff; }
 @media (max-width:800px){
-#logo { width: 60%; }
-#loginbox{ width:80%}
+    #logo { width: 60%; }
+    #loginbox{ width:80%}
 }
 @media (max-width: 480px){
-#logo { width: 40%; }
-#loginbox{ width:90%}
-#loginbox .control-group{ padding:8px 0; margin-bottom:0px;}
+    #logo { width: 40%; }
+    #loginbox{ width:90%}
+    #loginbox .control-group{ padding:8px 0; margin-bottom:0px;}
 }

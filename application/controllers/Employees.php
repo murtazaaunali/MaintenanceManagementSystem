@@ -17,6 +17,17 @@ class Employees extends CI_Controller {
 
     function __construct() {
         parent::__construct();
+        if (!$this->ion_auth->logged_in()) {
+            // redirect them to the login page
+            redirect('auth/login', 'refresh');
+        }
+        # multiple groups (by name)
+        $group = array('admin', 'manager');
+        if (!$this->ion_auth->in_group($group)) {
+            $this->session->set_flashdata('message', 'You must be a gangsta OR a hoodrat to view this page');
+            redirect('/');
+        }
+
         $this->output->set_title('Primo CMMS | Employee');
         $this->output->set_template('default');
         $this->load->model('Employees_m');
@@ -33,17 +44,19 @@ class Employees extends CI_Controller {
         $this->data['page_title'] = 'Work Orders > Add New Work Order';
         $this->load->view("Employees/add", $this->data);
         if ($this->input->post()) {
-            $employee_id = $this->Users_m->get_unused_id();
-            $insert_user = $this->Users_m->insert(array(
-                'user_id' => $employee_id,
-                'username' => NULL,
-                'email' => $this->input->post('email'),
-                'auth_level' => $this->input->post('employee_type'),
-                'passwd' => password_hash($this->input->post('password'), PASSWORD_BCRYPT, ['cost' => 11]),
-                'created_at' => date('Y-m-d H:i:s')
-            ));
+            $username = $this->input->post('email');
+            $password = $this->input->post('password');
+            $email = $this->input->post('email');
+            $group = $this->input->post('employee_type');
+            $additional_data = array(
+                'first_name' => $this->input->post('First_Name'),
+                'last_name' => $this->input->post('Last_name'),
+                'company' => $this->input->post('Company_name'),
+                'phone' => $this->input->post('Phone_number')
+            );
+            $insert_user = $this->ion_auth->register($username, $password, $email, $additional_data, $group);
             if ($insert_user === FALSE) {
-                $this->load->view('Erorr');
+                $this->load->view('Error');
             } else {
                 $insert_employee = $this->Employees_m->insert(array(
                     'email' => $this->input->post('email'),
@@ -52,8 +65,8 @@ class Employees extends CI_Controller {
                     'job_title' => $this->input->post('Job_tittle'),
                     'phone_number' => $this->input->post('Phone_number'),
                     'company_name' => $this->input->post('Company_name'),
-                    'status' => '1',
-                    'modified_by' => '1'
+                    'status' => $this->input->post('status'),
+                    'modified_by' => $this->ion_auth->user()->row()->id
                 ));
                 if ($insert_employee === FALSE) {
                     $this->load->view('Erorr');
@@ -74,14 +87,19 @@ class Employees extends CI_Controller {
             $this->data['user'] = $user;
 
             if ($this->input->post()) {
-                $update_user = $this->Users_m->update($this->input->post($user->user_id), array(
-                    'auth_level' => $this->input->post('employee_type')
-                ));
+                $this->ion_auth->remove_from_group(NULL, $id);
+                $data = array(
+                    'first_name' => $this->input->post('First_Name'),
+                    'last_name' => $this->input->post('Last_name'),
+                    'password'
+                );
+                $update_user = $this->ion_auth->update($id, $data);
 
                 if ($this->input->post('password')) {
-                    $update_user_password = $this->Users_m->update($this->input->post($user->user_id), array(
-                        'passwd' => password_hash($this->input->post('password'), PASSWORD_BCRYPT, ['cost' => 11])
-                    ));
+                    $data = array(
+                        'password' => $this->input->post('password')
+                    );
+                    $update_user_password = $this->ion_auth->update($id, $data);
                 }
                 if ($update_user === FALSE) {
                     $this->load->view('Erorr');
@@ -93,9 +111,9 @@ class Employees extends CI_Controller {
                         'phone_number' => $this->input->post('phone_number'),
                         'company_name' => $this->input->post('company_name'),
                         'status' => $this->input->post('status'),
-                        'modified_by' => '1'
+                        'modified_by' => $this->ion_auth->user()->row()->id
                     ));
-                    
+
 
                     if ($update_employee === FALSE) {
                         $this->load->view('Erorr');

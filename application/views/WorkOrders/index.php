@@ -11,19 +11,19 @@
                             <?php
                             switch ($workorder->status) {
                                 case "0":
-                                    echo '<span class="label label-important">Closed</span>';
+                                    echo '<span class="label label-success">Closed</span>';
                                     break;
 
                                 case "1":
-                                    echo '<span class="label label-success">Open</span>';
+                                    echo '<span class="label label-important">Open</span>';
                                     break;
 
                                 case "2":
-                                    echo '<span class="label label-info">In progress</span>';
+                                    echo '<span class="label label-info">In Progress</span>';
                                     break;
 
                                 case "3":
-                                    echo '<span class="label label-warning">On hold</span>';
+                                    echo '<span class="label label-warning">On Hold</span>';
                                     break;
 
                                 default :
@@ -32,8 +32,8 @@
                             ?>                                
                             <div class="article-post">
                                 <div class="fr"><a href="<?php echo site_url('WorkOrders/view/' . $workorder->id); ?>" class="btn btn-default btn-mini">View</a> <a href="<?php echo site_url('WorkOrders/edit/' . $workorder->id); ?>" class="btn btn-primary btn-mini">Edit</a></div>
-                                <span class="user-info"> #<?php echo $workorder->id; ?> By: john Deo / <?php echo $workorder->date_created; ?> </span>
                                 <p><a href="<?php echo site_url('WorkOrders/view/' . $workorder->id); ?>"><?php echo substr($workorder->title, 0, 85); ?>...</a> </p>
+                                <span class="user-info"> #<?php echo $workorder->id; ?> By: <?php echo $this->ion_auth->user($workorder->modified_by)->row()->first_name; ?> / <?php echo $workorder->date_created; ?> </span>
                             </div>
                         </li>
                     <?php endforeach; ?>

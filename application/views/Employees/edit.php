@@ -39,7 +39,7 @@
                             </div>
 
                             <label class="control-label">User Account Type</label>
-                            <?php echo form_dropdown('employee_type', array('1' => 'Employee', '6' => 'Manager', '9' => 'Admin'), set_value('employee_type', $user->auth_level), array('class' => 'span12')); ?>
+                            <?php echo form_dropdown('employee_type', array('1' => 'Admin', '2' => 'Employee', '3' => 'Manager'), set_value('employee_type', $this->ion_auth->get_users_groups($user->id)->result()), array('class' => 'span12')); ?>
                         </div>
 
                         <div class="form-group">

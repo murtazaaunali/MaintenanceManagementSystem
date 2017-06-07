@@ -17,6 +17,10 @@ class Inquiries extends CI_Controller {
 
     function __construct() {
         parent::__construct();
+        if (!$this->ion_auth->logged_in()) {
+            // redirect them to the login page
+            redirect('auth/login', 'refresh');
+        }
         $this->output->set_title('Primo CMMS | Inquiries');
         $this->output->set_template('default');
         $this->load->model('Inquiries_m');

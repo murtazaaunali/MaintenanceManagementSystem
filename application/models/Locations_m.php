@@ -25,11 +25,13 @@ class Locations_m extends MY_Model {
 
     protected function timestamps_before_create($locations) {
         $locations['date_created'] = $locations['date_modified'] = date('Y-m-d H:i:s');
+        
         return $locations;
     }
 
     protected function timestamps_before_update($locations) {
         $locations['date_modified'] = date('Y-m-d H:i:s');
+        
         return $locations;
     }
 

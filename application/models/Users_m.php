@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Users_m extends MY_Model {
 
     public $_table = 'users';
-    public $primary_key = 'user_id';
+    public $primary_key = 'id';
 
     /**
      * Update a user record with data not from POST
@@ -26,7 +26,7 @@ class Users_m extends MY_Model {
      * @return bool
      */
     public function update_user_raw_data($the_user, $user_data = []) {
-        $this->db->where('user_id', $the_user)
+        $this->db->where('id', $the_user)
                 ->update($this->db_table('user_table'), $user_data);
     }
 

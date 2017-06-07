@@ -17,6 +17,16 @@ class Teams extends CI_Controller {
 
     function __construct() {
         parent::__construct();
+        if (!$this->ion_auth->logged_in()) {
+            // redirect them to the login page
+            redirect('auth/login', 'refresh');
+        }
+        # multiple groups (by name)
+        $group = array('admin', 'manager');
+        if (!$this->ion_auth->in_group($group)) {
+            $this->session->set_flashdata('message', 'You must be a gangsta OR a hoodrat to view this page');
+            redirect('/');
+        }
         $this->output->set_title('Primo CMMS | Teams');
         $this->output->set_template('default');
 
@@ -42,7 +52,7 @@ class Teams extends CI_Controller {
                 'name' => $this->input->post('team_name'),
                 'description' => $this->input->post('team_description'),
                 'status' => '1',
-                'modified_by' => '1'
+                'modified_by' => $this->ion_auth->user()->row()->id
             ));
 
             $team_id = $this->Teams_m->get_next_id() - 1;

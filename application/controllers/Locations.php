@@ -17,6 +17,16 @@ class Locations extends CI_Controller {
 
     function __construct() {
         parent::__construct();
+        if (!$this->ion_auth->logged_in()) {
+            // redirect them to the login page
+            redirect('auth/login', 'refresh');
+        }
+        # multiple groups (by name)
+        $group = array('admin', 'manager');
+        if (!$this->ion_auth->in_group($group)) {
+            $this->session->set_flashdata('message', 'You must be a gangsta OR a hoodrat to view this page');
+            redirect('/');
+        }
         $this->output->set_title('Primo CMMS | Locations');
         $this->output->set_template('default');
         $this->load->model('Locations_m');
@@ -44,7 +54,7 @@ class Locations extends CI_Controller {
                 'date_created' => $this->input->post('date_created'),
                 'date_modified' => $this->input->post('date_modified'),
                 'status' => '1',
-                'modified_by' => '1'
+                'modified_by' => $this->ion_auth->user()->row()->id
             ));
             if ($insert === FALSE) {
                 $this->load->view('Erorr');
@@ -72,7 +82,7 @@ class Locations extends CI_Controller {
                     'email' => $this->input->post('email'),
                     'status' => '1',
                     'date_modified' => $this->input->post('date_modified'),
-                    'modified_by' => '1'
+                    'modified_by' => $this->ion_auth->user()->row()->id
                 ));
             }
             $this->load->view("Locations/edit", $this->data);

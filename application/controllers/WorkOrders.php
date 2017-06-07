@@ -17,6 +17,10 @@ class WorkOrders extends CI_Controller {
 
     function __construct() {
         parent::__construct();
+        if (!$this->ion_auth->logged_in()) {
+            // redirect them to the login page
+            redirect('auth/login', 'refresh');
+        }
         if (!$this->input->is_ajax_request()) {
             $this->output->set_title('Primo CMMS | Work Orders');
             $this->output->set_template('default');
@@ -32,7 +36,12 @@ class WorkOrders extends CI_Controller {
 
     public function index() {
         $this->data['page_title'] = 'Work Orders';
-        $this->data['workorders'] = $this->Workorders_m->get_all();
+        if ($this->ion_auth->is_admin()) {
+            $this->data['workorders'] = $this->Workorders_m->get_all();
+        } else {
+            $user = $this->ion_auth->user()->row();
+            $this->data['workorders'] = $this->Workorders_m->get_many_by(array('employee_id' => $user->id));
+        }
         $this->load->view('WorkOrders/index', $this->data);
     }
 
@@ -59,7 +68,7 @@ class WorkOrders extends CI_Controller {
                 'requires_sign' => $this->input->post('workorder_requires_signature'),
                 'repeating_schedule' => $this->input->post('workorder_repeating_schedule'),
                 'status' => '1',
-                'modified_by' => '1'
+                'modified_by' => $this->ion_auth->user()->row()->id
             ));
             foreach ($this->input->post('workorder_task') as $task) {
                 $insert_task = $this->Tasks_m->insert();
@@ -83,7 +92,7 @@ class WorkOrders extends CI_Controller {
                         'type' => $task['type'],
                         'status' => 1,
                         'workorder_id' => ($this->Workorders_m->get_next_id()) - 1,
-                        'modified_by' => '1'
+                        'modified_by' => $this->ion_auth->user()->row()->id
                     ));
                 }
                 redirect('WorkOrders');
@@ -91,11 +100,13 @@ class WorkOrders extends CI_Controller {
         }
     }
 
-    public function view($id = null) {
+    public function view($id = NULL) {
         $this->data['page_title'] = 'Work Orders > Work Order Title';
         $this->data['Workorder'] = $this->Workorders_m->get_all();
         $this->data['workorder'] = $this->Workorders_m->get($id);
         $this->data['locations'] = $this->Locations_m->get_all();
+        $this->data['employees'] = $this->Employees_m->get_all();
+        $this->data['tasks'] = $this->Tasks_m->get_many_by(array('workorder_id' => $id));
         $this->load->view('WorkOrders/view', $this->data);
     }
 
@@ -122,7 +133,7 @@ class WorkOrders extends CI_Controller {
                     'rates' => $this->input->post('workorder_rate'),
                     'repeating_schedule' => $this->input->post('workorder_repeating_schedule'),
                     'status' => '1',
-                    'modified_by' => '1'
+                    'modified_by' => $this->ion_auth->user()->row()->id
                 ));
             }
             $this->load->view('WorkOrders/edit', $this->data);
@@ -151,7 +162,21 @@ class WorkOrders extends CI_Controller {
     }
 
     public function change_status() {
-        
+        if ($this->input->is_ajax_request()) {
+            echo $this->input->get('status');
+            echo "<br>";
+            echo $this->input->get('Wid');
+            $change_status = $this->Workorders_m->update($this->input->get('Wid'), array(
+                'status' => $this->input->get('status'),
+                'modified_by' => $this->ion_auth->user()->row()->id
+            ));
+            print_r($change_status);
+            if ($change_status) {
+                echo "Success";
+            } else {
+                echo "Error";
+            }
+        }
     }
 
     public function generate_pdf() {

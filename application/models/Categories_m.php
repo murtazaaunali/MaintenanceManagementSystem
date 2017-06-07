@@ -25,11 +25,14 @@ class Categories_m extends MY_Model {
 
     protected function timestamps_before_create($workorders) {
         $workorders['date_created'] = $workorders['date_modified'] = date('Y-m-d H:i:s');
+        
         return $workorders;
     }
 
     protected function timestamps_before_update($workorders) {
         $workorders['date_modified'] = date('Y-m-d H:i:s');
+        
+
         return $workorders;
     }
 
